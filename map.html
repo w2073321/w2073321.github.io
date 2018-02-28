@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=640,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=true;">
+
+<title>大连圣亚海洋世界html5响应式触屏版手机wap旅游网站模板-【HTML5/】</title>
+<meta name="keywords" content="大连圣亚海洋世界官方网站/大连文化旅游景区/圣亚海洋世界/圣亚极地世界/圣亚珊瑚世界/圣亚深海传奇/恐龙传奇/大连圣亚海洋世界/圣亚海洋世界/ 大连好玩的地方 海洋公园 值得去得地方"/>
+<meta name="description" content="大连圣亚海洋世界已于大连本地成功建设并运营了以圣亚海洋世界、圣亚极地世界、圣亚珊瑚世界、圣亚深海传奇和恐龙传奇为核心项目的文化旅游景区，该景区营业面积5万多平方米，与亚洲最大的星海广场、百年历史的星海公园及东北最大的游艇码头，共同组成大连最具有休闲娱乐特色的旅游目的地，2001年1月获评国家首批AAAA级旅游景区（点）。2005年，独资建成 “世界首座极地演艺游乐园”——哈尔滨极地馆，建成不久即成为哈尔滨国际冰雪节四大景区之一，并于2009年获评国家AAAA级旅游景区（点）。浪漫大连第一站 国家级AAAA旅游景区 中国最浪漫的海洋馆 四大场馆全新升级 ！" />
+<meta name="author" content="互动设计公司唐宋中国TSCN.CN,075582519520,china,cn@tscn.cn" />
+<link href="web.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/lfjquery.js"></script>
+<script type="text/javascript" src="js/lfweb.js"></script>
+<script src="plugins/bannerplay/js/main.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="plugins/bannerplay/css/main.css" />
+<!--[if IE 6]>
+  <script src="js/lfDD_belatedPNG.js"></script>
+  <script>
+  DD_belatedPNG.fix('*');
+  </script>
+<![endif]-->
+</head>
+<body>
+<div class="page" id="topnav">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><a href="index.html"><img src="images/index_02.jpg" width="80" height="77" alt="" /></a></td>
+      <td><a href="indexbak.html"><img src="images/index_03.jpg" width="480" height="77" alt="" /></a></td>
+      <td><a href="dhlb.html" ><img src="images/index_04.jpg" width="80" height="77" alt="" /></a></td>
+    </tr>
+  </table>
+</div>
+<div class="page" style="height:777px; overflow:hidden; background-color:#1874c9;">
+ <div style="height:456px; position:relative;">
+ <div style="position:absolute; height:80px; bottom:-2px; width:100%; font-size:23px; text-indent:35px; color:#FFF; line-height:80px; background-image:url(images/huibg.png); z-index:99999;">大连星海广场西侧，星海公园内，医大二院对面</div>
+ <div style=" position:absolute;width:79px; display:none; height:80px; right:0px; bottom:0px;"><a href="javascript:"><img src="images/mapbtn.png" width="79" height="80" /></a></div>
+ 
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api@key=&v=1.1&services=true"></script>
+
+  <!--百度地图容器-->
+  <div style="width:640px;height:456px;border:#ccc solid 1px;" id="dituContent"></div>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+        addPolyline();//向地图中添加线
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.578762,38.885915);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"圣亚海洋世界",content:"大连圣亚海洋世界",point:"121.577621|38.884834",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("../../app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+//标注线数组
+    var plPoints = [{style:"solid",weight:4,color:"#f00",opacity:0.6,points:["121.57807|38.885367","121.577702|38.884883","121.577702|38.884876"]}
+		 ,{style:"solid",weight:4,color:"#f00",opacity:0.6,points:["121.578088|38.885423","121.578115|38.885613"]}
+		 ,{style:"solid",weight:3,color:"#f00",opacity:0.6,points:["121.578169|38.88569","121.579391|38.885718"]}
+		 ];
+    //向地图中添加线函数
+    function addPolyline(){
+		for(var i=0;i<plPoints.length;i++){
+			var json = plPoints[i];
+			var points = [];
+			for(var j=0;j<json.points.length;j++){
+				var p1 = json.points[j].split("|")[0];
+				var p2 = json.points[j].split("|")[1];
+				points.push(new BMap.Point(p1,p2));
+			}
+			var line = new BMap.Polyline(points,{strokeStyle:json.style,strokeWeight:json.weight,strokeColor:json.color,strokeOpacity:json.opacity});
+			map.addOverlay(line);
+		}
+	}
+    
+    initMap();//创建和初始化地图
+</script></div>
+ <div>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+       <td width="13%" valign="top"><table border="0" cellspacing="0" cellpadding="0">
+     <tr>
+       <td><a href="javascript:" class="btn" onClick="document.getElementById('b1').src='images/map1.jpg';document.getElementById('b2').src='images/map2b.jpg';document.getElementById('b3').src='images/map3b.jpg';document.getElementById('b4').src='images/map4b.jpg';"><img id="b1" src="images/map1.jpg" width="80" height="81" /></a></td>
+     </tr>
+     <tr>
+       <td><a href="javascript:" class="btn"  onclick="document.getElementById('b1').src='images/map1b.jpg';document.getElementById('b2').src='images/map2.jpg';document.getElementById('b3').src='images/map3b.jpg';document.getElementById('b4').src='images/map4b.jpg';"><img id="b2" src="images/map2b.jpg" width="80" height="80" /></a></td>
+      </tr>
+     <tr>
+       <td><a href="javascript:" class="btn"  onclick="document.getElementById('b1').src='images/map1b.jpg';document.getElementById('b2').src='images/map2b.jpg';document.getElementById('b3').src='images/map3.jpg';document.getElementById('b4').src='images/map4b.jpg';"><img id="b3" src="images/map3b.jpg" width="80" height="80" /></a></td>
+      </tr>
+     <tr>
+       <td><a href="javascript:" class="btn"  onclick="document.getElementById('b1').src='images/map1b.jpg';document.getElementById('b2').src='images/map2b.jpg';document.getElementById('b3').src='images/map3b.jpg';document.getElementById('b4').src='images/map4.jpg';"><img id="b4" src="images/map4b.jpg" width="80" height="80" /></a></td>
+      </tr>
+   </table></td>
+       <td width="87%" valign="top">
+         <div class="nr" style="color:#FFF; padding:30px; line-height:40px;">
+           <strong>☆ 火车站&mdash;圣亚海洋世界</strong><br />
+<span style="font-size:16px">乘16、22、23、406、531、901路至医大二院下车，马路对面即是。（出租车车程约15分钟，车费约19元）</span>
+<div><strong>☆ 高铁（大连北站）&mdash;圣亚海洋世界</strong><br />
+<span style="font-size:16px">乘大连湾-解放路，至长春路站，换乘16、22、23、406、531、901路至医大二院下车，马路对面即是。（TAXI车程约25分钟，车费约45元）</span></div>
+<br />
+&nbsp;  
+          </div>
+         <div class="nr" style="color:#FFF; padding:30px; line-height:40px; display:none;">
+           <strong>☆ 机场&mdash;圣亚海洋世界</strong><br />
+<span style="font-size:14px"><span style="font-size:16px">乘701路至新建小学，换乘37路至医大二院下车，马路对面即是；乘532路至兴工街，换乘202路至医大二院下车，马路对面即是。（出租车车程约20分钟，车费约25元）。</span></span>  
+          </div>
+         <div class="nr" style="color:#FFF; padding:30px; line-height:40px;display:none;">
+           <strong>☆ 码头&mdash;圣亚海洋世界</strong><br />
+<span style="font-size:16px">乘708路至青泥洼桥，换乘16、22、23、531、901路至医大二院下车，马路对面即是（乘出租车车程约25分钟，车费约30元）。</span>  
+          </div>
+         <div class="nr" style="color:#FFF; padding:30px; line-height:40px;display:none;">
+           <strong>☆ 高速路口（自驾）&mdash;圣亚海洋世界</strong><br />
+<span style="font-size:16px">高速公路口&mdash;东快路&mdash;五一广场&mdash;胜利路&mdash;星海会展中心&mdash;圣亚海洋世界（非高峰期时间：车程约30分钟）</span>  
+          </div>
+        </td>
+     </tr>
+    </table>
+ </div>
+</div>
+<div class="page endnav" style="background-image:url(images/index_06.jpg);">
+<table width="640" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="160" height="66" align="center"><a href="contact.html">联系我们</a></td>
+    <td width="160" align="center"><a href="map.html">交通指南</a></td>
+    <td width="160" align="center"><a href="news.html">新闻公告</a></td>
+    <td width="160" align="center"><a href="../../weibo.com/daliansunasia" target="_blank">官方微博</a></td>
+  </tr>
+</table>
+</div>
+
+</body>
+</html>
