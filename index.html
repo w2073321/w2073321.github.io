@@ -28,6 +28,23 @@ adhoc('init', {
 
  </head>
  <body >
+ <script>
+    function applyFlags(flags) {
+      if (flags.get('isNewHomePage') === true) {
+        var text = " Hey，我是试验版 :) ";
+      } else {
+        var text = " Hey, 我是原始版本！";
+      }
+      document.getElementById('flags').innerHTML = text;
+    }
+  </script>
+
+
+
+
+
+
+
  <header class="bgG">
  <div class="bgQ header">
  <div class="logo"><img src="mobile/images/logo.png" width="201" height="48" /></div>
@@ -122,7 +139,7 @@ adhoc('init', {
      <li class="fontG" data-url="http://m.gq.com.cn/fashion/news_1543c59553f4a643.html">全球7大拥有天神容貌新晋男模 </li>
     <li class="fontG" data-url="http://m.gq.com.cn/fashion/album_103g072f9e58b3e7.html">户外风吹：BEDWIN & THE HEARTBREAKERS 2013秋冬主题系列</li>
   </ul>
- <div class="gochannel bgQ" data-url="http://www.gq.com.cn/mobile/m_cat/cat/fashion/"><span>进入潮流频道</span></div>
+ <div  class="gochannel bgQ" onclick="adhoc('getFlags', applyFlags)" onclick="adhoc('track', 'clickTimes', 1,function(){ data-url="http://www.gq.com.cn/mobile/m_cat/cat/fashion/" }); return false;" ><span>进入潮流频道</span></div>
  </section>
  <!--end 潮流-->
 
