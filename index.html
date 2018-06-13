@@ -14,7 +14,7 @@
           <script src=https://sdk.appadhoc.com/ab.plus.js></script>
           <script>
           adhoc('init', {
-          appKey: 'ADHOC_bbae09e4-6141-4ec1-84f7-c4f9d1ed5320'
+          appKey: 'ADHOC_2fc7e159-f117-47d8-b1cb-68b2008c8ffe'
           })
           </script>
           <!-- adhoc sdk end -->
@@ -28,17 +28,17 @@
  <body >
  <script>
     function applyFlags(flags) {
-      if (flags.get('sibug') === 0) {
+      if (flags.get('button') === 0) {
         var text = " Hey，我是原始版 :) ";
-      } else if (flags.get('sibug') === 1){
+      } else if (flags.get('button') === 1){
         var text = " Hey, 我是试验1版本！";
-      }else if (flags.get('sibug') === 2){
+      }else if (flags.get('button') === 2){
         var text = " Hey, 我是原始版本！";
-      }else if (flags.get('sibug') === 3){
+      }else if (flags.get('button') === 3){
         var text = " Hey, 我是原始版本！";
-      }else if (flags.get('sibug') === 4){
+      }else if (flags.get('button') === 4){
         var text = " Hey, 我是原始版本！";
-      }else if (flags.get('sibug') === 5){
+      }else if (flags.get('button') === 5){
         var text = " Hey, 我是原始版本！";
       }
       document.getElementById('flags').innerHTML = text;
