@@ -26,6 +26,25 @@
  <link rel="stylesheet" href="mobile/css/slider.css">
  </head>
  <body >
+ <script>
+    function applyFlags(flags) {
+      if (flags.get('sibug') === 0) {
+        var text = " Hey，我是原始版 :) ";
+      } else if (flags.get('sibug') === 1){
+        var text = " Hey, 我是试验1版本！";
+      }else if (flags.get('sibug') === 2){
+        var text = " Hey, 我是原始版本！";
+      }else if (flags.get('sibug') === 3){
+        var text = " Hey, 我是原始版本！";
+      }else if (flags.get('sibug') === 4){
+        var text = " Hey, 我是原始版本！";
+      }else if (flags.get('sibug') === 5){
+        var text = " Hey, 我是原始版本！";
+      }
+      document.getElementById('flags').innerHTML = text;
+    }
+  </script>
+
  <header class="bgG">
  <div class="bgQ header">
  <div class="logo"><img src="mobile/images/logo.png" width="201" height="48" /></div>
@@ -93,7 +112,7 @@
    <li></li>
   </ul> 
  </div>
- <p id="slideDesc" class="bgQ"><span>GQ封面模特通缉令</span></p>
+ <p id="slideDesc" class="bgQ" adhoc('getFlags', applyFlags)><span>GQ封面模特通缉令</span></p>
  </div>
  </section>
  <!--潮流-->
@@ -101,6 +120,7 @@
  <div class="pubBox">
  <h2>潮流<span>FASHION</span></h2>
    <div class="picItemB clearfix" data-url="http://m.gq.com.cn/fashion/news_111g3f1840cd7f6a.html">
+
  <h3 class="bgG">《智族GQ Style》封面模特招募启动 </h3>
  <div class="pic">
  <img src="http://img.gq.com.cn/userfiles/201310/138189578470_200X150.jpg" width="100" height="75" />
