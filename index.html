@@ -15,11 +15,22 @@
           <script>
           adhoc('init', {
           appKey: 'ADHOC_073ea21b-06eb-405e-9fa5-88292cce3b83',
-            custom: {'login':false}
+            
           })
           </script>
-          <!-- adhoc sdk end -->
 
+          <!-- adhoc sdk end -->
+<script>
+    function applyFlags(flags) {
+      if (flags.get('webtest') === 1) {
+        var text = " Hey，我是试验版 :) ";
+      } else {
+        var text = " Hey, 我是原始版本！";
+      }
+      document.getElementById('flags').innerHTML = text;
+    }
+    adhoc('getFlags', applyFlags);
+  </script>
 
  <title>仿GQ男士网微官网手机wap杂志网站模板-【】</title>
  <link rel="stylesheet" href="mobile/css/global.css">
