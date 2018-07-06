@@ -26,8 +26,9 @@
    // js-adhoc-test02 隐藏
    
     function applyFlags(flags) {
-      js-adhoc-test.style.display="none";
-   js-adhoc-test02.style.display="none";
+      document.getElementById("js-adhoc-test").style.visibility="hidden";
+      document.getElementById("js-adhoc-test02").style.visibility="hidden";
+   
       if (flags.get('webtest') === 1) {
         js-adhoc-test02.style.display='block';
          
