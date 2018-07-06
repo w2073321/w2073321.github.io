@@ -21,6 +21,27 @@
 
           <!-- adhoc sdk end -->
 
+   <script>
+    
+   // js-adhoc-test02 隐藏
+   js-adhoc-test.style.display="none";
+   js-adhoc-test02.style.display="none";
+    function applyFlags(flags) {
+      if (flags.get('webtest') === 1) {
+        js-adhoc-test02.style.display='block';
+         
+      // js-adhoc-test 显示
+      id="js-adhoc-test"
+      } else {
+        js-adhoc-test.style.display='block';
+      // js-adhoc-test02 显示
+      }
+      
+    }
+    adhoc('getFlags', applyFlags);
+    
+  </script>
+
 
  <title>仿GQ男士网微官网手机wap杂志网站模板-【】</title>
  <link rel="stylesheet" href="mobile/css/global.css">
@@ -106,20 +127,10 @@
  <div class="pubBox">
  <h2>潮流<span>FASHION</span></h2>
    <div class="picItemB clearfix" data-url="http://m.gq.com.cn/fashion/news_111g3f1840cd7f6a.html">
-   <script>
-    function applyFlags(flags) {
-      if (flags.get('webtest') === 1) {
-        <h3 class="bgG">《吆喝 Style》我是原始版本已全面启动 </h3>
-      } else {
-        <h3 class="bgG">《吆喝 Style》我是实验版本版本还在路上 </h3>
-      }
-      document.getElementById('flags').innerHTML = text;
-    }
-    adhoc('getFlags', applyFlags);
-    
-  </script>
 
- 
+
+ <h3 id="js-adhoc-test"  class="bgG">《吆喝 Style》我是原始版本已全面启动 </h3>
+ <h3  id="js-adhoc-test02"  class="bgG">《吆喝 Style》我是实验版本版本还在路上 </h3>
  <div class="pic">
  <img src="http://img.gq.com.cn/userfiles/201310/138189578470_200X150.jpg" width="100" height="75" />
  </div>
