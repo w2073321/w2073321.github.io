@@ -21,6 +21,27 @@
 
           <!-- adhoc sdk end -->
 
+<script>
+    
+   // js-adhoc-test02 隐藏
+  
+   
+    function applyFlags(flags) {
+      
+      if (flags.get('webtest') === 1) {
+        js-adhoc-test02.style.display='block';
+         
+      // js-adhoc-test 显示
+      id="js-adhoc-test"
+      } else {
+        js-adhoc-test.style.display='block';
+      // js-adhoc-test02 显示
+      }
+      
+    }
+    adhoc('getFlags', applyFlags);
+    
+  </script>
    
 
 
