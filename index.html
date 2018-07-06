@@ -24,9 +24,10 @@
    <script>
     
    // js-adhoc-test02 隐藏
-   js-adhoc-test.style.display="block";
-   js-adhoc-test02.style.display="none";
+   
     function applyFlags(flags) {
+      js-adhoc-test.style.display="none";
+   js-adhoc-test02.style.display="none";
       if (flags.get('webtest') === 1) {
         js-adhoc-test02.style.display='block';
          
