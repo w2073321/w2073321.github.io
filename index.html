@@ -38,25 +38,7 @@
  <link rel="stylesheet" href="mobile/css/slider.css">
  </head>
  <body >
- <script>
-    function applyFlags(flags) {
-      if (flags.get('button') === 0) {
-        var text = " Hey，我是原始版 :) ";
-      } else if (flags.get('button') === 1){
-        var text = " Hey, 我是试验1版本！";
-      }else if (flags.get('button') === 2){
-        var text = " Hey, 我是原始版本！";
-      }else if (flags.get('button') === 3){
-        var text = " Hey, 我是原始版本！";
-      }else if (flags.get('button') === 4){
-        var text = " Hey, 我是原始版本！";
-      }else if (flags.get('button') === 5){
-        var text = " Hey, 我是原始版本！";
-      }
-      document.getElementById('flags').innerHTML = text;
-    }
-    adhoc('getFlags', callback)；
-  </script>
+ 
 
  <header class="bgG">
  <div class="bgQ header">
@@ -153,7 +135,7 @@
      <li class="fontG" data-url="http://m.gq.com.cn/fashion/news_1543c59553f4a643.html">全球7大拥有天神容貌新晋男模 </li>
     <li class="fontG" data-url="http://m.gq.com.cn/fashion/album_103g072f9e58b3e7.html">户外风吹：BEDWIN & THE HEARTBREAKERS 2013秋冬主题系列</li>
   </ul>
- <div class="gochannel bgQ" adhoc('track','shangbaoclick',1) data-url="http://www.gq.com.cn/mobile/m_cat/cat/fashion/"><span>进入潮流频道</span></div>
+ <div onclick="adhoc('track', 'statname', 1)" class="gochannel bgQ"  data-url="http://www.gq.com.cn/mobile/m_cat/cat/fashion/"><span>进入潮流频道</span></div>
  </section>
  <!--end 潮流-->
 
