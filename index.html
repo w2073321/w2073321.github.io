@@ -25,7 +25,7 @@
         var text = " Hey, 我是原始版本！";
       }
       document.getElementById('flags').innerHTML = text;
-      adhoc('getFlags',applyFlags);
+      
     }
   </script>
 <title>I'm QQ - 每一天，乐在沟通</title>
@@ -597,13 +597,14 @@ location.href = 'http://im.qq.com/mobileqq/touch/index.html';
 <!--E main-->
 
 <!--S sidebar nav-->
-<div class="sdnav">
+<div adhoc('getFlags',applyFlags); class="sdnav">
     <ul id="sdnav">
         <li tabid="0" class="current">首页</li>
         <li tabid="1">全新界面</li>
         <li tabid="2">精彩动态</li>
         <li tabid="3">多人视频</li>
     </ul>
+
 </div>
 <!--E sidebar nav-->
 
