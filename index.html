@@ -23,24 +23,24 @@
 
 <script>
    //js-adhoc-test02 隐藏
-  var js_adhoc_test = document.getElementById('js-adhoc-test')；
-  var js_adhoc_test02 = document.getElementById('js-adhoc-test02')；
+  // var js_adhoc_test = document.getElementById('js-adhoc-test')；
+  // var js_adhoc_test02 = document.getElementById('js-adhoc-test02')；
    
     function applyFlags(flags) {
       
       if (flags.get('webtest') === true) {
-        js_adhoc_test.style.display='block'；
-         
+          
       // js-adhoc-test 显示
       
       } else {
-       js_adhoc_test2.style.display='block'；
+
+       
       // js-adhoc-test02 显示
       }
       
     }
-   adhoc('getFlags', applyFlags)；
     
+    adhoc('getFlags', applyFlags)；
   </script>
    
 
