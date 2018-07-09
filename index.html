@@ -1,16 +1,13 @@
-﻿<!DOCTYPE HTML>
-<html>
- <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
- <meta content="yes" name="apple-mobile-web-app-capable" /> 
- <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
- <meta content="telephone=no" name="format-detection" />
- <link rel="apple-touch-icon" href="mobile/images/apply/logo.png"/>
- <link rel="apple-touch-icon-precomposed" href="mobile/images/apply/logo.png" />
- <link rel="apple-touch-startup-image" href="mobile/images/apply/logo-640.png" />
-
- <!-- adhoc sdk -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="QQ,手机QQ,MacQQ,QQ2015,QQ2014,QQ2013,空间,Qzone,语音通话,QQ钱包,设备锁,电话,聊天,交友,社交,群,传文件,语音,视频,照片,图片,附近,通话,chat,tencent,腾讯" />
+<meta itemprop="name" content="I'm QQ - 每一天，乐在沟通"/>
+<meta name="description" itemprop="description" content="灵动界面，轻简架构，多人音视频，QQ5.0玩到根本停不下来！" />
+<meta itemprop="image" content="http://im-img.qq.com/mobileqq/touch/img/v5/rich.png" />
+<!-- adhoc sdk -->
           <script src=https://sdk.appadhoc.com/ab.plus.js></script>
           <script>
           adhoc('init', {
@@ -20,349 +17,697 @@
           </script>
 
           <!-- adhoc sdk end -->
-
-<script>
-   //js-adhoc-test02 隐藏
-  // var js_adhoc_test = document.getElementById('js-adhoc-test')；
-  // var js_adhoc_test02 = document.getElementById('js-adhoc-test02')；
-   
+  <script>
     function applyFlags(flags) {
-      
-      if (flags.get('webtest') ===0) {
-          
-      // js-adhoc-test 显示
-      
+      if (flags.get('webtest') === 1) {
+        var text = " Hey，我是试验版 :) ";
       } else {
-
-       
-      // js-adhoc-test02 显示
+        var text = " Hey, 我是原始版本！";
       }
-      
+      document.getElementById('flags').innerHTML = text;
+      adhoc('getFlags',applyFlags);
     }
-    
-    adhoc('getFlags', applyFlags)；
   </script>
-   
+<title>I'm QQ - 每一天，乐在沟通</title>
+<style type="text/css">
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family:"microsoft yahei", "宋体", Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size:100%;}
+html,body{ width: 100%; min-width: 1003px; overflow: hidden; color:#333}
+ul,ol,li{ list-style:none;}
+a:link, a:visited{ color:#333; text-decoration:none;}
+img{ border:none;}
+em{ font-style:normal;}
+h1,h2,h3,h4,h5{ font-weight:normal;}
+.initbody{ position: fixed; top: 0;}
+.w960{ width:960px; margin:0 auto;}
+.topic{ position: absolute; left: 0; top: 0; width:100%; min-width:1003px; height:64px; background:#cbedf9; z-index: 10000;}
+.topBar{ float:left; width:236;}
+.topBar a{ display:block; width:246px; height:0px; overflow:hidden; padding-top:64px; font-size:0; background:transparent url(mobileqq/img/v50/logo.png) no-repeat 0 6px;}
+
+.topTool{ float:right; width:500px; overflow:hidden; font-size:0.75em;}
+.topTool div{ width:100%; text-align:right;}
+.topTool .login{ height:39px; line-height:39px;}
+.topTool .login span{ padding:0 12px; color:#cecece;}
+.topTool a:link, .topTool a:visited{ color:#666;}
+.topTool a:hover{ color:#333;}
+.topTool .flashData{ line-height:17px;}
+.flashData a{ padding-left:25px; background:transparent url(home/img/q2013/xymap.png) no-repeat left center;}
+.flashData a:hover{ text-decoration:underline;}
+
+.bgscroll{ width: 100%; position: absolute; left: 0; top: 0; z-index: -1;}
+.mbbg{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; font-size: 0; line-height: 0; z-index: -1;}
+.mbbg img{ width: 100%; height: 100%; min-width: 1003px;}
+
+.sdnav{ position: absolute; right: 0; top: 50%; width: 225px; height: 156px; margin-top: -78px; z-index: 9000;}
+.sdnav ul{ float: right; width: 125px; padding-right: 100px;}
+.sdnav li{ float: right; width: 100px; height: 39px; padding-right: 18px; background:transparent url(mobileqq/img/v50/n_normal.png) no-repeat right center; cursor: pointer; font-size: 16px; color: #fff; line-height: 39px; text-align: right;}
+.sdnav li.current{background:transparent url(mobileqq/img/v50/n_selected.png) no-repeat right center;}
+
+/* main css */
+
+.maincon{ width: 100%; height: 100%;}
+.fixrelative{ position: absolute; left: 0; top: 0; width: 100%; -webkit-transition : -webkit-transform 1s ease; -moz-transition : -moz-transform 1s ease; -o-transition : -o-transform 1s ease; transition : transform 1s ease;}
+.mbwrap{ position: relative; width: 878px; height: 100%; margin: 0 auto;}
+.figure{ position: relative; width: 100%; height: 100%; background-repeat: no-repeat; background-position:  top center; z-index: 1000;}
+
+.downInfo{ position: absolute; width: 100%; left: 0; top: 0; z-index: 9000;}
+.vers{ position: relative; width: 274px; margin: 0 auto; padding-top: 100px;}
+.vers h2{ width: 144px; height: 0px; margin: 0 auto; padding-top: 106px; overflow: hidden; font-size: 0; line-height: 0; background:transparent url(mobileqq/img/v50/s_mb5.png) no-repeat -65px 0;}
+.vers sup{ position: absolute; right: -39px; top: 100px; width: 90px; height: 0px; padding-top: 33px; overflow: hidden; font-size: 0; line-height: 0; background:transparent url(mobileqq/img/v50/s_mb5.png) no-repeat right top;}
+.vers p{ width: 100%; height: 0; padding-top: 48px; overflow: hidden; font-size: 0; line-height: 0; background:transparent url(mobileqq/img/v50/s_mb5.png) no-repeat 0 -106px; text-indent: -9999px;}
+.vers a.downtouch{ display: block; width: 184px; height: 55px; margin: 0 auto 15px; overflow: hidden;text-indent: -500px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat -69px -187px;}
+.vers a.downtouch:hover{background:transparent url(mobileqq/img/v50/hover.png) no-repeat 0 -1px;}
+
+.vers a.vediotouch{ display: block; width: 155px; height: 26px; margin: 0 auto; overflow: hidden; text-indent: -500px; background:transparent url(mobileqq/img/v50/vedio.png) no-repeat 0 0;}
+.vers a.vediotouch:hover{background-image: url(mobileqq/img/v50/vedio_hover.png);}
+
+.fpic{ position: absolute; width: 100%; top: 407px;}
+.ph1{ width: 217px; height: 458px; margin: 0 auto;}
+.ph1 img{ width: 100%;}
 
 
- <title>仿GQ男士网微官网手机wap杂志网站模板-【】</title>
- <link rel="stylesheet" href="mobile/css/global.css">
- <link rel="stylesheet" href="mobile/css/color.css"> 
- <link rel="stylesheet" href="mobile/css/slider.css">
- </head>
- <body >
- 
+.ph2txt, .ph3txt, .ph4txt,.ph2img, .ph3img, .ph4img{ position: absolute; left: 0; top: 50%;}
+.ph2txt{ width: 310px; margin-top: -167px;}
+.ph2txt h2{ background:transparent url(mobileqq/img/v50/ph2txt_s.png) no-repeat 0 0;}
+.ph2txt p{ background:transparent url(mobileqq/img/v50/ph2txt_s.png) no-repeat 0 -55px;}
+.ph2txt span{ margin-left: -44px;}
+.ph2img{ left: 345px; margin-top: -163px;}
+.ph2ani{position: relative; width: 491px; height:325px;}
+.ph2ani div{position: absolute; left: 0; top: 0; width: 398px; height: 246px; }
+.ph2ani img{ width: 100%; height: 100%;}
+.ph2ani div.ph2-0{ width: 491px; height:325px; z-index: 0;}
+.ph2ani .ph2-1{ left: 49px; top: 26px; z-index: 1;}
+.ph2ani .ph2-2{ left: 49px; top: 26px; z-index: 2}
+.ph2ani .ph2-3{ left: 49px; top: 26px; z-index: 3;}
+.ph2ani .ph2-4{ left: 284px; top: 32px; z-index: 4; width: 33px; height: 23px; opacity: 0;}
+.ph2ani .ph2-4 img{ width: auto; height: auto;}
+.ph2ani .ph2-5{ left: 49px; top: 26px; z-index: 5;}
+.ltie .ph2ani .ph2-2{top:-5px;}
+.ltie .ph2ani .ph2-3{ top: -30px;}
+.ltie .ph2ani .ph2-4, .ltie .ph2ani .ph2-5{ display: none;}
 
- <header class="bgG">
- <div class="bgQ header">
- <div class="logo"><img src="mobile/images/logo.png" width="201" height="48" /></div>
- <span class="bgG navMenu">导航</span>
- </div>
- <nav class="navList clearfix">
- <ul>
- <li><a href="default.htm">首页</a></li>
- <li><a href="fun/default.htm">好玩</a></li>
- <li><a href="fashion/default.htm">潮流</a></li>
- <li><a href="gadget/default.htm">器物</a></li>
- <li><a href="girl/default.htm">女人</a></li>
- <li><a href="living/default.htm">生活</a></li>
- <li><a href="celebrity/default.htm">人物</a></li>
- <li><a href="watch/default.htm">腕表</a></li>
- <li><a href="column/default.htm">专栏</a></li> 
- <li><a href="feature/default.htm">专题</a></li>
- <li><a href="../shows.m.gq.com.cn/default.htm">秀场</a></li>
- <li><a href="../brand.m.gq.com.cn/default.htm">品牌</a></li>
- <li><a href="../bbs.m.gq.com.cn/default.htm">论坛</a></li>
- <li><a href="magazine/default.htm">杂志</a></li>
- <li><a href="wireless.html">应用</a></li>
- <!--li><a href="http://m.gq.com.cn/topic/">话题</a></li-->
- <!--li><a href="http://m.gq.com.cn/car/">汽车</a></li-->
+.ph3txt{ width: 308px; margin-top: -97px;}
+.ph3txt h2{ background:transparent url(mobileqq/img/v50/ph3txt_s.png) no-repeat 0 0;}
+.ph3txt p{ background:transparent url(mobileqq/img/v50/ph3txt_s.png) no-repeat 0 -55px;}
+.ph3txt img{ margin-top: 20px;}
+.ph3img{ left: 337px; width: 217px; height: 458px; margin-top: -229px;}
+.ph3img img{ width: 100%;}
+.ph3ani{ position: absolute; left: 610px; top: 50%; margin: -92px 0 0 0; width: 196px; height: 184px;z-index: 6;}
+.ph3ani div{position: absolute; left: 0; top: 0; width: 196px; height: 184px; background-repeat: no-repeat;}
+.ph3-ani img{ width: 100%; height: 100%;}
+.ph3ani .ph3-1{ background-image:url(mobileqq/img/v50/ph3-1_s.png); background-position: center center; z-index: 10}
+.ph3ani .ph3-2{ z-index: 2}
+.ph3ani div.ph3-3{ left: 80px; top: 65px; width: 45px; height: 39px; z-index: 7;}
+.ph3ani div.ph3-4{ left: 80px; top: 65px; width: 36px; height: 43px; z-index: 8;}
+.ph3ani div.ph3-5{ left: 76px; top: 69px; width: 46px; height: 43px; z-index: 9;}
+/* .ph3ani div.ph3-3{ left: 103px; top: 163px; width: 45px; height: 39px; z-index: 7;}
+.ph3ani div.ph3-4{ left: 168px; top: 37px; width: 36px; height: 43px; z-index: 8;}
+.ph3ani div.ph3-5{ left: -10px; top: 26px; width: 46px; height: 43px; z-index: 9;} */
+.ph3ani img{ width: 100%; margin: 0;}
 
- </ul>
- </nav>
- </header>
- <div class="wrapper">
- <div id="content" >
- <!--焦点图 -->
- <section >
- <div class="index-slider slide-player bgG">
- 
- <div class="slide-list">
- <ul class="clearfix" style="">
- <li desc="GQ封面模特通缉令">
- <div class="slide-item">
- <img src="http://img.gq.com.cn/userfiles/201310/138197757175.jpg" data-src="http://img.gq.com.cn/userfiles/201310/138197757175.jpg" data-url="http://bbs.gq.com.cn/model/">
- </div>
- </li>
- <li desc="入手Xbox One你得知道这些！">
- <div class="slide-item">
- <img src="http://img.gq.com.cn/userfiles/201311/138534956661_640X288.jpg" data-src="http://img.gq.com.cn/userfiles/201311/138534956661_640X288.jpg" data-url="http://m.gq.com.cn/gadget/album_11ggae40e1b51be0.html">
- </div>
- </li>
- <li desc="享受自由tapas 京城最热门西班牙餐厅">
- <div class="slide-item">
- <img src="http://img.gq.com.cn/userfiles/201311/138491666563_640X288.jpg" data-src="http://img.gq.com.cn/userfiles/201311/138491666563_640X288.jpg" data-url="http://m.gq.com.cn/living/news_18443d8b57ee87c0.html">
- </div>
- </li>
- <li desc="新品尝鲜 假期必玩游戏大作">
- <div class="slide-item">
- <img src="http://img.gq.com.cn/userfiles/201310/138077337338_640X288.jpg" data-src="http://img.gq.com.cn/userfiles/201310/138077337338_640X288.jpg" data-url="http://m.gq.com.cn/gadget/album_12413480721ff9f1.html">
- </div>
- </li>
+.ph4txt{ width: 289px; margin-top: -116px;}
+.ph4txt img{ margin-top: 25px;}
+.ph4txt h2{ background:transparent url(mobileqq/img/v50/ph4txt_s.png) no-repeat 0 0;}
+.ph4txt p{ background:transparent url(mobileqq/img/v50/ph4txt_s.png) no-repeat 0 -55px;}
+.ph4img{ left: 349px; margin-top: -254px;}
+.ph4ani{position: relative; width: 192px; height:507px;}
+.ph4ani div{position: absolute; left: 0; top: 0; width: 164px; height: 385px; background-repeat: no-repeat; }
+.ph4ani img{ width: 100%;}
+.ph4ani .ph4-0{ width: 192px; height: 507px; z-index: 1;}
+.ph4ani .ph4-1{ left: 142px; top: 335px; width: 33px; height: 44px; z-index: 1;}
+.ph4ani .ph4-2{ left: 23px; top: 57px; z-index: 2}
+.ph4ani .ph4-3{ left: 23px; top: 60px; z-index: 3;}
+.ph4ani div.ph4-4{ width: 192px; height: 507px; left: 266px; z-index: 3;}
+.ph4ani .ph4-5{ left: 123px; top: 238px; width: 38px; height: 81px;  z-index: 4;}
 
- </ul>
- </div>
- <div class="bottom-line"></div>
- <div class="slide-controler clearfix"> 
- <ul class="slide-triggers">
-  <li class="bgQ"></li>
-   <li></li>
-   <li></li>
-   <li></li>
-  </ul> 
- </div>
- <p id="slideDesc"  class="bgQ"><span>GQ封面模特通缉令</span></p>
- </div>
- </section>
- <!--潮流-->
- <section>
- <div class="pubBox">
- <h2>潮流<span>FASHION</span></h2>
-   <div class="picItemB clearfix" data-url="http://m.gq.com.cn/fashion/news_111g3f1840cd7f6a.html">
+.phfg h2{ width: 310px; height: 0; overflow: hidden; padding-top: 55px; font-size: 0; line-height: 0; text-indent: -9999px;}
+.phfg p{ width: 310px; height: 0; overflow: hidden; padding-top: 64px; font-size: 0; line-height: 0; text-indent: -9999px;}
+
+.downfloor{ display: none; position: absolute; left: 50%; top:50%;  width: 700px; height: 420px; margin: -210px 0 0 -350px; z-index: 9999;}
+.msgbox{ width: 700px; height: 420px; margin: 0 auto; background: #fff; border-radius: 3px;}
+.msgclose{ float: right; width: 36px; height: 36px; overflow: hidden; margin: 15px 15px 54px 0; text-indent: -999px; background:transparent url(mobileqq/img/v50/close.png) no-repeat 0 0;}
+.msgbody{ clear: both; width: 400px; margin: 0 auto;}
+.msgdesc{ height: 38px; color: #111; font-size: 16px;}
+.msgcode{ float: left; width: 130px; height: 130px; overflow: hidden; border: 1px solid #e8e8e8;}
+.msgcode img{ width: 100%; height: 100%;}
+.msgbtns{ float: right; width: 238px;}
+.msgbtns a{ display: block; width: 224px; height: 54px; overflow: hidden; text-indent: -999px; background:transparent url(mobileqq/img/v50/downbtns.png) no-repeat 0 0;}
+.msgbtns a.iph{ margin-bottom: 23px; background-position: 0 0;}
+.msgbtns a.iph:hover{ background-position: 0 -55px;}
+.msgbtns a.and{ background-position: 0 -110px;}
+.msgbtns a.and:hover{ background-position: 0 -165px;}
+.msgmore{clear: both; padding: 25px 10px 0 0; text-align: right;}
+.msgmore a:link, .msgmore a:visited{ color: #00a4e3;}
+.hide{ display: none;}
+.show{ display: block;}
+.footfg{ position: relative; height: 126px;}
+.ftbg{ position: absolute; left: 0; top: 0; width: 100%; height: 126px; background: #00aef3; opacity: 0.2; z-index: 100; filter:alpha(opacity=20);}
+.footer{ position: absolute; left: 0; top: 0; width: 100%; height: 80px; padding-top:45px; text-align:center; line-height:23px; color:#fff; font-size:0.75em; z-index: 99999;}
+
+.flashBox{background:url(online/images/loading.gif) no-repeat 50% 40%;width:910px;height:auto;}
+.overlay{ display:none; position:absolute; left:0; top:0; z-index:99990; width:100%; height:100%; background-color:#000; opacity:0.9;}
+#flashDiv{ position:absolute; left:50%; top:50%; width:978px; height:700px; margin:-350px 0 0 -489px; display:none; z-index:99999;}
+.flashBar{ float:right; width:67px;}
+.flashBar a{ display:block; width:67px; height:0; overflow:hidden; padding-top:67px; background:#000 url(home/img/q2013/flahicons.png) no-repeat 0 0; border-bottom:1px solid #333;}
+.flashBar a.close{ background-position:14px 14px;}
+.flashBar a.sharetozone{ background-position:14px -52px;}
+.flashBar a.sharetoweibo{ background-position:14px -120px;}
+.flashBar a.close:hover{ background-position:-52px 14px;}
+.flashBar a.sharetozone:hover{ background-position:-52px -52px;}
+.flashBar a.sharetoweibo:hover{ background-position:-52px -120px;}
+.login_div { display: none; position: fixed; left: 50%; top: 50%; width: 622px; height: 368px; margin: -184px 0 0 -311px; z-index: 99999;}
+
+#myVideo{ width: 700px; height: 434px; overflow: hidden;}
+.videoArea{ display: none; position: fixed; left: 50%; top: 50%; width: 700px; height: 434px; margin:-217px 0 0 -350px; border:1px solid #000; box-shadow: 0 16px 25px rgba(0, 0, 0, 0.5); z-index: 100000;}
+.videoArea .close{ position: absolute; right: -30px; top: -30px; width: 60px; height: 60px; background:transparent url(mobileqq/img/v50/cancle.png) no-repeat 0 0; z-index: 100002;}
+
+/*#figph1 .mbwrap, #page1 #figph2 .mbwrap, #page2 #figph3 .mbwrap, #page3 #figph4 .mbwrap, #page4 #figph4 .mbwrap{ display: block;}*/
+
+#page1 .trans1 .ph2-4, .sc_2_fi{
+    -webkit-animation: fadeInOut 1s ease 2s;
+    -moz-animation: fadeInOut 1s ease 2s;
+    -o-animation: fadeInOut 1s ease 2s;
+    animation: fadeInOut 1s ease 2s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#page1 .trans1 .ph2-2 ,.secAni{
+    -webkit-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -moz-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -o-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#page1 .trans1 .ph2-3, .thiAni{
+    -webkit-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -moz-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -o-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#page2 .trans1 .ph3-ani,.toscale{
+    -webkit-animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -moz-animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -o-animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-1,.pop1{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+#page3 .trans1 .ph4-2, .pop2{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-3, .pop3{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-5, .pop5{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page1 .trans1 .ph2-5, .pop6{
+    -webkit-animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    -moz-animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    -o-animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-4, .moveInLeft {
+    -webkit-animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    -moz-animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    -o-animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page1 .trans1 .ph2txt, #page2 .trans1 .ph3txt, #page3 .trans1 .ph4txt, .txtLeft {
+    -webkit-animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    -moz-animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    -o-animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+@-o-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-ms-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes fadeInOut {
+    0%,100% { opacity: 0;}
+    50% { opacity: 1;}
+}
+@-moz-keyframes fadeInOut {
+    0%,100% {opacity: 0; }
+    50% {opacity: 1; }
+}
+@-webkit-keyframes fadeInOut {
+    0%,100% {opacity: 0;}
+    50% {opacity: 1; }
+}
+@-o-keyframes fadeInOut {
+    0%,100% { opacity: 0;}
+    50% { opacity: 1;}
+}
+@-ms-keyframes fadeInOut{
+    0%,100%{ opacity: 0;}
+    50% { opacity: 1;}
+}
+
+@keyframes toscale {
+    0%{ transform: scale(0);}
+    100% { transform: scale(1);}
+}
+@-moz-keyframes toscale {
+    0%{ transform: scale(0);}
+    100% { transform: scale(1);}
+}
+@-webkit-keyframes toscale {
+    0%{ -webkit-transform: scale(0);}
+    100% { -webkit-transform: scale(1);}
+}
+@-o-keyframes toscale {
+    0%{ -o-transform: scale(0);}
+    100% { -o-transform: scale(1);}
+}
+@-ms-keyframes toscale{
+    0%{ -ms-transform: scale(0);}
+    100% { -ms-transform: scale(1);}
+}
+
+@keyframes secAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%,50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-moz-keyframes secAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%,50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-webkit-keyframes secAni{
+0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+25%,50%{-webkit-transform:translateY(-30px);opacity: 1;}
+}
+
+@-o-keyframes secAni{
+0%,100%{-o-transform:translateY(0);opacity: 0;}
+25%,50%{-o-transform:translateY(-30px);opacity: 1;}
+}
+@-ms-keyframes secAni{
+0%,100%{-ms-transform:translateY(0);opacity: 0;}
+25%,50%{-ms-transform:translateY(-30px);opacity: 1;}
+}
+
+@keyframes thiAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%{transform:translateY(-60px);opacity: 1;}
+50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-moz-keyframes thiAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%{transform:translateY(-60px);opacity: 1;}
+50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-webkit-keyframes thiAni{
+0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+25%{-webkit-transform:translateY(-60px);opacity: 1;}
+50%{-webkit-transform:translateY(-30px);opacity: 1;}
+}
+
+@-o-keyframes thiAni{
+0%,100%{-o-transform:translateY(0);opacity: 0;}
+25%{-o-transform:translateY(-60px);opacity: 1;}
+50%{-o-transform:translateY(-30px);opacity: 1;}
+}
+@-ms-keyframes thiAni{
+0%,100%{-ms-transform:translateY(0);opacity: 0;}
+25%{-ms-transform:translateY(-60px);opacity: 1;}
+50%{-ms-transform:translateY(-30px);opacity: 1;}
+}
+
+@keyframes slidepop{
+0%{transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-moz-keyframes slidepop{
+0%{-moz-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-moz-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-webkit-keyframes slidepop{
+0%{-webkit-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-webkit-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-o-keyframes slidepop{
+0%{-o-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-o-transform:translateY(0) translateY(0);opacity: 1;}
+}
+@-ms-keyframes slidepop{
+0%{-ms-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-ms-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@keyframes moveInLeft {
+    0% { transform:translateX(-127px); opacity: 0;}
+    100% {transform:translateX(0px); opacity: 1;}
+}
+@-moz-keyframes moveInLeft {
+    0% {transform:translateX(-127px); opacity: 0; }
+    100% {transform:translateX(0px); opacity: 1; }
+}
+@-webkit-keyframes moveInLeft {
+    0% {-webkit-transform:translateX(-127px); opacity: 0;}
+    100% { -webkit-transform:translateX(0px); opacity: 1; }
+}
+@-o-keyframes moveInLeft {
+    0% {-o-transform:translateX(-127px); opacity: 0;}
+    100% {-o-transform:translateX(0px); opacity: 1;}
+}
+@-ms-keyframes moveInLeft {
+    0% { -ms-transform:translateX(-127px); opacity: 0;}
+    100% {-ms-transform:translateX(0px); opacity: 1;}
+}
 
 
- <h3   id='js-adhoc-test'   style="display:none;" class="bgG">《吆喝 Style》我是实验版本版本还在路上 </h3>
- <h3   id='js-adhoc-test02' style="display:none;" class="bgG">《吆喝 Style》我是原始版本版本已到达 </h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201310/138189578470_200X150.jpg" width="100" height="75" />
- </div>
- <p>中国男性时尚领军媒体《智族GQ Style》首度携手Emporio Armani，隆重启动2013封面模特招募。</p>
- </div>
-     <div class="picItemB clearfix" data-url="http://m.gq.com.cn/fashion/news_16133d4c33eb7921.html">
- <h3 class="bgG">秋冬靴款大集结：复古摩登切尔西靴</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138492252045_200X150.jpg" width="100" height="75" />
- </div>
- <p>充满英伦风格的切尔西靴，侧面橡皮筋无鞋带、高脚踝、窄鞋型、摇滚复古摩登感让它出现至今一个世纪以来仍然备受大众喜爱。秋冬时节，他是男人脚上的好伙伴，舒适，保暖，有型，易穿搭。时尚型男们可不要忘记，众多秋冬靴款当中，切尔西靴可是很好的选择。</p>
- </div>
-      </div>
- <ul class="indexList indexList">
-      <li class="fontG borderQ first" onclick="adhoc('track','shangbaoclick',1)"  data-url="http://m.gq.com.cn/fashion/news_14329764a90b2147.html">GQ Style封面模特通缉令14强出炉</li>
-     <li class="fontG" data-url="http://m.gq.com.cn/fashion/news_1543c59553f4a643.html">全球7大拥有天神容貌新晋男模 </li>
-    <li class="fontG" data-url="http://m.gq.com.cn/fashion/album_103g072f9e58b3e7.html">户外风吹：BEDWIN & THE HEARTBREAKERS 2013秋冬主题系列</li>
-  </ul>
- <div  class="gochannel bgQ"  data-url="http://www.gq.com.cn/mobile/m_cat/cat/fashion/"><span>进入潮流频道</span></div>
- </section>
- <!--end 潮流-->
+@media screen and (min-width:1700px) {
+    .mbwrap{ width: 1218px;}
+    .vers{ width: 314px; padding-top: 100px;}
+    .vers h2{ width: 192px; padding-top: 135px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat -61px 0;}
+    .vers sup{ right: -63px; top: 100px; width: 110px; height: 0px; padding-top: 39px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat right top;}
+    .vers p{  padding-top: 52px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat 0 -135px;}
+    .fpic{top: 506px;}
+    .ph1{ width: 294px; height: 621px;}
 
- <!--器物-->
- <section>
- <div class="pubBox">
- <h2>器物<span>GADGET</span></h2>
-   <div class="picItemB clearfix" data-url="http://m.gq.com.cn/gadget/news_15g396e0bf111d8a.html">
- <h3 class="bgG">家用3D打印时代来临 入门级3D打印机推荐</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138534746333_200X150.jpg" width="100" height="75" />
- </div>
- <p>3D打印早已不是新鲜事，如今GQ读者可以根据我们的推荐自己在家感受3D打印。</p>
- </div>
-     <div class="picItemB clearfix" data-url="http://m.gq.com.cn/gadget/news_1312d12ff4ace6ea.html">
- <h3 class="bgG">移动互联网时代 谁能成为第四代操作系统</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138509049326_200X150.jpg" width="100" height="75" />
- </div>
- <p>说到手机操作系统，你对于iOS和Android一定不会陌生，在操作系统经历了Symbian OS到Android、iOS的进化之后，操作系统又开启了新一轮的更新与竞争，Android、iOS能否继续统领操作系统?又会有谁能够成为第四代操作系统的代表呢?
-</p>
- </div>
-      </div>
- <ul class="indexList indexList">
-      <li class="fontG borderQ first" data-url="http://m.gq.com.cn/gadget/news_14422ec624547cc2.html">iOS遥控玩具玩起来</li>
-     <li class="fontG" data-url="http://m.gq.com.cn/gadget/album_11ggae40e1b51be0.html">做足功课 入手Xbox One你得知道这些</li>
-    <li class="fontG" data-url="http://m.gq.com.cn/gadget/news_18g4ac0d477c716e.html">Xbox One和PS4将替代电视盒？</li>
-  </ul>
- <div class="gochannel bgQ" data-url="http://www.gq.com.cn/mobile/m_cat/cat/gadget/"><span>进入器物频道</span></div>
- </section>
- <!--end 器物-->
+    .ph2txt{ width: 365px; margin-top: -183px;}
+    .ph2txt h2{ background:transparent url(mobileqq/img/v50/ph2txt.png) no-repeat 0 0;}
+    .ph2txt p{ background:transparent url(mobileqq/img/v50/ph2txt.png) no-repeat 0 -71px;}
+    .ph2txt span{ margin-left: -44px;}
 
- <!--腕表-->
- <section>
- <div class="pubBox">
- <h2>腕表<span>WATCH</span></h2>
-   <div class="picItemB clearfix" data-url="http://m.gq.com.cn/watch/news_18153225cdb719ee.html">
- <h3 class="bgG">型男都代言腕表 吴彦祖代言西铁城</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138536968578_200X150.jpg" width="100" height="75" />
- </div>
- <p>近日，全球知名腕表品牌西铁城宣布正式启用国际巨星吴彦祖先生担任其中国大陆地区最新品牌形象代言人，其演绎的“用信念，造就更好的自己”为主题的平面广告形象也开始陆续出现在终端。作为一位国际影星，拥有俊朗帅气外表的吴彦祖在整个华语地区拥有巨大的号召力，而在盛誉之下，吴彦祖更是一位内心充满激情、坚守信念、并渴望挑战与突破，追求完美的影坛开拓者，这种特质也正与西铁城的品牌基因不谋而合。</p>
- </div>
-     <div class="picItemB clearfix" data-url="http://m.gq.com.cn/watch/news_114g3f69cbcc3142.html">
- <h3 class="bgG">温暖圣诞季 高级腕表献心意</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138536740455_200X150.jpg" width="100" height="75" />
- </div>
- <p>“圣诞”、“新年”，这两个尘封一年的喜悦代名词，随着时间的脚步，又一次来到了我们的面前。瑞士高级制表品牌爱彼（Audemars Piguet）精心挑选了爱彼皇家橡树系列41毫米自动上链腕表和女装自动上链腕表，以及爱彼Jules Audemars系列自动上链腕表和女装系列小秒针腕表，呈上尊贵的圣诞新年惊喜，在冬日中为你打造盎然的春天。</p>
- </div>
-      </div>
- <ul class="indexList indexList">
-      <li class="fontG borderQ first" data-url="http://m.gq.com.cn/watch/news_113g9f57340cd464.html">提高“瑞士制造”门槛 就能应对制表末落？</li>
-     <li class="fontG" data-url="http://m.gq.com.cn/watch/news_121134af70014c43.html">百年灵宾利世界时间计时腕表慕尚特别版</li>
-    <li class="fontG" data-url="http://m.gq.com.cn/watch/news_16536d9a9be6c74d.html">帝舵表“表显风格，帝舵之夜”即将开幕</li>
-  </ul>
- <div class="gochannel bgQ" data-url="http://www.gq.com.cn/mobile/m_cat/cat/watch/"><span>进入腕表频道</span></div>
- </section>
- <!--end 腕表-->
+    .ph2img{ left: 400px; margin-top: -224px;}
+    .ph2ani{ width: 680px; height:448px;}
+    .ph2ani div{position: absolute; left: 0; top: 0; width: 564px; height: 347px; }
+    .ph2ani div.ph2-0{ width: 680px; height: 448px;}
+    .ph2ani .ph2-1{ left: 63px; top: 33px; z-index: 1;}
+    .ph2ani .ph2-2{ left: 63px; top: 33px; z-index: 2}
+    .ph2ani .ph2-3{ left: 63px; top: 33px; z-index: 3;}
+    .ph2ani .ph2-4{ left: 405px; top: 45px; z-index: 4;}
+    .ph2ani .ph2-5{ left: 63px; top: 33px; z-index: 5;}
 
- <!--好玩-->
- <section>
- <div class="pubBox">
- <h2>好玩<span>FUN</span></h2>
-   <div class="picItemA" data-url="http://m.gq.com.cn/fun/news_121139fa06055ca9.html">
- <h3 class="bgG">超唯美的杯中倒影</h3>
- <div class="pic clearfix">
- <img src="http://img.gq.com.cn/userfiles/201311/1385106017341_temp_200X150.jpg" width="100" height="75" /><img src="http://img.gq.com.cn/userfiles/201311/138510601762_temp_200X150.jpg" width="100" height="75" /><img src="http://img.gq.com.cn/userfiles/201311/138510601773_temp_200X150.jpg" width="100" height="75" /> </div>
- <p>这组唯美的作品是由莫斯科摄影师Mariya-Luiza以装满水的酒杯当作滤镜拍摄下的，透过圆弧形的酒杯和水形成凸透镜的效果，除了拍出上下颠倒的风景照以外，让原本的景色仿佛被水洗过般的清澈干净。</p>
- </div>
-     <div class="picItemA" data-url="http://m.gq.com.cn/fun/news_111gcd93e629e22a.html">
- <h3 class="bgG">世界上最长的木雕艺术品</h3>
- <div class="pic clearfix">
- <img src="http://img.gq.com.cn/userfiles/201311/1385105666921_temp_200X150.jpg" width="100" height="75" /><img src="http://img.gq.com.cn/userfiles/201311/138510566632_temp_200X150.jpg" width="100" height="75" /><img src="http://img.gq.com.cn/userfiles/201311/1385105666173_temp_200X150.jpg" width="100" height="75" /> </div>
- <p>这座来自中国艺术家郑春晖的木雕作品，刷新了新的吉尼斯世界记录，它有12.286米长、3.075米高、2.401米宽，完美复现了我国著名的绘画作品《清明上河图》，雕塑展示了一个立体生动的场景，以及当时人们生活的各种细节。</p>
- </div>
-      </div>
- <ul class="indexList indexList">
-      <li class="fontG borderQ first" data-url="http://m.gq.com.cn/fun/news_10206g3cf9472ec6.html">孔雀开屏安全套包装</li>
-     <li class="fontG" data-url="http://m.gq.com.cn/fun/news_18g5a03c6c86606c.html">iPhone工具组合手机套</li>
-    <li class="fontG" data-url="http://m.gq.com.cn/fun/news_173499831ce6cac8.html">超现实主义汽车悬浮摄影作品</li>
-  </ul>
- <div class="gochannel bgQ"  data-url="http://www.gq.com.cn/mobile/m_cat/cat/fun/"><span>进入好玩频道</span></div>
- </section>
- <!--end 好玩-->
 
- <!--女人-->
- <section>
- <div class="pubBox">
- <h2>女人<span>GIRL</span></h2>
-   <div class="picItemB clearfix" data-url="http://m.gq.com.cn/girl/news_18143db9fcafef05.html">
- <h3 class="bgG">戴娇倩 生活不给片酬 何须我再表演</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138442587628_200X150.jpg" width="100" height="75" />
- </div>
- <p>“ 你看仔细点，然后实话实说，我的脸整过吗？”顶着一头利落短发，戴娇倩嘻嘻哈哈地；“逼问”化妆师。她是很懂得幽默的聪明女孩，和她聊天非常畅快，一口气在40分钟之内，她回答完了25个问题，不拖泥带水，也不拐弯抹角。公主、女王、女汉子，她说自己都是，又都不全是。</p>
- </div>
-     <div class="picItemB clearfix" data-url="http://m.gq.com.cn/girl/news_1714cacbe64c6303.html">
- <h3 class="bgG">熊乃瑾：戒躁，想爱</h3>
- <div class="pic">
- <img src="http://img.gq.com.cn/userfiles/201311/138442550545_200X150.jpg" width="100" height="75" />
- </div>
- <p>电影导演陈奕利和GQ的首次合作，献给了这位总能出人意表的姑娘。照片上她削脸红唇，特别“狠”，只是聊了半天，我依然未从她的话里找到可以支撑那副表情的佐证，索性直接问了，你狠吗？她的窄肩膀陡然耸动，牛仔外套回归正位，“重庆姑娘有不狠的吗？！”即刻却又回归无害笑容。</p>
- </div>
-      </div>
- <ul class="indexList indexList">
-      <li class="fontG borderQ first" data-url="http://m.gq.com.cn/girl/news_173499f3d4b44947.html">你想要哪个 吴莫愁</li>
-     <li class="fontG" data-url="http://m.gq.com.cn/girl/news_14g298ab28cfc449.html">李菲儿 等待品尝！</li>
-    <li class="fontG" data-url="http://m.gq.com.cn/girl/news_17246a5c7c341aac.html">MONICA BELLUCCI 女人中的女人</li>
-  </ul>
- <div class="gochannel bgQ" data-url="http://www.gq.com.cn/mobile/m_cat/cat/girl/"><span>进入女人频道</span></div>
- </section>
- <!--end 女人-->
- 
- </div>
- <footer>
- <section class="direct">
- <ul class="clearfix">
-  <li class="borderQ goto-www" after-class="bgG on" data-url="http://www.gq.com.cn/"><span></span><p>电脑版</p></li>
-    <li class="borderQ" after-class="bgG on" data-url="http://shujia.vogue.com.cn/feedback.php?src=gq-mobile-gq_msite-1.0"><span></span><p>问题反馈</p></li>
- <li class="borderQ" after-class="bgG on" id="gotop"><span></span><p>返回顶部</p></li>
- </ul>
- </section>
- 
- <section class="links clearfix">
-  <a href="../t.gq.com.cn/CKMg">手机QQ浏览器</a>
-  <a href="../m.vogue.com.cn/default.htm">VOGUE时尚网</a>
-  <a href="../m.self.com.cn/default.htm">悦己女性网</a>
-  </section>
- <section class="copyRight">
- 版权所有 北京风华创想网络有限公司<br />
- 京ICP证070504号<br />
- 京网文[2010] 0398-013号<br />
- 温馨提示：本信息仅供提供演示方便链接，与原网站无关！ <a href="index.html">首页</a>  <a href="zhengwen.html">正文页</a>  <a href="liebiao.html">列表页</a><br />
- </section>
- </footer>
- </div>
+    .ph3txt{ width: 365px; margin-top: -112px;}
+    .ph3txt h2{ background:transparent url(mobileqq/img/v50/ph3txt.png) no-repeat 0 0;}
+    .ph3txt p{ background:transparent url(mobileqq/img/v50/ph3txt.png) no-repeat 0 -71px;}
+    .ph3img{ left: 465px; width: 294px; height: 621px; margin-top: -311px;}
+    .ph3ani{ left: 869px; margin: -144px 0 0 0; width: 308px; height: 288px;}
+    .ph3ani div{position: absolute; left: 0; top: 0; width: 308px; height: 288px; background-repeat: no-repeat; }
+    .ph3ani .ph3-1{background-image:url(mobileqq/img/v50/ph3-1.png);}
+    .ph3ani div.ph3-3{ left: 118px; top: 108px; width: 71px; height: 62px;}
+    .ph3ani div.ph3-4{ left: 122px; top: 110px; width: 57px; height: 68px;}
+    .ph3ani div.ph3-5{ left: 116px; top: 108px; width: 73px; height: 67px;}
+    .ph3ani img{ margin: 0;}
 
- </body>
-<script type="text/javascript" src="js/gq/mobile/js/zepto.min.js"></script>
-<script src="js/gq/mobile/js/global.js"></script>
+    .ph4txt{ width: 365px; margin-top: -131px;}
+    .ph4txt img{ margin-top: 25px;}
+    .ph4txt h2{ background:transparent url(mobileqq/img/v50/ph4txt.png) no-repeat 0 0;}
+    .ph4txt p{ background:transparent url(mobileqq/img/v50/ph4txt.png) no-repeat 0 -71px;}
+    .ph4img{ left: 425px; margin-top: -317px;}
 
-<!--GA代码-->
-<!--ipt type="text/javascript">
-try {
- var _gaq = _gaq || [];
- var pageTracker = {};
- pageTracker._trackPageview = function(url){
- _gaq.push(['gqTracker._trackPageview'])
- };
- 
- _gaq.push(['gqTracker._setAccount', 'UA-1848314-3']);
- _gaq.push(['gqTracker._setDomainName', '.gq.com.cn']);
- _gaq.push(function() {
- var gqTracker = _gat._getTrackerByName('gqTracker');
- if(window._gq_c_d_) {
- _gq_c_d_.detectChannel(gqTracker); 
- }
- });
- _gaq.push(['gqTracker._setAllowHash', false]);
- _gaq.push(['gqTracker._setAllowAnchor', true]);
- var gapathname = window.location.pathname, gasearch = window.location.search, gahash = escape(window.location.hash);
- _gaq.push(['gqTracker._trackPageview', gapathname+gasearch+gahash]);
-} catch(err) {}
-</scri-->
-<script type="text/javascript"> (function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- ga.src = ('https:' == document.location.protocol ? '../https@ssl/' : '../www/') + '.google-analytics.com/ga.js';
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- })();
-</script>
-<!--end GA代码-->
-<!--start baidu-->
+    .ph4ani{width: 240px; height:634px;}
+    .ph4ani div{position: absolute; left: 0; top: 0; width: 200px; height: 478px;}
+    .ph4ani img{ height: 100%;}
+    .ph4ani .ph4-0{ width: 240px; height: 634px;}
+    .ph4ani .ph4-1{ left: 177px; top: 420px; width: 42px; height: 55px;}
+    .ph4ani .ph4-2{ left: 32px; top: 82px;}
+    .ph4ani .ph4-3{ left: 32px; top: 82px;}
+    .ph4ani div.ph4-4{ width: 240px; height: 634px; left: 366px; }
+    .ph4ani .ph4-5{ left: 170px; top: 318px; width: 40px; height: 94px;}
+
+    .phfg h2{ width: 365px; padding-top: 71px; }
+    .phfg p{ width: 365px; padding-top: 78px; }
+
+}
+
+
+
+</style>
 <script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc2bdcc85951eec531fec2cf87a3c9e49' type='text/javascript'%3E%3C/script%3E"));
+document.domain = "qq.com";
+var t0 = new Date();
+var os = function() {
+     var ua = navigator.userAgent,
+     isWindowsPhone = /(?:Windows Phone)/.test(ua),
+     isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone, 
+     isAndroid = /(?:Android)/.test(ua), 
+     isFireFox = /(?:Firefox)/.test(ua), 
+     isChrome = /(?:Chrome|CriOS)/.test(ua),
+     isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+     isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+     isPc = !isPhone && !isAndroid && !isSymbian;
+     return {
+          isTablet: isTablet,
+          isPhone: isPhone,
+          isAndroid : isAndroid,
+          isPc : isPc
+     };
+}();
+if(os.isAndroid || os.isPhone || os.isTablet){
+location.href = 'http://im.qq.com/mobileqq/touch/index.html';
+}
 </script>
-<!--end baidu-->
-<script language="javascript" type="text/javascript" src="js/statistics/total.js"></script><script src="js/gq/mobile/js/slide.js"></script>
-<script>
 
-new Slide({
- slideBox: $(".slide-list"),
- nextBtn: $(".focus-button .next"),
- prevBtn: $(".focus-button .prev"),
- autoPlay: true,
- triggers: $(".slide-triggers li"),
- triggerOnClass: "bgQ",
- callback:function(index){ 
- $('#slideDesc span').text($('.slide-list li').eq(index+1).attr('desc'));
- trackPageview(index,'fid');
- }
- });
+</head>
 
-</script>
+<body>
 
-<!--添加主屏幕-->
-<div id="iphone-fav-tips" class="fix-box"> 
- <div class="fix-bookmark">
- <a id="iphone-fav-tips-close" class="fix-bookmark-close" href="javascript:void(0)"></a>
- <a class="icon-logo" href="javascript:void(0)"></a>
- <p>在您的iPhone上收藏<br />GQ男士网：点击<span class="icon-add"></span>然后选择“添加至主屏幕”。</p>
- <span></span>
- </div>
+
+<div id="maincon" class="maincon">
+    <div id="fixrelative" class="fixrelative">
+        <div id="figph1" class="figure trans1">
+            <!--S header-->
+            <div class="topic">
+                <div class="w960">
+                    <div class="topBar">
+                        <h1><a href="http://im.qq.com/" class="pngFix" tabindex="1">im.qq.com</a></h1>
+                    </div>
+                    <div class="topTool">
+                        <div class="login"><em id="loginInfo"></em><a class="forTcss" name="im.mb5_0.login" id="login" tabindex="2" href="#">登录</a> <a id="regit" class="forTcss" name="im.mb5_0.reg" href="http://zc.qq.com" target="_blank"><span>|</span> 注册</a><span>|</span><a class="forTcss" name="im.mb5_0.feature"  href="http://im.qq.com/mobileqq/update/" target="_blank">功能介绍</a><span>|</span><a class="forTcss" name="im.mb5_0.help"  href="http://kf.qq.com/product/mobile.html" target="_blank">帮助与反馈</a><span>|</span><a class="forTcss" name="im.mb5_0.home"  href="http://im.qq.com/" target="_blank">IM官网首页</a></div>
+                        <div class="flashData"><a class="forTcss" name="im.mb5_0.viewonlinedata" id="viewOnline" href="#">当前在线用户：<em id="cur_online">210,700,415</em> 最高在线用户：<em id="max_online">216,503,993
+</em></a></div>
+                    </div>
+                </div>
+            </div>
+            <!--E header-->
+
+            <!--S main-->
+            <div class="downInfo">
+                <div class="vers">
+                    <h2>5.0</h2>
+                    <sup>QQ手机版</sup>
+                    <p>全然一新，灵动呈现</p>
+                    <a onclick="adhoc('track','shangbaoclick',1)" id="downtouch" class="downtouch forTcss" href="javascript:;" name="im.mb5_0.openDown">立即下载</a>
+                    <a id="vediotouch" class="vediotouch forTcss" href="javascript:;" name="im.mb5_0.openvideo">功能展示视频</a>
+                </div>
+            </div>
+            <div id="ph1" class="fpic">
+                <div class="ph1"><img src="mobileqq/img/v50/ph1.png" alt="" /></div>
+            </div>
+            
+            <div class="mbbg"><img id="firstbg" src="mobileqq/img/v50/bg1.jpg" alt="" /></div>
+
+        </div>
+        <div id="figph2" class="figure phfg"></div>
+        <div id="figph3" class="figure phfg"></div>
+        <div id="figph4" class="figure phfg"></div>
+        <div id="figph5" class="footfg"></div>
+    </div>    
+</div>   
+
+<!--E main-->
+
+<!--S sidebar nav-->
+<div class="sdnav">
+    <ul id="sdnav">
+        <li tabid="0" class="current">首页</li>
+        <li tabid="1">全新界面</li>
+        <li tabid="2">精彩动态</li>
+        <li tabid="3">多人视频</li>
+    </ul>
 </div>
-<script type="text/javascript">
-$(function(){
- AddIphoneFav.init();
-})
+<!--E sidebar nav-->
+
+<!--S down msgbox-->
+<div id="downfloor" class="downfloor">
+    <div class="msgbox">
+        <a id="msgclose" href="javascript:;" class="msgclose">x</a>
+        <div class="msgbody">
+            <p class="msgdesc">用手机扫描左侧二维码，或选择合适你的手机系统下载。</p>
+            <div class="msgcode"><img src="mobileqq/img/v50/code.png" alt="" /></div>
+            <div class="msgbtns">
+                <a href="http://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8" target="_blank" class="iph forTcss" name="im.mb5_0.downIphone">iPhone</a>
+                <a href="http://down.myapp.com/myapp/qqteam/AndroidQQ/mobileqq_android.apk" class="and forTcss" name="im.mb5_0.downAndroid">Android</a>
+            </div>
+            <p class="msgmore"><a href="http://im.qq.com/download/mobile.shtml" target="_blank">更多手机系统版本&gt;</a></p>
+        </div>
+    </div>
+    
+</div>
+<!--E down msgbox-->
+
+<!--S flash object-->
+<div id="flashDiv">
+    <div class="flashBar"><a id="flashClose" href="#" class="close">关闭</a><a id="flashZone" href="javascript:;" class="sharetozone">分享到空间</a><a id="flashWeibo" href="javascript:;" class="sharetoweibo">分享到微博</a></div>
+    <div class="flashBox">
+        <div id="flashBox"><p><a href="http://www.adobe.com/go/getflashplayer"><img src="images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p></div>
+    </div>
+    <p class="togame"><a href="http://qqgame.qq.com/online.shtml" target="_blank">查看QQ游戏在线人数&gt;&gt;</a></p>
+</div>
+<div id="overlay" class="overlay"></div>
+<!--E flash object-->
+
+<div id="videoArea" class="videoArea"><div id="myVideo"></div><a href="#" id="close_x" class="close"></a></div>
+
+<script type="text/x-template" id="ph2temp">
+    <div class="mbwrap">
+        <div id="ph2txt" class="ph2txt txtLeft">
+            <h2>全新界面</h2>
+            <p>冰川蓝带来灵动清爽的视觉体验<br />化繁为简的架构，更加轻便自如</p>
+            <span><img src="mobileqq/img/v50/ph2sd.png" alt="" /></span>
+        </div>
+        <div id="ph2img" class="ph2img">
+            <div id="ph2ani" class="ph2ani">
+                <div class="ph2-0"><img src="mobileqq/img/v50/ph2-0.png" alt="" /></div>
+                <div class="ph2-1"><img src="mobileqq/img/v50/ph2-1.png" alt="" /></div>
+                <div id="ph2-2" class="ph2-2"><img src="mobileqq/img/v50/ph2-2.png" alt="" /></div>
+                <div id="ph2-3" class="ph2-3"><img src="mobileqq/img/v50/ph2-3.png" alt="" /></div>
+                <div id="ph2-4" class="ph2-4"><img src="mobileqq/img/v50/ph2-4.png" alt="" /></div>
+                <div id="ph2-5" class="ph2-5"><img src="mobileqq/img/v50/ph2-5.png" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg2.jpg" alt="" /></div>
+</script>
+<script type="text/x-template" id="ph3temp">
+    <div class="mbwrap">
+        <div id="ph3txt" class="ph3txt txtLeft">
+            <h2>精彩动态</h2>
+            <p>自由定制你的专属动态页面<br />熟人、附近、兴趣部落各有精彩</p>
+            <span><img src="mobileqq/img/v50/plus.png" alt="" /></span>
+        </div>
+        <div id="ph3img" class="ph3img"><img src="qq_product_operations/im/mobileqq/ph3.png" alt="" /></div>
+        <div id="ph3ani" class="ph3ani">
+            <div class="ph3-1"></div>
+            <div id="ph3-ani" class="ph3-ani"><img src="mobileqq/img/v50/ph3ani.png" alt="" /></div>
+        </div>
+    </div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg3.jpg" alt="" /></div>
+</script>
+<script type="text/x-template" id="ph4temp">
+    <div class="mbwrap">
+        <div id="ph4txt" class="ph4txt txtLeft">
+            <h2>多人视频</h2>
+            <p>多人通话支持开启视频模式<br />最高容纳50人面对面欢乐畅聊</p>
+            <span><img src="mobileqq/img/v50/tho.png" alt="" /></span>
+        </div>
+        <div id="ph4img" class="ph4img">
+            <div id="ph4ani" class="ph4ani">
+                <div class="ph4-0"><img src="mobileqq/img/v50/ph4.png" alt="" /></div>
+                <div id="ph4-1" class="ph4-1"><img src="mobileqq/img/v50/ph4-1.png" alt="" /></div>
+                <div id="ph4-2" class="ph4-2"><img src="mobileqq/img/v50/ph4-2.png" alt="" /></div>
+                <div id="ph4-3" class="ph4-3"><img src="mobileqq/img/v50/ph4-31.png" alt="" /></div>
+                <div id="ph4-4" class="ph4-4"><img src="mobileqq/img/v50/ph4-4.png" alt="" /></div>
+                <div id="ph4-5" class="ph4-5"><img src="mobileqq/img/v50/ph4-5.png" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg4.jpg" alt="" /></div>
 </script>
 
-<!--end 添加主屏幕-->
+<script type="text/x-template" id="ph5temp">
+    <div id="footer" class="footer">
+        <p>Copyright &copy; 1998-2014 Tencent. All Rights Reserved.</p>
+        <p>腾讯公司 版权所有</p>
+    </div>
+    <div class="ftbg"></div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg5.jpg" alt="" /></div>
+</script>
 
+<!-- <div id="console" style="position:absolute; left:0; top:100px; width:100%; background:#000; color:#fff; z-index:99999;"></div>-->
+<script type="text/javascript" src="jslib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jslib/jquery/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="tencentvideo_v1/tvp/js/tvp.player_v2_jq.js"></script>
+<script type="text/javascript" src="home/js/8/swfobject.js"></script>
+<script>$(function(){var loadTimer=setTimeout(scrollTo,0,0,1);var winh=$(window).height();var minh=winh>720?winh:720;var fgNum=$(".figure").size();var c=0;var timer=null;var styleSupport=(function(){var div=document.createElement("div"),vendors="Khtml Ms O Moz Webkit".split(" ");return function(prop){if(prop in div.style){return true}prop=prop.replace(/^[a-z]/,function(val){return val.toUpperCase()});var len=vendors.length;while(len--){if((vendors[len]+prop) in div.style){return true}}return false}})();var ltie10=(function(){var lt=false;var verInfo=window.navigator.userAgent.match(/MSIE\s\d+/);if(!!verInfo){var verNum=verInfo[0].split(" ")[1];if(verNum<10){lt=true}}return lt})();if(ltie10){$("#figph2").addClass("ltie")}$("#figph2").html($("#ph2temp").html());$("#figph3").html($("#ph3temp").html());$("#figph4").html($("#ph4temp").html());$("#figph5").html($("#ph5temp").html());$(".figure").each(function(i,item){$(item).css("height",minh+"px")});$("#downtouch").click(function(e){e.preventDefault();$("#downfloor").fadeIn(400).focus()});$("#msgclose").click(function(e){e.preventDefault();$("#downfloor").fadeOut(200)});$("#fixrelative").bind("mousewheel",function(event,delta,deltaX,deltaY){if(timer){window.clearTimeout(timer)}timer=window.setTimeout(function(){if(delta<0){motion(1)}else{motion(-1)}},500)});var moveData={};function getArr(){var arr=[0];var allheight=0;var _wh_=$(window).height();var winheight=_wh_>720?_wh_:720;$(".figure").each(function(i,item){allheight+=$(item).height()});allheight+=126;var mod=allheight%winheight;var floor_ind=Math.floor(allheight/winheight);var inds=(mod===0)?floor_ind:Math.ceil(allheight/winheight);var i=0;while(i<floor_ind-1){arr.push(winheight+arr[i]);i++}if(mod){arr.push(mod+arr[floor_ind-1])}moveData.arr=arr;moveData.inds=inds;return moveData}getArr();$(window).resize(function(){winh=$(window).height();minh=winh>720?winh:720;$(".figure").each(function(i,item){$(item).css("height",minh+"px")});getArr();motion(0)});$(window).keydown(function(event){var code=event.keyCode||event.which||event.charCode;switch(code){case 38:motion(-1);break;case 40:motion(1);break}});var $$figure=$(".figure");var $curfg=$$figure.eq(0);function anichage(n){$curfg.removeClass("trans1");$$figure.eq(n).addClass("trans1");$curfg=$$figure.eq(n)}var $sideLis=$("#sdnav").find("li");$sideLis.click(function(){var id=$(this).attr("tabid");motion(id-c)});var ii=0;function motion(d){c=c+d;ii=ii+d;var _ind_=moveData.inds-1;if(c<0||c===0){c=0}else{if(c===_ind_||c>_ind_){c=_ind_}}if(ii<0||ii===0){ii=0}else{if(ii===_ind_||ii>_ind_){ii=_ind_}}anichage(c);if(c<4){$("#sdnav").fadeIn();$sideLis.removeClass();$sideLis.eq(c).addClass("current")}else{$("#sdnav").hide()}$("body").attr("id","page"+c);if(!ltie10){$("#fixrelative").css({"-webkit-transform":"translate(0px, -"+moveData.arr[ii]+"px)","-moz-transform":"translate(0px, -"+moveData.arr[ii]+"px)","-o-transform":"translate(0px, -"+moveData.arr[ii]+"px)","-ms-transform":"translate(0px, -"+moveData.arr[ii]+"px)",transform:"translate(0px, -"+moveData.arr[ii]+"px)"})}else{$("#fixrelative").animate({top:(0-moveData.arr[ii])+"px"},1000)}}var TCSS_TAG=function(){};if(typeof(pgvMain)!="function"){var tcss="http://pingjs.qq.com/tcss.ping.js?v=1";$.getScript(tcss,function(){if(typeof(pgvMain)=="function"){pgvMain()}TCSS_TAG=pgvSendClick})}var getHash=function(name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");var r=window.location.hash.substring(1).match(reg);if(!!r){return unescape(r[2])}return null};var getSearch=function(name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");var r=window.location.search.substring(1).match(reg);if(!!r){return unescape(r[2])}return null};var hashTimer=setTimeout(function(){if(!!getHash("from")){TCSS_TAG({hottag:""+getHash("from")})}},1000);$(".forTcss").click(function(){var tag=$(this).attr("name");if(!!getHash("from")&&(tag==="im.mobileqq.iPhone-download"||tag==="im.mobileqq.android-apk-download")){TCSS_TAG({hottag:getHash("from")+"."+tag.slice(3)})}else{TCSS_TAG({hottag:tag})}});window.online_resp=function(data){if(data&&data.c){$("#cur_online").text(data.c.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,"));$("#max_online").text(data.h.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,"))}};$.getJSON("http://mma.qq.com/cgi-bin/im/online&callback=?",function(data){});swfobject.embedSWF("http://im.qq.com/online/flash/flash20140304.swf","flashBox","910","700","9.0.0","expressInstall.swf");$("#viewOnline").click(function(e){e.preventDefault();$("#flashDiv").show();$("#overlay").css({opacity:"0.9"}).fadeIn();$("#overlay").css({height:$(document).height()});TCSS_TAG({hottag:"im.qq.com.mobile.openflash"})});$("#flashClose").click(function(e){e.preventDefault();$("#flashDiv").hide();$("#overlay").fadeOut()});$("#flashZone").click(function(){var left=($(window).width()-615)/2,top=($(window).height()-713)/2;window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fim.qq.com%2F&showcount=1&desc=%E4%BA%BF%E4%B8%87%E4%B8%AA%E9%97%AA%E8%80%80%E6%98%9F%E5%85%89%E8%83%8C%E5%90%8E%EF%BC%8C%E6%98%AF%E6%9C%8B%E5%8F%8B%EF%BC%8C%E6%98%AF%E5%AE%B6%E4%BA%BA%EF%BC%8C%E6%98%AF%E7%88%B1%E4%BA%BA%E2%80%A6%E2%80%A6%E7%99%BB%E5%BD%95QQ%EF%BC%8C%E4%B8%BA%E4%BB%96%EF%BC%88%E5%A5%B9%EF%BC%89%E7%82%B9%E4%BA%AE%E4%BD%A0%E7%9A%84%E9%82%A3%E9%A2%97%E6%98%9F%E3%80%82&summary=&title=&site=IM%20QQ%20-%20QQ%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99&pics=http%3A%2F%2Fim-img.qq.com%2Fhome%2Fimg%2Fq2013%2Fyun.png&style=203&width=98&height=22&otype=share","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=615, height=363, left="+left+", top="+top);TCSS_TAG({hottag:"im.qq.com.mobile.sharetozone"})});$("#flashWeibo").click(function(){window.open("http://share.v.t.qq.com/index.php?c=share&a=index&url=http%3A%2F%2Fim.qq.com%2F&title=%E4%BA%BF%E4%B8%87%E4%B8%AA%E9%97%AA%E8%80%80%E6%98%9F%E5%85%89%E8%83%8C%E5%90%8E%EF%BC%8C%E6%98%AF%E6%9C%8B%E5%8F%8B%EF%BC%8C%E6%98%AF%E5%AE%B6%E4%BA%BA%EF%BC%8C%E6%98%AF%E7%88%B1%E4%BA%BA%E2%80%A6%E2%80%A6%E7%99%BB%E5%BD%95QQ%EF%BC%8C%E4%B8%BA%E4%BB%96%EF%BC%88%E5%A5%B9%EF%BC%89%E7%82%B9%E4%BA%AE%E4%BD%A0%E7%9A%84%E9%82%A3%E9%A2%97%E6%98%9F%E3%80%82&pic=http%3A%2F%2Fim-img.qq.com%2Fhome%2Fimg%2Fq2013%2Fyun.png&appkey=","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=615, height=363");TCSS_TAG({hottag:"im.qq.com.mobile.sharetoweibo"})});var cookie={get:function(n){var m=document.cookie.match(new RegExp("(^| )"+n+"=([^;]*)(;|$)"));return !m?"":decodeURIComponent(m[2])},set:function(name,value,domain,path,hour){var expire=new Date();expire.setTime(expire.getTime()+(hour?3600000*hour:30*24*60*60*1000));document.cookie=name+"="+value+"; expires="+expire.toGMTString()+"; path="+(path?path:"/")+"; "+(domain?("domain="+domain+";"):"")},del:function(name,domain,path){document.cookie=name+"=; expires=Mon, 26 Jul 1997 05:00:00 GMT; path="+(path?path:"/")+"; "+(domain?("domain="+domain+";"):"")},uin:function(){var u=cookie.get("uin");return !u?null:parseInt(u.substring(1,u.length),10)}};var htmlEncodeDict={'"':"#34","<":"#60",">":"#62","&":"#38"," ":"#160"};var encodeHtml=function(s){s+="";return s.replace(/["<>& ]/g,function(all){return"&"+htmlEncodeDict[all]+";"})};window.share={net:{requestUserNameCallback:function(json){if(json&&json.retcode===0){var $login=$("#login");$login.addClass("in");$login.html("[退出]");$("#loginInfo").html("欢迎您，"+encodeHtml(json.result.nick)+"&nbsp;");$("#regit").hide()}}}};try{var uin=cookie.uin();if(!!uin){$.ajax({type:"GET",async:false,url:"http://cgi.connect.qq.com/qqconnectopen/openapi/get_nick?retype=2",dataType:"jsonp",jsonp:"callback",jsonpCallback:"share.net.requestUserNameCallback",success:function(json){},error:function(){}})}}catch(e){}window.ptlogin2_onClose=function(){$("#login_div").hide();$("#overlay").fadeOut()};window.ptlogin2_onResize=function(width,height){$("#login_div").css({width:width,height:height,visibility:"hidden"}).css("visibility","visible")};function str2JSON(str){eval("var __pt_json="+str);return __pt_json}if(typeof window.postMessage!=="undefined"){window.onmessage=function(event){var msg=event||window.event;var data;if(typeof JSON!=="undefined"){data=JSON.parse(msg.data)}else{data=str2JSON(msg.data)}switch(data.action){case"close":ptlogin2_onClose();break;case"resize":ptlogin2_onResize(data.width,data.height);break;default:break}}}var showLogin=function(){var loginWin=$("#login_div");var _url=window.location.href;if(!loginWin.length){loginWin=$('<div id="login_div" class="login_div"><iframe name="login_frame" frameborder="0" scrolling="auto" width="100%" height="100%" src="http://xui.ptlogin2.qq.com/cgi-bin/xlogin?appid=501038301&proxy_url=http%3A%2F%2Fid.qq.com%2Flogin%2Fproxy.html&s_url='+encodeURIComponent(_url)+'"></iframe></div>');loginWin.appendTo($("body"))}$("#overlay").css({opacity:"0.5"}).fadeIn();$("#overlay").css({height:$(document).height()});loginWin.show()};$("#login").click(function(e){e.preventDefault();if($(this).hasClass("in")){cookie.del("uin",".qq.com");cookie.del("skey",".qq.com");cookie.del("uin","im.qq.com");cookie.del("skey","im.qq.com");$(this).removeClass("in");$(this).html("登录");$("#loginInfo").html("")}else{showLogin()}});var vdw=$(window).width()*0.7;var vdh=vdw*1080/1920;$("#videoArea").css({width:vdw+"px",height:vdh+"px",marginLeft:(0-vdw/2)+"px",marginTop:(0-vdh/2)+"px"});$("#myVideo").css({width:vdw+"px",height:vdh+"px"});var video=new tvp.VideoInfo();video.setVid("h013399opsf");var player=new tvp.Player();player.create({width:vdw,height:vdh,video:video,modId:"myVideo",autoplay:true});$(".vediotouch").click(function(event){event.preventDefault();$("#overlay").css({opacity:"0.5"}).fadeIn();$("#overlay").css({height:$(document).height()});$("#videoArea").show();player.play(video)});$("#close_x").click(function(event){event.preventDefault();player.pause();$("#overlay").fadeOut();$("#videoArea").hide()})});</script>
+</body>
 </html>
