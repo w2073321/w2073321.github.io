@@ -15,7 +15,16 @@
 				appKey: 'ADHOC_74f84ed7-04e6-4eeb-b695-852209e9c43f'
 			})
 		</script>
-
+		<script>
+			function applyFlags(flags) {
+				if(flags.get('QQ_bianlaing') === 1) {
+					var text = " Hey，我是试验版 :) ";
+				} else {
+					var text = " Hey, 我是原始版本！";
+				}
+				document.getElementById('flags').innerHTML = text;
+			}
+		</script>
 		<!-- sdk end -->
 		<title>I'm QQ - 每一天，乐在沟通</title>
 		<style type="text/css">
@@ -1671,7 +1680,7 @@
 	</head>
 
 	<body>
-		<div id="maincon" class="maincon">
+		<div id="maincon" class="maincon" onclick="adhoc('getFlags',applyFlags)">
 			<div id="fixrelative" class="fixrelative">
 				<div id="figph1" class="figure trans1">
 					<!--S header-->
@@ -1703,31 +1712,13 @@
 							<h2>5.0</h2>
 							<sup>QQ手机版</sup>
 							<p>全然一新，灵动呈现</p>
-							
+
 							<!--优化指标/上报指标-->
 							<a onclick="adhoc('track','QQ_download',1)" id="downtouch" class="downtouch forTcss" href="javascript:;" name="im.mb5_0.openDown">立即下载</a>
-							<script type='text/javascript'>
-								$(function() {
-									$('#downtouch').click(function() {
-										adhoc('track', 'QQ_download', 1)
-									});
-								})
-							</script>
 							<!--优化指标/上报指标 end-->
-							
-							<!--试验变量-->
-							<a onclick="adhoc('getFlags',applyFlags)" id="vediotouch" class="vediotouch forTcss" href="javascript:;" name="im.mb5_0.openvideo">功能展示视频</a>
-							<script>
-								function applyFlags(flags) {
-									if(flags.get('QQ_bianlaing') === 1) {
-										var text = " Hey，我是试验版 :) ";
-									} else {
-										var text = " Hey, 我是原始版本！";
-									}
-									document.getElementById('flags').innerHTML = text;
-								}
-							</script>
-							<!--试验变量 end-->
+
+							<a id="vediotouch" class="vediotouch forTcss" href="javascript:;" name="im.mb5_0.openvideo">功能展示视频</a>
+
 						</div>
 					</div>
 					<div id="ph1" class="fpic">
