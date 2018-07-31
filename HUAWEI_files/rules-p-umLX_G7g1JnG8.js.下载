@@ -1,7 +1,0 @@
-/*
- Quantcast measurement tag
- Copyright (c) 2008-2017, Quantcast Corp.
-*/
-(function(a,g,f){try{__qc("defaults",a,{labels:"_fp.event.Default"})}catch(l){}var h=function(e){var c=f.createElement("a");c.href=e;return c},k=function(e,c,a){return e?"nc"===e?!c||!a||0>c.indexOf(a):"eq"===e?c===a:"sw"===e?0===c.indexOf(a):"ew"===e?(e=c.length-a.length,c=c.lastIndexOf(a,e),-1!==c&&c===e):"c"===e?0<=c.indexOf(a):!1:!1},d=function(e,a,b){var d;d=g.top===g.self?f.location.href:h(f.referrer).href;k(a,d,b)?e(d):e(!1)},b=function(a){return"array"==={}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()?
-{labels:a.join(",")}:{labels:""+a}};__qc.apply(null,["rules",[a,null,[[b,"_fp.event.Phone - Mate 10 Pro"]],[[d,"c","/phones/mate10-pro/"]]],[a,null,[[b,"_fp.event.I am what I do"]],[[d,"c","/campaign/i-am-what-i-do/"]]],[a,null,[[b,"_fp.event.Better Connected World"]],[[d,"c","better-connected-world/"]]],[a,null,[[b,"_fp.event.LGU"]],[[d,"c","/lgu"]]],[a,null,[[b,"_fp.event.Telecom"]],[[d,"c","/telecom"]]],[a,null,[[b,"_fp.event.Trends"]],[[d,"c","trends"]]],[a,null,[[b,"_fp.event.Chinamerchants"]],
-[[d,"c","chinamerchants"]]],[a,null,[[b,"_fp.event.Phoenix"]],[[d,"c","phoenix"]]],[a,null,[[b,"_fp.event.Railway"]],[[d,"c","railway"]]],[a,null,[[b,"_fp.event.Homepage"]],[[function(a,c,d){var b;b=g.top===g.self?f.location.pathname:h(f.referrer).pathname;k(c,b,d)?a(b):a(!1)},"eq","/"]]]])})("p-umLX_G7g1JnG8",window,document);
