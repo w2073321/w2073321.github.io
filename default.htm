@@ -20,7 +20,6 @@ $("#shownr img").delay(500).show(500)
 	
 })
 </script>
-
 <style>
 #shownr img { display:none;}
 </style>
@@ -30,25 +29,6 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
-<!-- sdk 初始化-->
-    <script src="https://sdk.appadhoc.com/ab.plus.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      adhoc('init', {
-        appKey: 'ADHOC_2f13f4b1-9725-45a3-8a62-434f141ac03e'
-      })
-    </script>
-    <script>
-      function applyFlags(flags) {
-        if(flags.get('QQ_bianlaing') === 1) {
-          var text = " Hey，我是试验版 :) ";
-        } else {
-          var text = " Hey, 我是原始版本！";
-        }
-        document.getElementById('flags').innerHTML = text;
-      }
-      adhoc('getFlags',applyFlags);
-    </script>
-    <!-- sdk end -->
 </head>
 <body  data-page="home">
 <div class="page" id="topnav">
