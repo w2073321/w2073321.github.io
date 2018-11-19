@@ -29,16 +29,16 @@
           </script>   
 
           <script>
-  function  applyFlags(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('wwc') === 0) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写原始版本要展示的文案！";
-    } else {
-      var text = "请填写试验版本要展示的文案！";
-    }
-    adhoc('getFlags', applyFlags);
-  }
+  // function  applyFlags(flags) {
+  //   //applyFlags:callback函数名称
+  //   if (flags.get('wwc') === 0) {
+  //     //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+  //     var text = "请填写原始版本要展示的文案！";
+  //   } else {
+  //     var text = "请填写试验版本要展示的文案！";
+  //   }
+  //   adhoc('getFlags', applyFlags);
+  // }
 
   adhoc('track', 'clickTimes', 1);
 </script>  
