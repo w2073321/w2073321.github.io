@@ -24,23 +24,23 @@
     <script src=https://sdk.appadhoc.com/ab.super.js></script>
           <script>
           adhoc('init', {
-          appKey: 'ADHOC_182e78d8-4f46-49ac-b22d-ee7a8e855525'
+          appKey: 'ADHOC_8475a470-0083-4824-badb-aa35d7688de0'
           })
           </script>   
 
           <script>
-  // function  applyFlags(flags) {
-  //   //applyFlags:callback函数名称
-  //   if (flags.get('wwc') === 0) {
-  //     //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-  //     var text = "请填写原始版本要展示的文案！";
-  //   } else {
-  //     var text = "请填写试验版本要展示的文案！";
-  //   }
-  //   adhoc('getFlags', applyFlags);
-  // }
+  function  applyFlags(flags) {
+    //applyFlags:callback函数名称
+    if (flags.get('skr') === 0) {
+      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+      var text = "请填写原始版本要展示的文案！";
+    } else {
+      var text = "请填写试验版本要展示的文案！";
+    }
+    adhoc('getFlags', applyFlags);
+  }
 
-  adhoc('track', 'clickTimes', 1);
+  adhoc('track', 'clickck', 1);
 </script>  
 
 
