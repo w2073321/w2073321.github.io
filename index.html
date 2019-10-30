@@ -34,7 +34,11 @@
 //custom page code end here
 
 gio('send');
-
+function count (){ 
+  var num = Math.floor(Math.random() * 2 + 1); 
+} 
+gio('visitor.set', 'group', 'count');
+gio('track', 'registerSuccess');
 </script>
 
 <!-- End GrowingIO Analytics code version: 2.1 -->
