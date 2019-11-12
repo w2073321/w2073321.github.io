@@ -17,6 +17,27 @@
     <script src="js/public.js">//导航</script>
     <script src="js/anim.js">//动画</script>
 	
+
+ <script type="text/javascript">
+ window.adhoc_domain_stat_api = 'http://wxtest.htsec.com:10080/data';
+   window.adhoc_domain_exp_api = 'http://wxtest.htsec.com:10080/experiment';
+   window.adhoc_domain_auth_api = 'http://wxtest.htsec.com:10080/auth';
+   window.adhoc_domain_isForbiddenSnap = true;
+    window.__ADHOC_EXP_URL__ = "http://wxtest.htsec.com:10080/experiment/get_flags_async";
+   window.__ADHOC_TRACKER_URL__ = "http://wxtest.htsec.com:10080/tracker/tracker";
+ </script>
+<script src="plus/ab.plus.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+  adhoc('init', {
+    appKey: 'ADHOC_9d790a17-bf13-4444-80b0-272f3191d229', //创建应用时获得的appkey
+    defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认
+
+    domain: '', //私有化部署设置域名, 选填, 例如 'youcash.com'
+  })
+</script>
+
+   
 </head>
 
 <body>
