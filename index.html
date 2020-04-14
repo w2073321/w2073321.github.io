@@ -21,31 +21,28 @@
     <script src="js/jquery.touchswipe.min.js">//轮显</script>
     <script src="js/public.js">//导航</script>
     <script src="js/anim.js">//动画</script>
+<script type="text/javascript">
+ //  window.adhoc_domain_stat_api = 'http://data.youcash.com';
+ //  window.adhoc_domain_exp_api = 'http://experiment.youcash.com';
+ // window.adhoc_domain_auth_api = 'http://auth.youcash.com';
+   // 下面这两个写一个即可
+   // window.adhoc_domain_snapshot_api = '';
+   window.adhoc_domain_isForbiddenSnap = true; // 是否禁止截图
+   
+   window.__ADHOC_EXP_URL__ = "http://test.jkioio.www/get_flags_async";
+   window.__ADHOC_TRACKER_URL__ = "http://test.jkioio.www/tracker";
+ </script>
 
-<!-- GrowingIO Analytics code version 2.1 -->
-<!-- Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com -->
-
-<script type='text/javascript'>
-!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.1/gio.js","gio");
-  gio('init','8d152d8280cfebfc', 
-    {
-});
-
-//custom page code begin here
-
-//custom page code end here
-
-gio('send');
-
-</script>
-
-<script type='text/javascript'>
-var num = Math.floor(Math.random() * 2 + 1); 
-gio('visitor.set', 'groupA', '1');
-
-gio('track', 'registerSuccess');
-</script>
-<!-- End GrowingIO Analytics code version: 2.1 -->
+<script type="text/javascript" src='js/ab.plus.bata.0413.js'></script>
+  <script>
+  adhoc('init', {
+    appKey: 'ADHOC_8b7e3281-8c8c-4bc8-a924-cc9b4dc3a5e9', //创建应用时获得的appkey
+    defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认值，通常为0
+    clientIdDomain:'w2073321.github.io',//试验页面主域名，例如appadhoc.com
+    crossDomain:'w2073321.github.io',
+    sourceKey：'utm_source'
+  })
+  </script>
 
 
 
