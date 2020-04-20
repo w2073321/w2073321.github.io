@@ -10,7 +10,7 @@
  <link rel="apple-touch-icon-precomposed" href="mobile/images/apply/logo.png" />
  <link rel="apple-touch-startup-image" href="mobile/images/apply/logo-640.png" />
 <!-- sdk 初始化-->
-<!-- 
+
 <script src='js/ab.plus.js' charset="utf-8"></script> 
 <script type="text/javascript">
     // window.adhoc_domain_stat_api = 'http://test.jkioio.www/data';
@@ -20,21 +20,35 @@
    // window.adhoc_domain_snapshot_api = '';
    // window.adhoc_domain_isForbiddenSnap = true; // 是否禁止截图
    
-   // window.__ADHOC_EXP_URL__ = "http://test.jkioio.www/experiment/get_flags_async";
-   // window.__ADHOC_TRACKER_URL__ = "http://test.jkioio.www/tracker";
- </script> -->
+    window.__ADHOC_EXP_URL__ = "http://test.jkioio.www/experiment/get_flags_async";
+    window.__ADHOC_TRACKER_URL__ = "http://test.jkioio.www/tracker";
+ </script> 
  <!--  <script src='js/ab.plus.bata-0414.js' charset="utf-8"></script> -->
  <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
   <script>
   adhoc('init', {
-    //appKey: 'ADHOC_f6fc7a17-3d0e-4e0b-b41f-ad4ef54886b1', //创建应用时获得的appkey
-    appKey:'ADHOC_d40daec2-99cb-488f-abe4-ac2d1fd1216f',
+    appKey: 'ADHOC_f6fc7a17-3d0e-4e0b-b41f-ad4ef54886b1', //创建应用时获得的appkey
+    //appKey:'ADHOC_d40daec2-99cb-488f-abe4-ac2d1fd1216f',
     defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认值，通常为0
     clientIdDomain:'w2073321.github.io',//试验页面主域名，例如appadhoc.com
     crossDomain:'w2073321.github.io',
     sourceKey:'utm_source'
   })
+
+function applyFlags(flags) {
+    //applyFlags:callback函数名称
+    if (flags.get('white') === 1) {
+      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+      var text = "请填写试验版本要展示的文案！";
+    } else {
+      var text = "请填写原始版本要展示的文案！";
+    }
+
+  }
+adhoc('getFlags', applyFlags)
   </script>
+
+  
 <!-- sdk end -->
 
  <title>仿GQ男士网微官网手机wap杂志网站模板-【】</title>
