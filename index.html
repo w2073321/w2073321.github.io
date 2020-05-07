@@ -11,8 +11,8 @@
  <link rel="apple-touch-startup-image" href="mobile/images/apply/logo-640.png" />
 <!-- sdk 初始化-->
 
-<!-- <script src='js/ab.plus.js' charset="utf-8"></script> 
-<script type="text/javascript">
+ 
+<!-- <script type="text/javascript">
     // window.adhoc_domain_stat_api = 'http://test.jkioio.www/data';
     // window.adhoc_domain_exp_api = 'http://test.jkioio.www/experiment';
     // window.adhoc_domain_auth_api = 'http://test.jkioio.www/auth';
@@ -20,21 +20,24 @@
    // window.adhoc_domain_snapshot_api = '';
    // window.adhoc_domain_isForbiddenSnap = true; // 是否禁止截图
    
-   // window.__ADHOC_EXP_URL__ = "http://test.jkioio.www/experiment/get_flags_async";
-  // window.__ADHOC_TRACKER_URL__ = "http://test.jkioio.www/tracker/tracker";
+    window.__ADHOC_EXP_URL__ = "http://test.abtest-bsb.com:8080/experiment/get_flags_async";
+   window.__ADHOC_TRACKER_URL__ = "http://test.abtest-bsb.com:8080/tracker/tracker";
  </script>  -->
  <!--  <script src='js/ab.plus.bata-0414.js' charset="utf-8"></script> -->
- <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
+  <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
+ <!--  <script src='js/ab.plus.js' charset="utf-8"></script> -->
   <script>
+   //  window.__ADHOC_EXP_URL__ = "http://test.abtest-bsb.com:8080/experiment/get_flags_async";
+   // window.__ADHOC_TRACKER_URL__ = "http://test.abtest-bsb.com:8080/tracker/tracker";
   adhoc('init', {
-    //clientId: '3600005938388301',
-    appKey: 'ADHOC_8475a470-0083-4824-badb-aa35d7688de0', //创建应用时获得的appkey
+    clientId: '3600005938388301',
+    appKey: 'ADHOC_fb232806-311d-4f72-9cea-7891874c905d', //创建应用时获得的appkey
     //appKey:'ADHOC_d40daec2-99cb-488f-abe4-ac2d1fd1216f',
     defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认值，通常为0
     clientIdDomain:'w2073321.github.io',//试验页面主域名，例如appadhoc.com
     crossDomain:'w2073321.github.io',
     sourceKey:'utm_source'
-    experimentCache: true
+    
   })
 
 function applyFlags(flags) {
