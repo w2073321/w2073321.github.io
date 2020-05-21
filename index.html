@@ -7,30 +7,29 @@
 <meta itemprop="name" content="I'm QQ - 每一天，乐在沟通"/>
 <meta name="description" itemprop="description" content="灵动界面，轻简架构，多人音视频，QQ5.0玩到根本停不下来！" />
 <meta itemprop="image" content="http://im-img.qq.com/mobileqq/touch/img/v5/rich.png" />
-<script>
-    (function(win, export_obj) {
-        win['TeaAnalyticsObject'] = export_obj;
-        if (!win[export_obj]) {
-            function _collect() {
-                _collect.q.push(arguments);
-            }
-            _collect.q = _collect.q || [];
-            win[export_obj] = _collect;            
+<script>    
+(function(win, export_obj) {
+    win['TeaAnalyticsObject'] = export_obj;
+    if (!win[export_obj]) {
+        function _collect() {
+            _collect.q.push(arguments);
         }
-        win[export_obj].l = +new Date();
-    })(window, 'collectEvent');
+        _collect.q = _collect.q || [];
+        win[export_obj] = _collect;            
+    }
+    win[export_obj].l = +new Date();
+})(window, 'collectEvent');
 </script>
-<script async src="https://s3.pstatp.com/pgc/tech/collect/collect-rangers.js"></script>
-window.collectEvent('init', {
-        app_id:159486,//  必须替换成申请的 app_id
-        channel:'cn',
-        log: true, // 开启调试日志，可用于查看ssid，web_id, 和user_unique_id， 上线请关闭
-        enable_ab_test: true // 开启A/B 测试功能
-    });
+<script async src="https://s3.pstatp.com/pgc/tech/collect/collect-autotrack-rangers.js"></script>
+<script>
+    window.collectEvent('init', { app_id:183602, channel: 'cn', enable_ab_test: true, autotrack: true});
     window.collectEvent('start')
-    window.collectEvent('test_event', {
-       'from': 'index',
-    })
+    
+    window.collectEvent('play_video', {
+       'video_title': 'the title here',
+})
+</script>
+
 <title>I'm QQ - 每一天，乐在沟通</title>
 <style type="text/css">
 html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family:"microsoft yahei", "宋体", Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size:100%;}
