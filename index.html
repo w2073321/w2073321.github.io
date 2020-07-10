@@ -1,36 +1,197 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=640,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=true;">
+ 
 
-<title>大连圣亚海洋世界html5响应式触屏版手机wap旅游网站模板-【HTML5/】</title>
-<meta name="keywords" content="大连圣亚海洋世界官方网站/大连文化旅游景区/圣亚海洋世界/圣亚极地世界/圣亚珊瑚世界/圣亚深海传奇/恐龙传奇/大连圣亚海洋世界/圣亚海洋世界/ 大连好玩的地方 海洋公园 值得去得地方"/>
-<meta name="description" content="大连圣亚海洋世界已于大连本地成功建设并运营了以圣亚海洋世界、圣亚极地世界、圣亚珊瑚世界、圣亚深海传奇和恐龙传奇为核心项目的文化旅游景区，该景区营业面积5万多平方米，与亚洲最大的星海广场、百年历史的星海公园及东北最大的游艇码头，共同组成大连最具有休闲娱乐特色的旅游目的地，2001年1月获评国家首批AAAA级旅游景区（点）。2005年，独资建成 “世界首座极地演艺游乐园”——哈尔滨极地馆，建成不久即成为哈尔滨国际冰雪节四大景区之一，并于2009年获评国家AAAA级旅游景区（点）。浪漫大连第一站 国家级AAAA旅游景区 中国最浪漫的海洋馆 四大场馆全新升级 ！" />
-<meta name="author" content="互动设计公司唐宋中国TSCN.CN,075582519520,china,cn@tscn.cn" />
-<link href="web.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/lfjquery.js"></script>
-<script type="text/javascript" src="js/lfweb.js"></script>
-<link rel="stylesheet" href="css/styles.css" type="text/css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript">
-$(function(){
-$("#shownr img").delay(500).show(500)
+<!DOCTYPE html>
 
-	
-})
-</script>
+<html>
 
-<style>
-#shownr img { display:none;}
-</style>
-<!--[if IE 6]>
-  <script src="js/lfDD_belatedPNG.js"></script>
-  <script>
-  DD_belatedPNG.fix('*');
-  </script>
-<![endif]-->
-<script>
+	<head>
+
+		<title>
+
+															   	 					   京东触屏版
+
+									</title>
+
+    	<meta name="author" content="m.jd.com">
+
+        			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	            <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <meta name="format-detection" content="telephone=no">
+
+    <meta http-equiv="Expires" CONTENT="-1">           
+
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">           
+
+    <meta http-equiv="Pragma" CONTENT="no-cache">           
+
+	  				<link rel="stylesheet" type="text/css" href="css/base2013.css?v=20140414100001" charset="gbk"/>
+
+		
+
+		
+
+							<link rel="stylesheet" type="text/css" href="css/index.css?v=2014042100001" charset="gbk"/>	
+
+				
+
+					
+
+		        								<link rel="apple-touch-icon-precomposed" href="http://m.jd.com/images/apple-touch-icon.png"/>
+
+						<script type="text/javascript">
+
+			var _winLocation=window.location.href;//获得当前页面的路径，根据路径规则进行逐页替换
+
+			var _isWebKit = '__proto__' in {};//是否是webkit内核
+
+			if(_isWebKit){//如果是webkit内核，则分模块使用zepto
+
+				//要使用zeptojs的路径列表，可以做为分模块替换的开关
+
+				var _locationList=new Array();
+
+				//活动模块
+
+				_locationList.push('/activity/proActList');
+
+				_locationList.push('/activity/proActWareList');
+
+				_locationList.push('/activity/list');
+
+				//商品分类模块
+
+				_locationList.push('/category/');
+
+				//京东快讯模块
+
+				_locationList.push('/newslist.html');
+
+				_locationList.push('/newslist/');
+
+				_locationList.push('/news/');
+
+				//机票模块
+
+				_locationList.push('/airline/');
+
+				//酒店模块
+
+				_locationList.push('/hotel/');
+
+				//团购模块
+
+				_locationList.push('/tuan/');
+
+				//首页相关
+
+				_locationList.push('/hotbrand.html');//品牌馆
+
+				//商品筛选相关
+
+				_locationList.push('/ware/expandSort.action');
+
+				_locationList.push('/ware/categoryFilter.action');
+
+				_locationList.push('/ware/search.action');
+
+				_locationList.push('/products/');
+
+				
+
+				_locationList.push('/notice/');//通告模块
+
+				_locationList.push('/coupons/');//随地惠模块
+
+				_locationList.push('/chongzhi/');//手机充值模块
+
+				_locationList.push('/comment/');//手机推荐模块
+
+				_locationList.push('/pay/');//支付
+
+				_locationList.push('/order/');//订单
+
+				var _needReplace = false;
+
+				//如果当前路径符合要使用的路径规则，则进行替换
+
+				for(var i=0;i<_locationList.length;i++){
+
+					if(_winLocation.indexOf(_locationList[i])!=-1){
+
+						_needReplace=true;
+
+						break;
+
+					}
+
+				}
+
+				//如果是首页的话，则使用zepto
+
+				var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g,'');
+
+				if(_tmp.indexOf('/')<0 || (_tmp.split('/').length<=2 && _tmp.indexOf('/index')>=0)){
+
+					_needReplace=true;
+
+				}
+
+				//如果是商品详情页的话，则使用zepto
+
+                var _dlocationList=new Array();
+
+                _dlocationList.push(/\/product\/([0-9]+)\.html/);
+
+                _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+
+                _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+
+                _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+
+                _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+
+                for(var i=0,len=_dlocationList.length;i<len;i++){
+
+                	if(_dlocationList[i].test(_winLocation)){
+
+                		_needReplace=true;
+
+               			 break;
+
+               		 }
+
+                }
+
+				if(_needReplace){
+
+					document.write('<script src="js/zepto.min.js"><\/script>');
+
+					document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+
+				}else{
+
+					document.write('<script src="js/jquery-1.6.2.min.js"><\/script>');
+
+				}
+
+			}else{//如果是非webkit内核直接使用jquery
+
+				document.write('<script src="js/jquery-1.6.2.min.js"><\/script>');
+
+			}
+
+		</script>
+
+				        <script type="text/javascript" src="js/common.js?v=201401141358"></script>
+
+        <script type="text/javascript" src="js/spin.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
     (function(win, export_obj) {
         win['TeaAnalyticsObject'] = export_obj;
         if (!win[export_obj]) {
@@ -50,83 +211,1078 @@ window.collectEvent('init', {
         channel:'cn',
         log: true, // 开启调试日志，可用于查看ssid，web_id, 和user_unique_id， 上线请关闭
         enable_ab_test: true, // boolean类型，是否开启A/B实验功能
-    	enable_ab_visual: true,// boolean类型，是否开启A/B实验的可视化编辑模式功能
-    	enable_multilink: true,//boolean类型，是否开启A/B实验的多链接实验功能，默认为false
-    	multilink_timeout_ms:3000//number类型，A/B实验的多链接实验中关闭遮罩层的时间，默认500毫秒
+        enable_ab_visual: true,// boolean类型，是否开启A/B实验的可视化编辑模式功能
+        enable_multilink: true,//boolean类型，是否开启A/B实验的多链接实验功能，默认为false
+        multilink_timeout_ms:3000//number类型，A/B实验的多链接实验中关闭遮罩层的时间，默认500毫秒
     });
     window.collectEvent('start')
     window.collectEvent('test_event', {
        'from': 'index',
     })
  </script>
-</head>
-<body  data-page="home">
-<div class="page" id="topnav">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><a href="index.html"><img src="images/index_02.jpg" width="80" height="77" alt="" /></a></td>
-      <td><a href="indexbak.html"><img src="images/index_03.jpg" width="480" height="77" alt="" /></a></td>
-      <td><a href="dhlb.html" ><img src="images/index_04.jpg" width="80" height="77" alt="" /></a></td>
-    </tr>
-  </table>
-</div>
-<div class="page" style=" padding-bottom:20px;overflow:hidden;">
-<div class="slider">
-	  <ul>
-      
-	    <li><a href="default.htm"><img src="images/sy_02.jpg"></a></li>
+	</head>
 
-	    <li><a href="../../order.sunasia.com/notice.htmlx@id=26"><img src="uploadimgs/201406/2014631123534115832.jpg"></a></li>
 
-	    <li><a href="../../order.sunasia.com/notice.htmlx@id=22"><img src="uploadimgs/201405/20145271634223234454.jpg"></a></li>
 
-	  </ul>
+<body id="body">
+
+<a name="top"></a>
+
+<header>
+
+	<div id="unsupport" style="cursor: pointer;display: block;font-size: 0.925em;height: 44px;line-height: 44px; margin: 0 auto; text-align: center; width: 100%;    border-bottom: 1px solid #DAD4CF; border-top: 1px solid #FCFAF9;">
+
+    		<span >
+
+    			显示效果不佳？
+
+    		</span>
+
+    		<a href="/index.html?v=w&sid=a9bfb26aebeb1cc89652f2be7cc39eff" style="text-decoration:underline;color:blue;">
+
+    			切换到标准版
+
+    		</a>
+
+    	</div>
+
+		
+
+	</header>
+
+<script type="text/javascript" src="js/index.js?v=20140319100001"></script>
+
+<script type="text/javascript">$('body').css('background','#d5d5d6');$(function(){$('.new-footer').css('margin-top','0px');})</script>
+
+<div class="download-con" id="down_app" style="display:none;">
+
+	<div class="down_app">
+
+		<div class="download-logo"></div>
+
+		<div class="alogo">
+
+			<p class="client-name">京东客户端</p>
+
+			<p class="client-logon">多  ● 快  ● 好  ● 省</p>
+
+		</div>
+
+		<div class="open_now">
+
+			<a id="openJD" href="/download/downApp.html?sid=a9bfb26aebeb1cc89652f2be7cc39eff"><span class="open_btn">立即打开</span></a>
+
+		</div>
+
+		<div class="close-btn-con close-btn">
+
+			<span class="close-btn-icon"></span>
+
+		</div>
+
 	</div>
-  <script type="text/javascript" src="js/yxMobileSlider.js"></script>
-  <script>
-    $(".slider").yxMobileSlider({width:640,height:214,during:3000})
-  </script>
-<div style="padding-top:20px;">
-<div id="shownr" >
-<table width="100%" border="0" cellspacing="0" cellpadding="0" >
-  <tr>
-    <td valign="top"><table border="0" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td><a href="ztjq.html"><img src="images/sy_05.jpg" width="290" height="303" alt="" /></a></td>
-        </tr>
-      <tr>
-        <td style="padding-top:20px;"><a href="bysj.html"><img src="images/sy_11.jpg" width="290" height="155" alt="" /></a></td>
-        </tr>
-      <tr>
-        <td style="padding-top:20px;"><a href="ywgl.html"><img src="images/sy_15.jpg" width="290" height="195" alt="" /></a></td>
-        </tr>
-      </table></td>
-    <td valign="top"><table border="0" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td><a href="zxdp.html"><img src="images/sy_08.jpg" width="290" height="347" alt="" /></a></td>
-      </tr>
-      <tr>
-        <td style="padding-top:20px;"><a href="zthd.html"><img src="images/sy_13.jpg" width="290" height="152" alt="" /></a></td>
-      </tr>
-      <tr>
-        <td style="padding-top:20px;"><a href="jcyy.html"><img src="images/sy_17.jpg" width="290" height="153" alt="" /></a></td>
-      </tr>
-    </table></td>
-  </tr>
-  </table>
-  </div>
+
 </div>
-</div>
-<div class="page endnav" style="background-image:url(images/index_06.jpg);">
-<table width="640" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="160" height="66" align="center"><a href="contact.html">联系我们</a></td>
-    <td width="160" align="center"><a href="map.html">交通指南</a></td>
-    <td width="160" align="center"><a href="news.html">新闻公告</a></td>
-    <td width="160" align="center"><a href="../../weibo.com/daliansunasia" target="_blank">官方微博</a></td>
-  </tr>
-</table>
-</div>
+
+<div class="new-ct main">
+
+	<div class="banner scroll-wrapper" id="idContainer2" ontouchstart="touchStart(event)" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);">
+
+    			<ul class="scroller" style="position:relative;left:0px;width:700%" id="idSlider2">
+
+			 
+
+			     			    				    												<li style="width:-100.0%">
+
+											<a href='http://sale.jd.com/m/act/2utFmzLNO5K.html?resourceType=listActivity&resourceValue=0%7C54945&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff' name="6">
+
+							<img src="images/rBEQYFNoujMIAAAAAAO5XfK70YUAAFkrgMxIDoAA7l1592.jpg" />
+
+						</a>
+
+									</li>
+
+                 							<li style="width:-100.0%">
+
+																		<a href='/activity/list.action?activityId=54951&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff'>
+
+								<img src="images/rBEbR1Np8D8IAAAAAAOhzMQ_MWEAAAGFQEJ1rUAA6Hk961.jpg"  alt="一分钟教你识男人" />
+
+							</a>
+
+															</li>
+
+                 							<li style="width:-100.0%">
+
+																		<a href='/activity/list.action?activityId=54950&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff'>
+
+								<img src="images/rBEbR1Np3bMIAAAAAAEwqUXIOxEAAAFFwGsbEkAATDB575.jpg"  alt="感恩父母—贴心超值礼物" />
+
+							</a>
+
+															</li>
+
+                 							<li style="width:-100.0%">
+
+																		<a href='/activity/list.action?activityId=54949&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff'>
+
+								<img src="images/rBEbRlNpqNMIAAAAAAGSYXL5bakAAACvQCAN5IAAZJ5891.jpg"  alt="美妆献礼母亲节" />
+
+							</a>
+
+															</li>
+
+                 							<li style="width:-100.0%">
+
+																		<a href='/activity/list.action?activityId=54940&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff'>
+
+								<img src="images/rBEhUlNog2cIAAAAAAGiLCCweEMAAM-4QKSCjMAAaJE677.jpg"  alt="园味生活京东造" />
+
+							</a>
+
+															</li>
+
+                 			    				    												<li style="width:-100.0%">
+
+											<a href='http://sale.jd.com/m/act/vbG1IJ8XpOLU.html?resourceType=listActivity&resourceValue=5%7C54929&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff' name="6">
+
+							<img src="images/rBEbRlNrYOMIAAAAAADpgY-bNzQAAAXKAJKVRoAAOmZ624.jpg" />
+
+						</a>
+
+									</li>
+
+                 							<li style="width:-100.0%">
+
+																		<a href='/activity/list.action?activityId=54912&resourceType=index_activity&resourceValue=&sid=a9bfb26aebeb1cc89652f2be7cc39eff'>
+
+								<img src="images/rBEhWlNgaRoIAAAAAAFX-uk5yqQAAMrPAKhTCUAAVgS864.jpg"  alt="一五一十" />
+
+							</a>
+
+															</li>
+
+                     </ul>        
+
+        <ul class="new-banner-num new-tbl-type" id="idNum">
+
+        </ul>
+
+    </div>
+
+    <div class="logo">
+
+    	<img src="images/logo.png" alt="logo">
+
+    </div>
+
+	
+
+    <div class="search" style="position:relative">
+
+    	<span class="input-box">
+
+			<form action="/ware/search.action" id="searchForm">
+
+				                    <input name="sid" value="a9bfb26aebeb1cc89652f2be7cc39eff" type="hidden" />
+
+                    			        		        	<input name="keyword" type="text" id="newkeyword" class="new-input" required value="">
+
+			</form>	
+
+            <a href="javascript:void(0)"  onclick="$('#searchForm').submit();" class="btn-search"><span>search</span></a>
+
+        </span>
+
+		<div class="new-srch-lst" id="shelper" style="position:absolute;top: 2em;left: 3.28em;display:none;width:201px;z-index:10"></div>
+
+    </div>
+
+    <div class="category">
+
+    	<ul class="cate-menu tbl-type"  id="categoryMenu">
+
+        <li class="tbl-cell route1">
+
+        	<a href=all.html class="menu1" onclick="clickResponse(this)" res="1">
+
+            	<span class="menu1-icon"><span></span></span>
+
+                <span class="cate-name">分类</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell route2">
+
+        	<a href="javascript:void(0)" id="html5_cart" class="menu2" onclick="clickResponse(this)" res="1">
+
+            	<span class="menu2-icon"><span></span></span>
+
+                <span class="cate-name">购物车</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell route3">
+
+        	<a href="/user/home.html" class="menu3" onclick="clickResponse(this)" res="1">
+
+            	<span class="menu3-icon"><span></span></span>
+
+                <span class="cate-name">我的</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell route4">
+
+        	<a href="#" class="menu4" onclick="clickResponse(this)" res="1">
+
+            	<span class="menu4-icon"><span></span></span>
+
+                <span class="cate-name">充值</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell route5">
+
+        	<a href="#" class="menu6" onclick="clickResponse(this)" res="1">
+
+            	<span class="menu6-icon"><span></span></span>
+
+                <span class="cate-name">彩票</span>
+
+            </a>
+
+        </li>
+
+        </ul>
+
+    </div>
+
+    
+
+    <div class="ad1 tbl-type">
+
+    	<div class="tbl-cell">
+
+        	<a href="/index/getWare.html">
+
+            	<img src="images/@img1_1.png" class="half-img" width="160" alt="img">
+
+            </a>
+
+        </div>
+
+        <div class="tbl-cell">
+
+        	<div class="ad1-left">
+
+				<a href="tuan.html" class="ad-border">
+
+                	<img src="images/@img1_4.png" class="half-img" width="160" alt="img">
+
+                </a>
+
+								<a href="promotion.html">
+
+                	<img src="images/index_hotsale.png" class="half-img" width="160" alt="img">
+
+                </a>
+
+				            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <div class="keyword">
+
+		<a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">电视</a><a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">空调</a><a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">冰箱</a><a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">洗衣机</a>
+
+        <a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">剃须刀</a><a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">按摩器</a><a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">电吹风</a><a href="/products.html" class="btn-text" res="1" onclick="clickResponse(this)">电饭煲</a>
+
+    </div>
+
+    
+
+    <div class="tab-menu">
+
+    	<ul class="tbl-type">
+
+        <li class="tbl-cell" onclick="clickResponse($(this).children('a').children('span').eq(0))">
+
+        	<a href="/hotel/index.html" class="bdr-right">
+
+            	<span class="tab-icon1" res="1"></span>
+
+                <span class="tab-text">酒店预订</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell" onclick="clickResponse($(this).children('a').children('span').eq(0))">
+
+        	<a href="#" class="bdr-right">
+
+            	<span class="tab-icon2" res="1"></span>
+
+                <span class="tab-text">景点门票</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell" onclick="clickResponse($(this).children('a').children('span').eq(0))">
+
+        	<a href="#" class="bdr-right">
+
+            	<span class="tab-icon3" res="1"></span>
+
+                <span class="tab-text">机  票</span>
+
+            </a>
+
+        </li>
+
+        <li class="tbl-cell" onclick="clickResponse($(this).children('a').children('span').eq(0))">
+
+        	<a href="#">
+
+            	<span class="tab-icon4" res="1"></span>
+
+                <span class="tab-text">电影票</span>
+
+            </a>
+
+        </li>
+
+        </ul>
+
+    </div>
+
+	
+
+						
+
+												<div class="ad2 ad2-v1">
+
+                	<h2 class="ad-h2">掌上专享特惠</h2>
+
+                    <div class="ad2-big-img">
+
+                    	<a href="#"><img src="images/rBEQYFNQzKMIAAAAAABqFlGNQ3EAAErLwMdksYAAGou332.jpg" class="full-img" width=320  alt="掌上专享特惠"></a>
+
+                    </div>
+
+                </div>
+
+												
+
+				<div class="ad2">
+
+                	<h2 class="ad-h2">值得买</h2>
+
+					                    <div class="tbl-type">
+
+                        <div class="tbl-cell">
+
+							                            <a href="#">
+
+                                <img src="images/rBEhU1NmBwEIAAAAAABbPFjw8SUAAM0jgEJKwUAAFtU418.jpg"  class="half-img" width="160" alt="母亲节-要做行动派">
+
+                            </a>
+
+                        </div>
+
+                        <div class="tbl-cell">
+
+                            <div class="ad1-left">
+
+								                                <a href="#" class="ad-border">
+
+                                    <img src="images/rBEbRlNppKEIAAAAAABP3d8YPzYAAACfwL_1_wAAE_1359.jpg"  class="half-img" width="160" alt="母亲值得 用心说爱">
+
+                                </a>
+
+								                                <a href="#">
+
+                                    <img src="images/rBEbRlNq14gIAAAAAABOUazSQxwAAAJhAHlp0EAAE5p998.jpg" class="half-img" width="160" alt="母婴用品 满200减40">
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+					                </div>
+
+								
+
+				<div class="ad2">
+
+                	<h2 class="ad-h2">耍大牌</h2>
+
+					                    <div class="tbl-type">            
+
+                        <div class="tbl-cell">
+
+                            <div class="ad1-right">
+
+								                                <a href="#" class="ad-border">
+
+                                    <img src="images/rBEQWFNguagIAAAAAAA5X6A8-GsAAF0JgDUED8AADl3746.jpg"  class="half-img" width="160" alt="HTC最高直降300">
+
+                                </a>
+
+								                                <a href="#">
+
+                                    <img src="images/rBEbSFNp6zoIAAAAAAA0OB--FHIAAAF0gEpE6kAADRQ446.jpg"  class="half-img" width="160" alt="金士顿32G 99元秒杀">
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tbl-cell">
+
+							                            <a href="#">
+
+                                <img src="images/rBEhWFNnQNQIAAAAAABSM68EticAAM4nwD9DJ8AAFJL831.jpg"  class="half-img" width="160" alt="三星 爱国者最高降1500">
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+					                </div>
+
+								
+
+												<div class="ad2 ad2-v1">
+
+                	<h2 class="ad-h2">京东超市</h2>
+
+                    <div class="ad2-big-img">
+
+                    	<a href="#"><img src="images/rBEhU1NEtqYIAAAAAACU9_HKc50AALc2QEdlewAAJUP900.jpg" class="full-img" width=320  alt="京东超市"></a>
+
+                    </div>
+
+                </div>
+
+												
+
+				<div class="ad2 ad2-v1">
+
+                	<h2 class="ad-h2">生活家</h2>
+
+					                    <div class="tbl-type">
+
+						<div class="tbl-cell" style="width:50%;">
+
+							                            <a href="#">
+
+                                <img src="images/rBEhWVMdUVsIAAAAAACAlGr91aoAAJwBgGCd7sAAICs605.jpg" class="half-img" width="160" alt="京品惠">
+
+                            </a>
+
+                        </div>
+
+                        <div class="tbl-cell" style="width:50%;">
+
+                            <div class="ad1-left2" >
+
+								                                <a href="#" class="ad-border2">
+
+                                    <img src="images/rBEhU1NOT7AIAAAAAAA1e2EOlPgAAL8FwI09TEAADWT649.jpg" class="half-img" width="160" alt="晚集-品牌钜惠，送货及时">
+
+                                </a>
+
+								                                <a href="#">
+
+                                    <img src="images/rBEhWVM46kYIAAAAAAA2Nk-DPoMAAK87wI-qHAAADZO374.jpg" class="half-img" width="160" alt="生活旅行">
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+					                </div>
+
+								
+
+				<div class="theme-pavilion">
+
+											<div class="tbl-type">
+
+							                        	<span class="tbl-cell">
+
+                            	<a href="#"><img src="images/rBEhWVMWxRwIAAAAAAA3R8nql-YAAJeDQP_q4AAADdf450.jpg" class="half-img" width="160" alt="服装鞋帽"></a>
+
+                            </span>
+
+							                            <span class="tbl-cell">
+
+                            	<a href="#"><img src="images/rBEhV1MWxUwIAAAAAAA6CBNTYdwAAJmpQPqm6gAADog053.jpg" class="half-img" width="160" alt="数码家电"></a>
+
+                            </span>
+
+                        </div>
+
+                        <div class="tbl-type">
+
+							                        	<span class="tbl-cell">
+
+                            	<a href="#"><img src="images/rBEhVFMWxXsIAAAAAAArpMSmaigAAJf-gPVH0wAACu8252.jpg" class="half-img" width="160" alt="百货集"></a>
+
+                            </span>
+
+							                            <span class="tbl-cell">
+
+                            	<a href="#"><img src="images/rBEhV1MWxgIIAAAAAAAwtgmYQekAAJmqwGenAUAADDO658.jpg" class="half-img" width="160" alt="亲子屋"></a>
+
+                            </span>
+
+                        </div>
+
+                        <div class="tbl-type">
+
+							                        	<span class="tbl-cell">
+
+                            	<a href="#"><img src="images/rBEhVFMWxiQIAAAAAAAwyBcypgwAAJf_gENkREAADDg850.jpg" class="half-img" width="160" alt="好书汇"></a>
+
+                            </span>
+
+							                            <span class="tbl-cell">
+
+                            	<a href="#"><img src="images/rBEhUlMWxkcIAAAAAAAz2oYklycAAJf_wDyua4AADPy752.jpg" class="half-img" width="160" alt="美食馆"></a>
+
+                            </span>
+
+                        </div>
+
+									</div>
+
+						</div>
+
+<input type="hidden" value="7" id="activity"/>
+
+<input type="hidden" value="15" id="crazy"/>
+
+
+
+<script>
+
+//活动轮播图
+
+var picCount = $("#activity").val();
+
+	$(".pic-num1").css("width",(picCount*30)+"px");
+
+	var forEach = function(array, callback){
+
+		for (var i = 0, len = array.length; i < len; i++) { callback.call(this, array[i], i); }
+
+	}
+
+	var st = createPicMove("idContainer2", "idSlider2", picCount);	//图片数量更改后需更改此数值
+
+	var nums = [];
+
+	//插入数字
+
+	for(var i = 0, n = st._count - 1; i <= n;i++){
+
+		var li = document.createElement("li");
+
+		nums[i] = document.getElementById("idNum").appendChild(li);
+
+	}
+
+	//设置按钮样式
+
+	st.onStart = function(){
+
+		//forEach(nums, function(o, i){ o.className = ""})
+
+		forEach(nums, function(o, i){ o.className = st.Index == i ? "new-tbl-cell on" : "new-tbl-cell"; })
+
+	}
+
+	// 重新设置浮动
+
+	$("#idSlider2").css("position","relative");
+
+	
+
+	var _initX = 0;
+
+	var _finishX = 0;
+
+	var _startX = 0;
+
+	var _startY = 0;
+
+	function touchStart(event) {
+
+		_startX = event.touches[0].clientX;
+
+		_startY = event.touches[0].clientY;
+
+		_initX = _startX;
+
+	}
+
+	function touchMove(event) {
+
+		var touches = event.touches;
+
+		var _endX = event.touches[0].clientX;
+
+		var _endY = event.touches[0].clientY;
+
+		if(Math.abs(_endY-_startY)>Math.abs(_endX-_startX)){
+
+			return;		
+
+		}
+
+		event.preventDefault();
+
+		_finishX = _endX;
+
+		var _absX = Math.abs(_endX-_startX);
+
+		var lastX = $('#idSlider2').css('left').replace('px','');
+
+		if(_startX>_endX){
+
+			st.Stop();
+
+			$('#idSlider2').css('left',(parseInt(lastX)-_absX)+'px');
+
+		}else{
+
+			st.Stop();
+
+			$('#idSlider2').css('left',(parseInt(lastX)+_absX)+'px');
+
+		} 
+
+		_startX = _endX;
+
+	}
+
+	//触屏  离开屏幕事件
+
+	function touchEnd(event) {
+
+		if(_finishX==0){
+
+			return;
+
+		}
+
+		if(_initX>_finishX){
+
+			bindEvent(_initX,_finishX);
+
+		}else if(_initX<_finishX){
+
+			bindEvent(_initX,_finishX);
+
+		}
+
+		_initX = 0;
+
+		_finishX = 0;
+
+	}
+
+
+
+    /**
+
+     *  绑定触屏触发事件
+
+     * @param start
+
+     * @param end
+
+     */
+
+    function bindEvent(start,end){
+
+         if (start >= end) {
+
+                   st.Next();
+
+                } else {
+
+                    st.Previous();
+
+                }
+
+    }
+
+	st.Run();
+
+	var resetScrollEle = function(){
+
+		$("#shelper").css("width",$("#newkeyword").width()+"px");
+
+		var slider2Li = $("#idSlider2 li");
+
+		slider2Li.css("width",$(".scroll-wrapper").width()+"px");
+
+		$("#shelper").css("width",$("#newkeyword").width()+"px");
+
+	}
+
+	
+
+	window.addEventListener("resize",function(){
+
+		st.Change = st._slider.offsetWidth/st._count;
+
+		st.Next();
+
+		resetScrollEle();
+
+	});
+
+	window.addEventListener("orientationchange",function(){
+
+		st.Change = st._slider.offsetWidth/st._count;
+
+		st.Next();
+
+		resetScrollEle();
+
+	})
+
+	resetScrollEle();
+
+	
+
+		$(function(){
+
+    	//根据cookie判断用户是否已经主动取消，主动取消了则不再出现提醒
+
+    	var cookieName="ucTip";
+
+    	var cancel = false;
+
+        var start = document.cookie.indexOf(cookieName+"=");
+
+        if (start !=-1) {
+
+            start = start+cookieName.length+1;
+
+            var end = document.cookie.indexOf(";",start);
+
+            if (end==-1) {end = document.cookie.length;}
+
+            var ucTip = document.cookie.substring(start,end);
+
+    		if(ucTip=='1'){
+
+    			cancel = true; 
+
+    		}
+
+    	}
+
+    	if(!cancel){
+
+    		//外层div元素
+
+    		var ucElement = $('<div>').attr('id','ucTip').css({"position":"fixed","bottom":"30%","z-index":"10001","border":"0","display":"none"});
+
+    		//frame元素，目前UC只支持该接入类型
+
+    		var ucFrame = $('<iframe>').css({"height":"160px","width":"320px","border":"0px"}).attr('src','http://app.uc.cn/appstore/AppCenter/frame?uc_param_str=nieidnutssvebipfcp&api_ver=2.0&id=445&bg=#ffffff');
+
+    		ucElement.append(ucFrame);
+
+    		//将元素添加到页面
+
+    		$('body').append(ucElement);
+
+    		//回调方法
+
+    		window.addEventListener("message",function(event){
+
+    			var dt = event.data.type;
+
+    			var dm = event.data.message;
+
+    			//判断出现的情况
+
+    			if(dm!='not android uc' && dm!='not exist' && dm!='browser version error' && dm!='already exist' && dm!=undefined){
+
+    				$('#ucTip').show();
+
+    			}
+
+    			//判断隐藏的情况
+
+    			if (dm == 'success' || dm=='cancle' || dm=='close'){
+
+        			$('#ucTip').hide();
+
+    				//如果用户主动取消，则记录到cookie，30天内不再提醒
+
+    				if(dm=='cancle'){
+
+    					var expires = new Date();
+
+    					expires.setTime(expires.getTime() + 30*24*60*60*1000);
+
+    					document.cookie=cookieName+'=1;expires='+expires.toGMTString()+';path=/;domain=.jd.com';
+
+    					document.cookie=cookieName+'=1;expires='+expires.toGMTString()+';path=/;domain=.360buy.com';
+
+    				}
+
+        		}
+
+    		},false);
+
+    	}
+
+    });
+
+		function clickResponse(obj){
+
+		$('[res]').removeClass('on');
+
+		$(obj).addClass('on');
+
+		setTimeout(function(){
+
+			$(obj).removeClass('on');
+
+		},700);
+
+	}
+
+	$("#newkeyword").focus(function(){
+
+		setTimeout(function(){
+
+			 window.scrollTo(0,$("#newkeyword").offset().top-60);
+
+		 },10);		
+
+	});
+
+	$(document).ready(function(){
+
+		$("#categoryMenu li").addClass("route");
+
+	})
+
+</script>	
+
+   
+
+	<div class="login-area" id="footer">
+
+        	<div class="login">
+
+									    					<a href="login.html">登录</a><span class="lg-bar">|</span><a href="mobileRegister.html">注册</a>
+
+    												<span  class="new-fr"><a href="/showvote.html">反馈</a><span class="lg-bar">|</span><a href="#top">回到顶部</a></span>
+
+            </div>
+
+        	<div class="version"><a href="index.html">标准版</a><a href="javascript:void(0)" class="on">触屏版</a><a href="#" id="toPcHome">电脑版</a></div>
+
+            <div class="copyright">&copy; m.jd.com </div>
+
+        </div>
+
+
+
+    <div style="display:none;">
+
+    					<img src="other/ja.jsp?&amp;utmn=1059282994&amp;utmr=-&amp;utmp=%2Findex%2Findex.action%3Fv%3Dt&amp;guid=ON&jav=html5&pin=-&utmac=MO-J2011-1" />
+
+			    </div>
+
+<script type="text/javascript">
+
+$("#unsupport").hide();
+
+if(!testLocalStorage()){ //not support html5
+
+    if(0!=0 && !$clearCart && !$teamId){
+
+		$("#html5_cart_num").text(0>0>0);
+
+	}
+
+}else{
+
+	updateToolBar('index');
+
+}
+
+
+
+$("#html5_cart").click(function(){
+
+//	syncCart('a9bfb26aebeb1cc89652f2be7cc39eff',true);
+
+	location.href='/cart/cart.action';
+
+});
+
+
+
+function reSearch(){
+
+var depCity = window.sessionStorage.getItem("airline_depCityName");
+
+	if(testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity!=""){
+
+    	var airStr = '<form action="/airline/list.action" method="post" id="reseach">'
+
+        +'<input type="hidden" name="sid"  value="a9bfb26aebeb1cc89652f2be7cc39eff"/>'
+
+        +'<input type="hidden" name="depCity" value="'+ window.sessionStorage.getItem("airline_depCityName") +'"/>'
+
+        +'<input type="hidden" name="arrCity" value="'+ window.sessionStorage.getItem("airline_arrCityName") +'"/>'
+
+        +'<input type="hidden" name="depDate" value="'+ window.sessionStorage.getItem("airline_depDate") +'"/>'
+
+        +'<input type="hidden" name="depTime" value="'+ window.sessionStorage.getItem("airline_depTime") +'"/>'
+
+        +'<input type="hidden" name="classNo" value="'+ window.sessionStorage.getItem("airline_classNo") +'"/>'
+
+        +'</form>';
+
+    	$("body").append(airStr);
+
+    	$("#reseach").submit();
+
+	}else{
+
+    	window.location.href='/airline/index.action?sid=a9bfb26aebeb1cc89652f2be7cc39eff';
+
+	}
+
+}
+
+ //banner 关闭点击
+
+    $('.div_banner_close').click(function(){
+
+        $('#div_banner_header').unbind('click');
+
+        jQuery.post('/index/addClientCookieVal.json',function(d){
+
+              $('#div_banner_header').slideUp(500);
+
+        });
+
+    });
+
+    //banner 下载点击
+
+    $('.div_banner_download').click(function(){
+
+         var downloadUrl = $(this).attr('url');
+
+         jQuery.post('/index/addClientCookieVal.json',function(d){
+
+               window.location.href=downloadUrl;
+
+        });
+
+    });
+
+	$(document).ready(function(){
+
+		var _loadScript = function(url, options,cb){
+
+			var script = document.createElement("script");
+
+			var def = {
+
+				type: "text/javascript",
+
+				charset:"utf-8"
+
+			}
+
+			options= options|| {
+
+			}
+
+			for(var i in options){
+
+				def[i] = options[i];
+
+			}
+
+			script.src = url;
+
+			
+
+			for(var i in def){
+
+				script.setAttribute(i,def[i]);
+
+			}
+
+			script.addEventListener("load",function(){
+
+				cb && cb();
+
+			},false)
+
+			document.getElementsByTagName("head")[0].appendChild(script);
+
+		}
+
+		var needHalfShow = window._needHalfShow || false;
+
+					needHalfShow = true;
+
+				if($(".download-con").length && (!needHalfShow || ~~(Math.random()*10)%2)){
+
+			_loadScript("/js/2013/installapp.js?v=20140422100001",{},function(){
+
+			});
+
+		}
+
+		
+
+	})
+
+</script>
 
 </body>
+
 </html>
+

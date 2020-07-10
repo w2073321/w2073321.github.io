@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>
+
+															   	 					   京东触屏版
+
+									</title>
+
+    	<meta name="author" content="m.jd.com">
+
+        			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	            <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <meta name="format-detection" content="telephone=no">
+
+				<link rel="stylesheet" type="text/css" href="css/base2013.css?v=20130806100001" charset="gbk"/>
+
+						<link rel="stylesheet" type="text/css" href="css/mobileRegister.css" charset="gbk"/>	
+
+					
+
+				
+
+			
+
+		        								<link rel="apple-touch-icon-precomposed" href="http://m.jd.com/images/apple-touch-icon.png"/>
+
+						<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+
+				        <script type="text/javascript" src="js/common.js?v=201307121358"></script>
+
+        <script type="text/javascript" src="js/spin.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+
+
+<body id="body">
+
+<a name="top"></a>
+
+<header>
+
+			<div class="new-header">
+
+        	<a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+
+							<h2>手机快速注册</h2>
+
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span>京东键</span></a>
+
+    	</div>
+
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+
+        	<div class="new-tbl-type">
+
+                <a href="http://m.jd.com/index.html?sid=0c6b1ff690ce934723dbeb472d7eada6" class="new-tbl-cell">
+
+                	<span class="icon">首页</span>
+
+					<p style="color:#6e6e6e;">首页</p>
+
+                </a>
+
+                <a href="http://m.jd.com/category/all.html?sid=0c6b1ff690ce934723dbeb472d7eada6" class="new-tbl-cell">
+
+                	<span class="icon2">分类搜索</span>
+
+					<p style="color:#6e6e6e;">分类搜索</p>
+
+                </a>
+
+                <a href="javascript:void(0)" id="html5_cart" class="new-tbl-cell">
+
+                	<span class="icon3">购物车</span>
+
+					<p style="color:#6e6e6e;">购物车</p>
+
+                </a>
+
+                <a href="/user/home.action?sid=0c6b1ff690ce934723dbeb472d7eada6" class="new-tbl-cell">
+
+                	<span class="icon4">我的京东</span>
+
+					<p style="color:#6e6e6e;">我的京东</p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+	</header>
+
+
+
+<div class="new-ct bind">
+
+	<form action='/user/mobileRegisterEnd.action?sid=0c6b1ff690ce934723dbeb472d7eada6' method="post" id="form" >
+
+	<div class="new-pay-pw">   		
+
+        <div class="new-set-info">
+
+		<input type="hidden" id="sid" value="0c6b1ff690ce934723dbeb472d7eada6"/>
+
+		<input type="hidden" name="returnurl" value=""/>
+
+		<p  id="p_msg" style="display:none;" ></p>
+
+        <span class="new-input-span new-input-span-v1 new-mg-b10">
+
+			<input class="new-input" type="tel" id="mobile" name="mobile" placeholder="请输入手机号码" title="请输入手机号码" maxLength="11"/>
+
+			<a id="sub_btn" href="javascript:void(0);" class="new-get-btn">获取密码</a>
+
+			<span  id="second" class="new-get-num" style="display:none;"></span>
+
+		</span>
+
+		<div id="nameNull" class="new-txt-err" ></div>
+
+        <span class="new-input-span new-mg-b10">
+
+			<input type="text" class="new-input"  name="password" id="password"   placeholder="输入您收到的短信登录密码" title="请输入手机号码"  />
+
+		</span>
+
+        <div class="new-txt-err" id="passwordNull" ></div>
+
+        <!--[D] 默认时加  new-abtn-default 把a标签换成span-->
+
+        <a href="javascript:void(0);"  class="new-abtn-type new-mg-t15"    id="submitMobile" >注册</a>
+
+        </div>
+
+				
+
+    </div>	
+
+    </form>
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+    
+
+
+
+
+
+    var distantTime = 120;
+
+    var endTime;
+
+	
+
+	var mobileClick = function(){
+
+		var password = $("#password").val();
+
+		var mobile =  $("#mobile").val();
+
+		var sid = $("#sid").val();
+
+		if(password == ""){
+
+			$("#passwordNull").text("短信登录密码不能为空");
+
+			$("#passwordNull").show();
+
+			return;
+
+		}
+
+		jQuery.post('/user/doMobileRegister.json',{mobile:mobile,password:password,sid:sid},
+
+			function(data){
+
+				if(data.success!=true){
+
+					$("#passwordNull").text(data.message);
+
+					$("#passwordNull").show();
+
+				}else{
+
+				    //注册成功回到returnurl
+
+					$("#form").submit();
+
+				}
+
+		});
+
+	}
+
+	
+
+	var getCode = function(){
+
+		var nowTime = new Date().getTime()/1000;
+
+		var time = Math.floor(endTime - nowTime);
+
+		$("#second").text(time.toString()+'秒');
+
+		if(time > 0){
+
+			setTimeout("getCode()",1000);
+
+		}else{
+
+           // $("#sub_btn").html("重新发送");
+
+			$("#sub_btn").show();
+
+			$("#second").hide();
+
+			$("#p_msg").hide();
+
+			
+
+		}
+
+	}
+
+	
+
+	function getPassword(){
+
+	   var mobile = $("#mobile").val();
+
+		if(mobile == ""){
+
+			//$('#sub_btn').css("margin-top","20px");
+
+			$("#nameNull").show();
+
+			$("#nameNull").text("手机号不能为空");
+
+			return ;
+
+		}
+
+		if(!mobile.match(/^(13|15|18|14)[0-9]{9}$/)){
+
+			//$('#sub_btn').css("margin-top","20px");
+
+			$("#nameNull").text("手机号格式有误,请重新输入 ");
+
+			$("#nameNull").show();
+
+			return ;
+
+		}
+
+		var sid = $("#sid").val();
+
+		jQuery.get('/user/getCode.json?',
+
+		{mobile:mobile,sid:sid},
+
+		function(data){ 
+
+			if(data.success){ //成功
+
+			     // $("#p_msg").text(data.success);
+
+				$("#p_msg").hide();
+
+			    $("#nameNull").hide();
+
+				//发送按钮隐藏
+
+				$("#sub_btn").hide();
+
+				//倒计时显示
+
+				$("#second").show();
+
+				 endTime = new Date().getTime()/1000 + 120;
+
+				getCode();
+
+				
+
+			}else{ //失败
+
+			
+
+			    $("#nameNull").text(data.message);
+
+				$("#nameNull").show();
+
+				 $("#p_msg").hide();
+
+				 //发送按钮隐藏
+
+				 $("#sub_btn").show();
+
+				 //倒计时显示
+
+				 //$("#second").show();
+
+				 //endTime  = new Date().getTime()/1000 + 60;
+
+				 //getCode();
+
+			}
+
+		});
+
+	}
+
+	
+
+	var check = function(){
+
+		var mobile = $("#mobile").val();
+
+		if(mobile == ""){
+
+			//$('#sub_btn').css("margin-top","20px");
+
+			$("#nameNull").show();
+
+			$("#nameNull").text("手机号不能为空");
+
+			return false;
+
+		}
+
+		if(!mobile.match(/^(13|15|18|14)[0-9]{9}$/)){
+
+			//$('#sub_btn').css("margin-top","20px");
+
+			$("#nameNull").text("手机号格式有误,请重新输入 ");
+
+			$("#nameNull").show();
+
+			return false;
+
+		}
+
+			//$('#sub_btn').css("margin-top","0px");
+
+			$("#codeSubmit").submit();
+
+	}
+
+	
+
+	
+
+	$(document).ready(function(){
+
+		$("#mobile").click(function(){
+
+			$("#nameNull").hide();
+
+		});
+
+		
+
+		
+
+		$("#password").click(function(){
+
+			$("#passwordNull").hide();
+
+		});
+
+		
+
+		//获取密码
+
+		$("#sub_btn").click(getPassword);
+
+
+
+		//注册操作
+
+		$("#submitMobile").click(mobileClick);
+
+		
+
+	})
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+	<div class="new-footer">
+
+		<!--
+
+			<div class="new-f-banner">
+
+				    										<a href="http://m.jd.com/download/downApp.html?sid=0c6b1ff690ce934723dbeb472d7eada6"><div class="new-banner-img3"></div></a>
+
+    								            </div>
+
+			-->
+
+        	<div class="new-f-login">
+
+									
+
+    					<a href="/user/login.action?sid=0c6b1ff690ce934723dbeb472d7eada6">登录</a><span class="new-bar2">|</span><a href="/user/mobileRegister.action?sid=0c6b1ff690ce934723dbeb472d7eada6">注册</a>
+
+    			
+
+								<span  class="new-back-top"><a href="http://m.jd.com/showvote.html?sid=0c6b1ff690ce934723dbeb472d7eada6">反馈</a><span class="new-bar2">|</span><a href="#top">回到顶部</a></span>
+
+            </div>
+
+        	<div class="new-f-section"><a href="http://m.jd.com/index.html?v=w&sid=0c6b1ff690ce934723dbeb472d7eada6">标准版</a><a href="javascript:void(0)" class="on">触屏版</a><a href="http://m.jd.com/index/pcsite.action">电脑版</a></div>
+
+            <div class="new-f-section2">Copyright &copy; 2012-2014  m.jd.com 版权所有</div>
+
+        </div>
+
+    </footer>
+
+
+
+    <div style="display:none;">
+
+        	<img src="other/ja.jsp?&amp;utmn=1994193440&amp;utmr=-&amp;utmp=%2Fuser%2FmobileRegister.action%3Fsid%3D0c6b1ff690ce934723dbeb472d7eada6&amp;guid=ON&jav=touch&pin=-&utmac=MO-J2011-1" />
+
+        </div>
+
+
+
+<script type="text/javascript">
+
+$("#unsupport").hide();
+
+if(!testLocalStorage()){ //not support html5
+
+    if(0!=0 && !$clearCart && !$teamId){
+
+		$("#html5_cart_num").text(0>0>0);
+
+	}
+
+}else{
+
+	updateToolBar('');
+
+}
+
+
+
+$("#html5_cart").click(function(){
+
+//	syncCart('0c6b1ff690ce934723dbeb472d7eada6',true);
+
+	location.href='http://m.jd.com/cart/cart.action';
+
+});
+
+
+
+function reSearch(){
+
+var depCity = window.sessionStorage.getItem("airline_depCityName");
+
+	if(testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity!=""){
+
+    	var airStr = '<form action="/airline/list.action" method="post" id="reseach">'
+
+        +'<input type="hidden" name="sid"  value="0c6b1ff690ce934723dbeb472d7eada6"/>'
+
+        +'<input type="hidden" name="depCity" value="'+ window.sessionStorage.getItem("airline_depCityName") +'"/>'
+
+        +'<input type="hidden" name="arrCity" value="'+ window.sessionStorage.getItem("airline_arrCityName") +'"/>'
+
+        +'<input type="hidden" name="depDate" value="'+ window.sessionStorage.getItem("airline_depDate") +'"/>'
+
+        +'<input type="hidden" name="depTime" value="'+ window.sessionStorage.getItem("airline_depTime") +'"/>'
+
+        +'<input type="hidden" name="classNo" value="'+ window.sessionStorage.getItem("airline_classNo") +'"/>'
+
+        +'</form>';
+
+    	$("body").append(airStr);
+
+    	$("#reseach").submit();
+
+	}else{
+
+    	window.location.href='http://m.jd.com/airline/index.action?sid=0c6b1ff690ce934723dbeb472d7eada6';
+
+	}
+
+}
+
+ //banner 关闭点击
+
+    $('.div_banner_close').click(function(){
+
+        $('#div_banner_header').unbind('click');
+
+        jQuery.post('/index/addClientCookieVal.json',function(d){
+
+              $('#div_banner_header').slideUp(500);
+
+        });
+
+    });
+
+    //banner 下载点击
+
+    $('.div_banner_download').click(function(){
+
+         var downloadUrl = $(this).attr('url');
+
+         jQuery.post('http://m.jd.com/index/addClientCookieVal.json',function(d){
+
+               window.location.href=downloadUrl;
+
+        });
+
+    });
+
+
+
+
+
+
+
+
+
+	
+
+</script>
+
+</body>
+
+</html>
+
+
+
