@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta property="qc:admins" content="102527707450566375" />
+        <title>手机和讯财金网触屏版自适应手机wap财金网站模板-shenghuofuwu/caijing/</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
+        <meta name="keywords" content="手机和讯网,和讯资讯,和讯新闻,和讯无线" />
+        <meta name="description" content="手机和讯网为用户提供最新最专业的财经资讯、视频,还有实时的股市行情、外汇期货基金等市场信息。" />
+        <link rel="stylesheet" type="text/css" href="css/home1.0.1.css">
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <!--[if lt IE 9]>
+        <style type="text/css">article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}</style>
+        <script type="text/javascript" src="js/h5.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon-precomposed" href="images/tip_logo.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+        <script>
+		var id = '100000000';
+		var LastModified= '2014/08/16 15:24:03';
+	</script>
+        <script src="js/home1.0.1.js"></script>
+	    <script src="../pic.snyu.com/sdk/js/mobile.js" charset="utf-8"></script>
+    <script>
+	    $(function(){
+		$('#hx_snyu').animate({height:'100px'},500);
+		setTimeout(function(){$('#hx_snyu a').css('display','block')},600);
+		$('#hx_snyu a').click(function(){
+			$(this).parent().slideUp();
+		})
+		setTimeout(function(){$('#hx_snyu').slideUp();},8000);
+		var ih=$(window).height()/2;
+		var iTop;
+		var onOff=true;
+		$(window).scroll(function(){
+			if($(window).scrollTop()>ih && onOff){
+			    $('.hx_snyu_btm').show();
+				setTimeout(function(){$('.hx_snyu_btm').hide();onOff=false;},20000);
+				$('.hx_snyu_btm a').click(function(){
+					$('.hx_snyu_btm').hide();
+					onOff=false;
+				})
+			}
+
+		})
+	    })
+	</script>
+    </head>
+    <body>
+        <div id="container">
+	                <header>
+                <div class="top_logo">
+                    <div class="logo fl">
+                        <a href="index.html"><img src="images/logo.png" alt="和讯" /></a>
+                    </div>
+                                            <!--<a href="http://reg.hexun.com/RegWap2012/login.aspx?gourl=http%3A%2F%2Fm.hexun.com%2Fmystock.php" class="login ft24" id='mwx2'>登录自选股</a>-->
+                                        <a href="search.php" class="hq_search"><img src="images/search.png" alt="查询" /></a>
+                </div>
+            </header>
+            <!----登录入口start--->
+			<div class="loginplace ft24">
+								    <a href="../reg.hexun.com/RegWap2012/login.aspx@gourl=http_253A_252F_252Fm.hexun.com_252Fmystock.php" class="btn_classify ft28">自选股票/基金/期货</a>
+				    <a href="../reg.hexun.com/RegWap2012/login.aspx@gourl=http_3A_2F_2Fm.hexun.com_2Findex.html" class="btn_signin">登录</a>
+								<a href="../reg.hexun.com/RegWap2012/default.aspx" class="btn_register">注册</a>
+			</div>
+			<!----登录入口end----->
+            <div class="hq_nav ft28">
+                <ul>
+                    <li data-sort='100234721' ><a href="index.html">头条</a></li>
+                    <li data-sort='100000000' class="checked"><a href="news.html">新闻</a></li>
+                    <li data-sort='100228599' ><a href="stock.html">股票</a></li>
+                    <li data-sort='101767368' ><a href="funds.html">基金</a></li>
+                    <li data-sort='101710857' ><a href="gold.html">黄金</a></li>
+		    <li data-sort='101032758' ><a href="futures.html">期货</a></li>
+		    <li data-sort='100098426' ><a href="forex.html">外汇</a></li>
+                    <li data-sort='clh'><a href="../c.hexun.com/mdi.aspx@from=mindex&time=635252252869730900">策略</a></li>
+                    <li data-sort='6' ><a href="index.php@id=6">行情</a></li>
+                    <li data-sort='7' ><a href="index.php@id=7">资金</a></li>
+                    <li data-sort='8' ><a href="index.php@id=8">研报</a></li>
+		    <li data-sort='100235854' ><a href="hkstock.html">港股</a></li>
+		    <li data-sort='108532727' ><a href="usstock.html">美股</a></li>
+		    <li data-sort='101155325' ><a href="qizhi.html">期指</a></li>
+		    <li data-sort='101032723' ><a href="bond.html">债券</a></li>
+		    <li data-sort='101002114' ><a href="money.html">理财</a></li>
+		    <li data-sort='101710894' ><a href="bank.html">银行</a></li>
+		    <li data-sort='101710721' ><a href="insurance.html">保险</a></li>
+		    <li data-sort='125750171' ><a href="trust.html">信托</a></li>
+		    <li data-sort='100092115' ><a href="house.html">房产</a></li>
+		    <li data-sort='101931837' ><a href="auto.html">汽车</a></li>
+		    <li data-sort='100052214' ><a href="tech.html">科技</a></li>
+		    <li data-sort='100012296' ><a href="opinion.html">评论</a></li>
+		    <li data-sort='125780307' ><a href="blog.html">博客</a></li>
+		    <li data-sort='103147590' ><a href="book.html">读书</a></li>
+                    <li data-sort='101931845' ><a href="travel.html">商旅</a></li>
+		    <li data-sort='108405032' ><a href="tv.html">视频</a></li>
+		    <li data-sort='158207539' ><a href="iof.html">互金</a></li>
+                    <li data-sort='000000000' class="nav_more"><a href="#">更多</a></li>
+                </ul>
+            </div>
+	                            
+                <div class="g_xc borbm">
+                <h1><a href="../3g.hexun.com/md/default.htm"><img src="images/ico_3.png" alt="" class="tj" />和讯手机客户端免费下载</a></h1>
+            </div>
+                                        <div class="funds_news_list" id='mwx1'>
+                    <ul id="news_list" class="hx_funds ft28">
+		        			    <li>
+                                    <a href="news/2014-08-16/167589641.html"><h1>土地财政进行首次“大审计” </h1>
+                                        <div class="news_tit">
+                                            <p>首次对全国土地财政“家底”的大审计将于本...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                        <a href="news/2014-08-16/167588282.html">
+                        <dl class="news_tit">
+                            <dt>
+                                <h1>房产税全面扩围有望提速 </h1>
+                                <p>业内人士表示，不动产统一登记制度有助于推...</p>
+                            </dt>
+                            <dd><img src="http://i5.hexunimg.cn/2014-08-16/167588740_c166x118.jpg" alt="图片" class="newsimg"/></dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <hr /><li>
+                                    <a href="tech/2014-08-15/167574801.html"><h1>国务院明确放开电信资费价格 </h1>
+                                        <div class="news_tit">
+                                            <p>中国政府网15日消息，国务院修改21部行...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="stock/2014-08-16/167582611.html"><h1>证监会将发布实施新退市制度 </h1>
+                                        <div class="news_tit">
+                                            <p>目前证监会对借壳上市的政策没有发生变化；...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                <a href="topic/news/167290948.html"><h1>日系车企横向垄断嫌疑  <img src="images/ico_camera.jpg" alt="专题"/></h1>
+                                    <div class="news_tit"></div>
+                                </a>
+                            </li>
+                            <hr /><li>
+                                    <a href="news/2014-08-16/167588492.html"><h1>证券公司监管条例修改版 </h1>
+                                        <div class="news_tit">
+                                            <p>国务院日前修改了21部行政法规的部分条款...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                        <a href="news/2014-08-16/167589111.html">
+                        <dl class="news_tit">
+                            <dt>
+                                <h1>国内油价调价窗口周一打开 最高或下调200元/吨 </h1>
+                                <p>中新网8月16日电(能源频道宋亚芬)根据...</p>
+                            </dt>
+                            <dd><img src="/i7.hexunimg.cn/2014-08-16/167589112_c166x118.jpg" alt="图片" class="newsimg"/></dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <hr /><li>
+                                    <a href="news/2014-08-15/167579117.html"><h1>传统文化受益资本助力获产业 </h1>
+                                        <div class="news_tit">
+                                            <p>和讯网消息8月15日，传统文化的产业化复...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-15/167548400.html"><h1>多地持续出台稳增长措施 </h1>
+                                        <div class="news_tit">
+                                            <p>本报记者定军实习记者黄静孙行黄莎段倩北京...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-15/167556498.html"><h1>韩国外汇储备3680.3亿美元 </h1>
+                                        <div class="news_tit">
+                                            <p>经济日报首尔8月15日讯（记者杨明）韩国...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-15/167548163.html"><h1>网传合肥行政区划将大调整 </h1>
+                                        <div class="news_tit">
+                                            <p>伴随大合肥的建设发展，关于合肥区划调整的...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-15/167548423.html"><h1>盘点全国工资增长基准线 </h1>
+                                        <div class="news_tit">
+                                            <p>本报记者定军实习记者黄静、孙行北京广州报...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-15/167548407.html"><h1>降低融资成本新十条正式发文 </h1>
+                                        <div class="news_tit">
+                                            <p>本报记者王冠实习记者林怡君北京报道今年以...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                        <a href="news/2014-08-15/167547833.html">
+                        <dl class="news_tit">
+                            <dt>
+                                <h1>李克强施策新常态：锁调结构 </h1>
+                                <p>每经记者胡健发自北京火车一响，黄金万两。...</p>
+                            </dt>
+                            <dd><img src="/i3.hexunimg.cn/2014-08-15/167554486_c166x118.jpg" alt="图片" class="newsimg"/></dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <hr /><li>
+                                    <a href="news/2014-08-15/167547424.html"><h1>国务院力挺长期资金入市 </h1>
+                                        <div class="news_tit">
+                                            <p>专家表示，对长期资金予以税收优惠，有利于...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                        <a href="news/2014-08-15/167547262.html">
+                        <dl class="news_tit">
+                            <dt>
+                                <h1>福州新区申报上升为国家新区 </h1>
+                                <p>中国证券报记者获悉，《福州新区发展规划》...</p>
+                            </dt>
+                            <dd><img src="/i2.hexunimg.cn/2014-08-15/167556527_c166x118.jpg" alt="图片" class="newsimg"/></dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <hr /><li>
+                                    <a href="news/2014-08-15/167556055.html"><h1>北京105亿地方债下周发行 </h1>
+                                        <div class="news_tit">
+                                            <p>新京报讯（记者温薷）北京市财政局昨日表示...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-14/167544141.html"><h1>中企热观冷对俄农产品缺口 </h1>
+                                        <div class="news_tit">
+                                            <p>经济导报首席记者时超俄罗斯宣布对欧美实施...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                                    <a href="news/2014-08-15/167546986.html"><h1>油价或迎来年内第六次下调 </h1>
+                                        <div class="news_tit">
+                                            <p>本报讯（记者蔺丽爽）近期国际油价呈震荡下...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr /><li>
+                        <a href="news/2014-08-15/167556992.html">
+                        <dl class="news_tit">
+                            <dt>
+                                <h1>7月社会用电量同比增长3.0% </h1>
+                                <p>7月份全社会用电量同比增长3.0%，创今...</p>
+                            </dt>
+                            <dd><img src="/i9.hexunimg.cn/2014-08-15/167556994_c166x118.jpg" alt="图片" class="newsimg"/></dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <hr />
+		    </ul>
+                </div>
+                <div id="click_more">
+                    <p class="click_more wid100" style="display:block">
+                        <a href="javascript:void(0);"><img src="images/click_more.jpg" alt="点击查看更多" /></a>
+                    </p>
+                    <p id="pn" style="display: none;">1</p>
+                    <p id="pc" style="display: none;">20</p>
+                    <p id="id" style="display: none;"></p>
+                </div>
+                        <div class="style_choice  ft28" id="yiban">
+                <div class="style_four">
+                    <ul>
+                        <li><a href="../wap.hexun.com/2.0/default.htm">彩版</a></li>
+                        <li><a href="index.html">触版</a></li>
+                        <li><a href="../www.hexun.com/default.htm">PC版</a></li>
+                                                <li><a href="../m.hexun.com.tw/default.htm">繁体</a></li>
+                                                <li class="Nobg"><a href="../3g.hexun.com/md/default.htm">客户端</a></li>
+                    </ul>
+                    <a href="#" class="To_up"><img src="images/btn-top.png" alt="返回顶部"/></a>
+                </div>
+                <p><a href="feedback.php" class="advice"><img src="images/btn-advice.png" alt="建议" /></a></p>
+            </div>
+        </div>
+	<div class="hx_snyu_btm">
+		<script>_SNYU_.Alliance.init('202335', { 'autosize': true });</script>
+		<a href="javascript:;" style="display: block;"><span>关闭</span></a>
+	</div>
+        <img src="../utrack.hexun.com/hexun.gif@wap=1&param=1&site=m.hexun.com&ref=-&channel=news&trackid=53ef06edbe3346839&hxuid=&r=1408173843" width="0" height="0" style="display:none"/>
+
+<div style="display: none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff9acd00e2ebff4599274de4530507165' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+    </body>
+</html>
