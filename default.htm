@@ -20,7 +20,6 @@ $("#shownr img").delay(500).show(500)
 	
 })
 </script>
-
 <style>
 #shownr img { display:none;}
 </style>
@@ -30,35 +29,6 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
-<script>
-    (function(win, export_obj) {
-        win['TeaAnalyticsObject'] = export_obj;
-        if (!win[export_obj]) {
-            function _collect() {
-                _collect.q.push(arguments);
-            }
-            _collect.q = _collect.q || [];
-            win[export_obj] = _collect;            
-        }
-        win[export_obj].l = +new Date();
-    })(window, 'collectEvent');
-</script>
-<script async src="https://s3.pstatp.com/pgc/tech/collect/collect-autotrack-rangers.js"></script>
-<script>
-window.collectEvent('init', {
-        app_id:164155,//  必须替换成申请的 app_id
-        channel:'cn',
-        log: true, // 开启调试日志，可用于查看ssid，web_id, 和user_unique_id， 上线请关闭
-        enable_ab_test: true, // boolean类型，是否开启A/B实验功能
-    	enable_ab_visual: true,// boolean类型，是否开启A/B实验的可视化编辑模式功能
-    	enable_multilink: true,//boolean类型，是否开启A/B实验的多链接实验功能，默认为false
-    	multilink_timeout_ms:3000//number类型，A/B实验的多链接实验中关闭遮罩层的时间，默认500毫秒
-    });
-    window.collectEvent('start')
-    window.collectEvent('test_event', {
-       'from': 'index',
-    })
- </script>
 </head>
 <body  data-page="home">
 <div class="page" id="topnav">
