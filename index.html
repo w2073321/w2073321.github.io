@@ -10,15 +10,12 @@
  <link rel="apple-touch-icon-precomposed" href="mobile/images/apply/logo.png" />
  <link rel="apple-touch-startup-image" href="mobile/images/apply/logo-640.png" />
 <!-- sdk 初始化-->
-  <script src='js/ab.plus.bata.js' charset="utf-8">></script>
+  <script src='js/ab.plus.beta.js' charset="utf-8"></script>
   <script>
-  adhoc('init', {
-    appKey: 'ADHOC_8475a470-0083-4824-badb-aa35d7688de0', //创建应用时获得的appkey
-    defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认值，通常为0
-    clientIdDomain:'w2073321.github.io',//试验页面主域名，例如appadhoc.com
-    crossDomain:'w2073321.github.io',
-    sourceKey：'fid'
-  })
+  adhoc('init',{
+    appKey:'ADHOC_8475a470-0083-4824-badb-aa35d7688de0',//平台获得的Appkey必要
+    sourceKey:'fid'//渠道参数key
+})  
   </script>
 <!-- sdk end -->
 
