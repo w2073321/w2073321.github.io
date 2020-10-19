@@ -24,7 +24,7 @@
    // window.__ADHOC_TRACKER_URL__ = "https://abtest.e-hqins.com/tracker/tracker";
    adhoc('init',{
     appKey:"ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5",//平台获得的Appkey必要
-    custom:{sex: "male"}//sex、age:自定义标签key；
+    custom:{sex:"male"}//sex、age:自定义标签key；
    })  
   </script>
 
@@ -37,7 +37,7 @@
   	
   function applyFlags(flags) {
     //applyFlags:callback函数名称
-    if (flags.get('skr') === 1) {
+    if (flags.get('sky') === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
       var text = "请填写试验版本要展示的文案！";
     } else {
