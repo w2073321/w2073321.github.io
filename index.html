@@ -24,7 +24,7 @@
    // window.__ADHOC_TRACKER_URL__ = "https://abtest.e-hqins.com/tracker/tracker";
    adhoc('init',{
     appKey:"ADHOC_87d1eed0-9fa1-4ba5-9369-5ac1cb0ed2a1",//平台获得的Appkey必要
-    custom:{sex:"male"}//sex、age:自定义标签key；
+    
    })  
   </script>
 
@@ -48,7 +48,7 @@
     
   }
   adhoc('getFlags', applyFlags);
-  adhoc('track', 'clickck', 1);
+  adhoc('track', 'clickTimes', 1, function(){return {sex: 'male'} });
 </script>
 		<title>I'm QQ - 每一天，乐在沟通</title>
 		<style type="text/css">
