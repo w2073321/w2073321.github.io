@@ -30,11 +30,6 @@
 
   <script>
   	
-  	 const client = window.adhoc('getCurClientId');
-  	 console.log('函数外const定义b：' + client);
-  	 
-
-  	
   function applyFlags(flags) {
     //applyFlags:callback函数名称
     if (flags.get('sky') === 1) {
@@ -44,11 +39,13 @@
       var text = "请填写原始版本要展示的文案！";
     }
     
-
-    
   }
   adhoc('getFlags', applyFlags);
+
+
+  
   adhoc('track', 'btnclick', 1, function(){return {sex: 'male'} });
+</script>
 
   <!-- Start VWO Async SmartCode -->
 <script type='text/javascript'>
