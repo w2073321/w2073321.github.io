@@ -9,8 +9,8 @@
 		<meta name="description" itemprop="description" content="灵动界面，轻简架构，多人音视频，QQ5.0玩到根本停不下来！" />
 		<meta itemprop="image" content="http://im-img.qq.com/mobileqq/touch/img/v5/rich.png" />
 	
-	<!-- <script src="js/ab.plus.js" charset="utf-8"></script>  -->
-  <script src="https://sdk.appadhoc.com/ab.plus.js" charset="utf-8"></script> 
+	<script src="js/ab.plus.js" charset="utf-8"></script> 
+  <!-- <script src="https://sdk.appadhoc.com/ab.plus.js" charset="utf-8"></script>  -->
 	<script type="text/javascript">
    //可视化编辑需要使用stat、exp和auth这几个服务
    // window.adhoc_domain_stat_api = "https://console.e-hqins.com/data";
@@ -20,10 +20,10 @@
    // // window.adhoc_domain_snapshot_api = '';
    // window.adhoc_domain_isForbiddenSnap = true; // 是否禁止截图
    
-   // window.__ADHOC_EXP_URL__ = "https://abtest.e-hqins.com/experiment/get_flags_async";
-   // window.__ADHOC_TRACKER_URL__ = "https://abtest.e-hqins.com/tracker/tracker";
+   window.__ADHOC_EXP_URL__ = "https://app.cbhb.com.cn/experiment/get_flags_async";
+   window.__ADHOC_TRACKER_URL__ = "https://app.cbhb.com.cn/tracker/tracker";
    adhoc('init',{
-    appKey:"ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5",//平台获得的Appkey必要
+    appKey:"ADHOC_c5fb26c7-3f56-413f-92fc-92b41eb67b6f",//平台获得的Appkey必要
     
    })  
   </script>
@@ -48,7 +48,7 @@
     
   }
   adhoc('getFlags', applyFlags);
-  adhoc('track', 'clickTimes', 1, function(){return {sex: 'male'} });
+  adhoc('track', 'btnclick', 1, function(){return {sex: 'male'} });
 
   <!-- Start VWO Async SmartCode -->
 <script type='text/javascript'>
