@@ -10,12 +10,14 @@
  <link rel="apple-touch-icon-precomposed" href="mobile/images/apply/logo.png" />
  <link rel="apple-touch-startup-image" href="mobile/images/apply/logo-640.png" />
 <!-- sdk 初始化-->
-  <script src="js/ab.plus.js" charset="utf-8"></script> 
+  
   <!-- <script src="https://sdk.appadhoc.com/ab.plus.js"></script> -->
   <script type="text/javascript">
    window.__ADHOC_EXP_URL__ = "https://experiment.cbhb.com.cn/experiment/get_flags_async";
    window.__ADHOC_TRACKER_URL__ = "https://tracker.cbhb.com.cn/tracker/tracker";
-  
+  </script>
+<script src="js/ab.plus.js" charset="utf-8"></script> 
+  <script type="text/javascript">
   adhoc('init', {
     appKey: "ADHOC_d457d239-07ff-489e-888c-a29bc90a5a3c", //创建应用时获得的appkey
     defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认值，通常为0
@@ -24,6 +26,7 @@
     sourceKey：'fid'
   })
   </script>
+
 <!-- sdk end -->
 
  <title>仿GQ男士网微官网手机wap杂志网站模板-【】</title>
