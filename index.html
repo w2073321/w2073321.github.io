@@ -20,12 +20,17 @@
 
   <script type="text/javascript">
   adhoc('init', {
-    appKey: "ADHOC_340bf207-a0d8-4bb0-ba84-b84af3aec8af", //创建应用时获得的appkey
+    appKey: "ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5", //创建应用时获得的appkey
     defaultFlags: {your_flag_name: 0}, //编程模式必填：设置试验变量默认值，通常为0
    
     
   })
+let ids = adhoc('getMatchedExpIds');
+console.log('expid==',ids);
+
   </script>
+
+
 
 <!-- sdk end -->
 
