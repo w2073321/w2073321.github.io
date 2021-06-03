@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>sdk 开发测试环境</title>
+	<script src="https://sdk.appadhoc.com/ab.plus.js" ></script>
+	<script>
+	    adhoc('init', {
+			appKey:"ADHOC_dcdca7e8-32fa-4f7c-b4a7-ef4e8b7326ad"
+			// experimentCache: true // 是否缓存试验 getflag信息, 选填(true:缓存，false：不缓存)
+		});
+	</script>
+
+
+	<style media="screen" id="style">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: wheat;
+		}
+	</style>
+</head>
+<body>
+	
+	
+
+
+	
+
+<script type="text/javascript">
+		function trackClick(){
+			adhoc('track', 'k',1)
+		}
+	</script>
+	<div class="track">
+		<div>
+			<ul>
+		<li>上报指标</li>
+			</ul>
+		</div>
+	</div>
+	
+		
+        <button type="submit" onclick="trackClick()"> track </button>
+
+</script>
+</body>
+</html>
