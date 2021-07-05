@@ -7,11 +7,15 @@
 	<title>sdk 开发测试环境</title>
 	<script src="/ab.plus.js" ></script>
 	<script>
+		var sum =1;
+		sum++;
+
 	    adhoc('init', {
 			appKey:"ADHOC_7988102b-e3d1-4011-a955-8a8f6432a56b",
 			crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
             clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
-			experimentCache: false // 是否缓存试验 getflag信息, 选填(true:缓存，false：不缓存)
+			experimentCache: false ,// 是否缓存试验 getflag信息, 选填(true:缓存，false：不缓存)
+			clientId:sum
 		});
 	</script>
 
@@ -32,7 +36,7 @@
 		function getClick(){
 			function applyFlags(flags) {
     //applyFlags:callback函数名称
-    if (flags.get('a') === 1) {
+    if (flags.get('b') === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
       var text = "请填写试验版本要展示的文案！";
     } else {
