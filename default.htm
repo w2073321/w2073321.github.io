@@ -20,7 +20,6 @@ $("#shownr img").delay(500).show(500)
 	
 })
 </script>
-
 <style>
 #shownr img { display:none;}
 </style>
@@ -30,25 +29,6 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
- <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
-  <script>
-  adhoc('init', {
-    appKey: 'ADHOC_1a7ebc5e-35fa-4414-af7c-a1a188324313', //创建应用时获得的appkey
-    crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
-    clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
-    })
-  
-  var timer = setInterval(function(){
-adhoc('track', 'View_Add_to_Cart_3190',1) 
-
- }, 2000);
-document.getElementById(timer);
-
-
-//adhoc('track', 'pageUV', 1, function(){ return {test:1} });
-adhoc('track', 'pageUV', 1, function(){return {testGroupName:'feae',testVersion:'test',v:'1'} });
-  </script>
-
 </head>
 <body  data-page="home">
 <div class="page" id="topnav">
