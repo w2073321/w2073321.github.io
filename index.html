@@ -39,7 +39,7 @@
 		function getClick(){
 			function applyFlags(flags) {
     //applyFlags:callback函数名称
-    if (flags.get('qinxinbaotest') === 1) {
+    if (flags.get('bianliang_one') === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
       var text = "请填写试验版本要展示的文案！";
     } else {
@@ -54,11 +54,11 @@
 	<div class="getflag">
 		<div>
 			<ul>
-		<li>获取变量</li>
+		<li>获取变量1</li>
 			</ul>
 		</div>
 	</div>
-	<button type="submit" onclick="getClick()"> getflag </button>
+	<button type="submit" onclick="getClick()"> bianliang_one </button>
 	
 
 
@@ -66,20 +66,65 @@
 
 <script type="text/javascript">
 		function trackClick(){
-			adhoc('track', 'testclickA',1)
+			adhoc('track', 'Aclick',1)
 		}
 	</script>
 	<div class="track">
 		<div>
 			<ul>
-		<li>上报指标</li>
+		<li>上报指标1</li>
 			</ul>
 		</div>
 	</div>
 	
 		
-        <button type="submit" onclick="trackClick()"> track </button>
+        <button type="submit" onclick="trackClick()"> Aclick </button>
 
 </script>
+
+<script type="text/javascript">
+
+	function getClick(){
+		function applyFlags(flags) {
+//applyFlags:callback函数名称
+if (flags.get('bianlaing_two') === 1) {
+  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+  var text = "请填写试验版本要展示的文案！";
+} else {
+  var text = "请填写原始版本要展示的文案！";
+}
+
+}
+		adhoc('getFlags', applyFlags);
+	}
+	
+</script>
+<div class="getflag">
+	<div>
+		<ul>
+	<li>获取变量2</li>
+		</ul>
+	</div>
+</div>
+<button type="submit" onclick="getClick()"> bianlaing_two </button>
+
+<script type="text/javascript">
+	function trackClick(){
+		adhoc('track', 'Bclick',1)
+	}
+</script>
+<div class="track">
+	<div>
+		<ul>
+	<li>上报指标2</li>
+		</ul>
+	</div>
+</div>
+
+	
+	<button type="submit" onclick="trackClick()"> Bclick </button>
+
+</script>
+
 </body>
 </html>
