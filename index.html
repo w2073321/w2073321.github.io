@@ -6,13 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>sdk 开发测试环境</title>
 	
-	<script src="/ab.plus.js" ></script>
+	<!-- <script src="/ab.plus.js" ></script> -->
+	<script src="https://sdk.appadhoc.com/ab.plus.js"></script>
 	
 	<script>
 		// window.__ADHOC_EXP_URL__ = "https://abtest.e-hqins.com/experiment/get_flags_async";
         // window.__ADHOC_TRACKER_URL__ = "https://abtest.e-hqins.com/tracker/tracker";
  
-
+     
 	    adhoc('init', {
 			appKey:"ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5",
 			crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
@@ -87,7 +88,7 @@
 	function getClick(){
 		function applyFlags(flags) {
 //applyFlags:callback函数名称
-if (flags.get('bianlaing_two') === 1) {
+if (flags.get('bianlaing_two') === B) {
   //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
   var text = "请填写试验版本要展示的文案！";
 } else {
