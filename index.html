@@ -37,8 +37,8 @@
 <body>
 	<script type="text/javascript">
 
-		function getClick(){
-			function applyFlags(flags) {
+		function getClick1(){
+			function applyFlags1(flags) {
     //applyFlags:callback函数名称
     if (flags.get('bianliang_one') === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
@@ -48,7 +48,7 @@
     }
 
   }
-			adhoc('getFlags', applyFlags);
+			adhoc('getFlags', applyFlags1);
 		}
 		
 	</script>
@@ -59,14 +59,14 @@
 			</ul>
 		</div>
 	</div>
-	<button type="submit" onclick="getClick()"> bianliang_one </button>
+	<button type="submit" onclick="getClick1()"> bianliang_one </button>
 	
 
 
 	
 
 <script type="text/javascript">
-		function trackClick(){
+		function trackClick1(){
 			adhoc('track', 'Aclick',1)
 		}
 	</script>
@@ -79,14 +79,14 @@
 	</div>
 	
 		
-        <button type="submit" onclick="trackClick()"> Aclick </button>
+        <button type="submit" onclick="trackClick1()"> Aclick </button>
 
 </script>
 
 <script type="text/javascript">
 
-	function getClick(){
-		function applyFlags(flags) {
+	function getClick2(){
+		function applyFlags2(flags) {
 //applyFlags:callback函数名称
 if (flags.get('bianlaing_two') === B) {
   //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
@@ -96,7 +96,7 @@ if (flags.get('bianlaing_two') === B) {
 }
 
 }
-		adhoc('getFlags', applyFlags);
+		adhoc('getFlags', applyFlags2);
 	}
 	
 </script>
@@ -107,10 +107,10 @@ if (flags.get('bianlaing_two') === B) {
 		</ul>
 	</div>
 </div>
-<button type="submit" onclick="getClick()"> bianlaing_two </button>
+<button type="submit" onclick="getClick2()"> bianlaing_two </button>
 
 <script type="text/javascript">
-	function trackClick(){
+	function trackClick2(){
 		adhoc('track', 'Bclick',1)
 	}
 </script>
@@ -123,7 +123,7 @@ if (flags.get('bianlaing_two') === B) {
 </div>
 
 	
-	<button type="submit" onclick="trackClick()"> Bclick </button>
+	<button type="submit" onclick="trackClick2()"> Bclick </button>
 
 </script>
 
