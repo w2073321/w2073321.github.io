@@ -20,7 +20,6 @@ $("#shownr img").delay(500).show(500)
 	
 })
 </script>
-
 <style>
 #shownr img { display:none;}
 </style>
@@ -30,90 +29,6 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
- <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
-  <script>
-  adhoc('init', {
-    appKey: 'ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5', //创建应用时获得的appkey
-    crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
-    clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
-    })
-  
-
-    function applyFlags1(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang1') === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags1);
-
-     adhoc('track', 'clickA',1);
-
-     function applyFlags2(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang2') === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags2);
-
-     adhoc('track', 'clickB',1);
-     function applyFlags3(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang3') === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags3);
-
-     adhoc('track', 'clickC',1);
-     function applyFlags4(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang4') === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags4);
-
-     adhoc('track', 'clickD',1);
-
-     function applyFlags5(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang1') === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags5);
-
-     adhoc('track', 'clickE',1);
-
-  </script>
-
 </head>
 <body  data-page="home">
 <div class="page" id="topnav">
