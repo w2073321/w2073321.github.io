@@ -30,7 +30,7 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
- <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
+ <script src='https://sdk.appadhoc.com/ab.plus.heatmap.js'></script>
   <script>
   adhoc('init', {
     appKey: 'ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5', //创建应用时获得的appkey
@@ -43,14 +43,14 @@ $("#shownr img").delay(500).show(500)
     //applyFlags:callback函数名称
     if (flags.get('shiyanbianliang1') === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
+      var src="images/sy_05.jpg";
     } else {
-      var text = "请填写原始版本要展示的文案！";
+      var src="images/ztjq_14.jpg";
     }
 
   }
 
-     adhoc('getFlags', applyFlags1);
+     
 
      adhoc('track', 'clickA',1);
 
@@ -147,7 +147,7 @@ $("#shownr img").delay(500).show(500)
   <tr>
     <td valign="top"><table border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td><a href="ztjq.html"><img src="images/sy_05.jpg" width="290" height="303" alt="" /></a></td>
+        <td><a href="ztjq.html"><img src="adhoc('getFlags', applyFlags1)" width="290" height="303" alt=""  /></a></td>
         </tr>
       <tr>
         <td style="padding-top:20px;"><a href="bysj.html"><img src="images/sy_11.jpg" width="290" height="155" alt="" /></a></td>
