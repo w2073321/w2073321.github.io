@@ -31,12 +31,17 @@ $("#shownr img").delay(500).show(500)
   </script>
 <![endif]-->
  <script src='https://sdk.appadhoc.com/ab.plus.heatmap.js'></script>
- <script src='https://sdk.appadhoc.com/ab.plus.js'></script>
+ <!-- <script src='https://sdk.appadhoc.com/ab.plus.js'></script> -->
   <script>
+    window.__ADHOC_EXP_URL__ = 'http://experiment.appadhoc.com/get_flags_async'
+    window.__ADHOC_TRACKER_URL__ = 'http://tracker.appadhoc.com/tracker'
+    window.ADHOC_HEATMAP_SERVER = "http://heatmap-api.appadhoc.com"
+    const appKey = "ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5"
   adhoc('init', {
     appKey: 'ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5', //创建应用时获得的appkey
     crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
     clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
+    heatmap: true ,
     })
   </script>
 <script language="javascript">
