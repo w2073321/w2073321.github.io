@@ -47,7 +47,7 @@ $("#shownr img").delay(500).show(500)
 <script language="javascript">
     function applyFlags1(flags) {
     //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang1') === 1) {
+    if (flags.get('sorntmbud') === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
       document.getElementById('ABtest1').src="images/sy_14.jpg";
     } else {
@@ -56,67 +56,9 @@ $("#shownr img").delay(500).show(500)
     
   }
 
-     
+     adhoc('track', 'heatclick',1);
 
-     adhoc('track', 'clickA',1);
-
-     function applyFlags2(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang2') === B) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags2);
-
-     adhoc('track', 'clickB',1);
-     function applyFlags3(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang3') === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags3);
-
-     adhoc('track', 'clickC',1);
-     function applyFlags4(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang4') === Coast) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags4);
-
-     adhoc('track', 'clickD',1);
-
-     function applyFlags5(flags) {
-    //applyFlags:callback函数名称
-    if (flags.get('shiyanbianliang5') === 349660797666804968565) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      var text = "请填写试验版本要展示的文案！";
-    } else {
-      var text = "请填写原始版本要展示的文案！";
-    }
-
-  }
-
-     adhoc('getFlags', applyFlags5);
-
-     adhoc('track', 'clickE',1);
+  
 
   </script>
 
