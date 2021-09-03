@@ -6,6 +6,68 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+	<script src='https://sdk.appadhoc.com/ab.plus.js'></script> 
+	<script>
+
+	  adhoc('init', {
+		appKey: 'ADHOC_87933b84-df15-4f32-b54e-8ad4c34943fc', //创建应用时获得的appkey
+		crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
+		clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
+		})
+	
+	  </script>
+	<script language="javascript">
+		function applyFlags1(flags) {
+		//applyFlags:callback函数名称
+		if (flags.get('dangao1') === T) {
+		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+		  document.getElementById('ABtest1').src="img/cake1.jpg";
+		} else {
+		  document.getElementById('ABtest1').src="img/cake_07.jpg";
+		}
+		
+	  }
+	  function applyFlags2(flags) {
+		//applyFlags:callback函数名称
+		if (flags.get('dangao2') === 1) {
+		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+		  document.getElementById('ABtest2').src="img/cake2.jpg";
+		} else {
+		  document.getElementById('ABtest2').src="img/cake_07.jpg";
+		}
+		
+	  }
+	  function applyFlags3(flags) {
+		//applyFlags:callback函数名称
+		if (flags.get('dangao3') === C) {
+		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+		  document.getElementById('ABtest3').src="img/cake3.jpg";
+		} else {
+		  document.getElementById('ABtest3').src="img/cake_07.jpg";
+		}
+		
+	  }
+	  function applyFlags4(flags) {
+		//applyFlags:callback函数名称
+		if (flags.get('dangao4') === 4) {
+		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+		  document.getElementById('ABtest4').src="img/cake4.jpg";
+		} else {
+		  document.getElementById('ABtest4').src="img/cake_07.jpg";
+		}
+		
+	  }
+	  function applyFlags5(flags) {
+		//applyFlags:callback函数名称
+		if (flags.get('dangao5') === S) {
+		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+		  document.getElementById('ABtest5').src="img/cake5.jpeg";
+		} else {
+		  document.getElementById('ABtest5').src="img/cake_07.jpg";
+		}
+		
+	  }
+	  </script>	
 	</head>
 	<body>
 		<div id="details">
@@ -40,27 +102,27 @@
 				<div class="content">
 					<ul class="clear">
 						<li>
-							<img src="img/cake1.jpg"/>
+							<img src="img/cake1.jpg" id="ABtest1" onerror="adhoc('getFlags', applyFlags1)" onclick="adhoc('track', 'guoshengri1', 1)" />
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="img/cake1.jpg"/>
+							<img src="img/cake1.jpg"id="ABtest2" onerror="adhoc('getFlags', applyFlags2)" onclick="adhoc('track', 'guoshengri2', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="img/cake1.jpg"/>
+							<img src="img/cake1.jpg"id="ABtest3" onerror="adhoc('getFlags', applyFlags3)" onclick="adhoc('track', 'guoshengri3', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="img/cake1.jpg"/>
+							<img src="img/cake1.jpg"id="ABtest4" onerror="adhoc('getFlags', applyFlags4)" onclick="adhoc('track', 'guoshengri4', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="img/cake1.jpg"/>
+							<img src="img/cake1.jpg"id="ABtest5" onerror="adhoc('getFlags', applyFlags5)" onclick="adhoc('track', 'guoshengri5', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
