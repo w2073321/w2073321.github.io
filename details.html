@@ -55,7 +55,7 @@
 	<script language="javascript">
 	  function applyFlags4(flag4) {
 		//applyFlags:callback函数名称
-		if (flags4.get('dangao4') === 4) {
+		if (flags4.get('dangao4') === 5) {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest4').src="img/cake4.jpg";
 		} else {
@@ -111,32 +111,32 @@
 				<div class="content">
 					<ul class="clear">
 						<li>
-							<img src="?" id="ABtest1" onerror="adhoc('getFlags', applyFlags1)"  />
+							<img src="?" id="ABtest1" onerror="adhoc('getFlags', applyFlags1)" onclick="adhoc('track', 'guoshengri1', 1)" />
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest2" onerror="adhoc('getFlags', applyFlags2)" />
+							<img src="?" id="ABtest2" onerror="adhoc('getFlags', applyFlags2)" onclick="adhoc('track', 'guoshengri2', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest3" onerror="adhoc('getFlags', applyFlags3)" />
+							<img src="?" id="ABtest3" onerror="adhoc('getFlags', applyFlags3)" onclick="adhoc('track', 'guoshengri3', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="img/cake1.jpg" />
+							<img src="?" d="ABtest4" onerror="adhoc('getFlags', applyFlags4)" onclick="adhoc('track', 'guoshengri4', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest5" onerror="adhoc('getFlags', applyFlags5)" />
+							<img src="?" id="ABtest5" onerror="adhoc('getFlags', applyFlags5)" onclick="adhoc('track', 'guoshengri5', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest4" onerror="adhoc('getFlags', applyFlags4)" onclick="adhoc('track', 'guoshengri4', 1)"/>
+							<img src="?" />
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
