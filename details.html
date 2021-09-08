@@ -27,8 +27,8 @@
 		}
 		
 	  }
-	</script>	
-	<script language="javascript">
+	
+	
 	  function applyFlags2(flags2) {
 		//applyFlags:callback函数名称
 		if (flags2.get('xinfuxibing2') === 1) {
@@ -39,8 +39,7 @@
 		}
 		
 	  }
-   </script>
-	<script language="javascript">
+  
 	  function applyFlags3(flags3) {
 		//applyFlags:callback函数名称
 		if (flags3.get('xingfuxibing3') === 'G') {
@@ -49,10 +48,12 @@
 		} else {
 		  document.getElementById('ABtest3').src="img/cake_07.jpg";
 		}
-		
+		adhoc('getFlags', applyFlags3)
+		var s = flags3.get('xingfuxibing3');
+	  console.log('变量返回值3是',s);
 	  }
-	</script>
-	<script language="javascript">
+	  
+	
 	  function applyFlags4(flag4) {
 		//applyFlags:callback函数名称
 		if (flags4.get('xingfuxibing4') === 1) {
@@ -61,22 +62,24 @@
 		} else {
 		  document.getElementById('ABtest4').src="img/cake_07.jpg";
 		}
-		
+		adhoc('getFlags', applyFlags4);
+		var T = flags4.get('xingfuxibing4');
+	  console.log('变量返回值4是',T);
 	  }
-	  console.log("变量返回值是:",flags4.get('xingfuxibing4'));
-	</script>
-	<!-- <script language="javascript">
+	  
+
 	  function applyFlags5(flags5) {
 		//applyFlags:callback函数名称
-		if (flags5.get('dangao5') === 'S') {
+		if (flags5.get('xingfuxibing5') === 'd') {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest5').src="img/cake5.jpeg";
 		} else {
 		  document.getElementById('ABtest5').src="img/cake_07.jpg";
 		}
-		
-	  }
-	</script> -->
+		adhoc('getFlags', applyFlags5);
+	  }  
+	</script>
+
 
 	</head>
 	<body>
