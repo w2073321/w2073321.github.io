@@ -19,9 +19,9 @@
 	<script language="javascript">
 		function applyFlags1(flags) {
 		//applyFlags:callback函数名称
-		if (flags.get('dangao1') === 'T') {
+		if (flags.get('xinfuxibing1') === 'A') {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-		  document.getElementById('ABtest1').src="img/cake1.jpg";
+		  document.getElementById('ABtest1').src="img/cake_03.jpg";
 		} else {
 		  document.getElementById('ABtest1').src="img/cake_07.jpg";
 		}
@@ -31,7 +31,7 @@
 	<script language="javascript">
 	  function applyFlags2(flags2) {
 		//applyFlags:callback函数名称
-		if (flags2.get('dangao2') === 1) {
+		if (flags2.get('xinfuxibing2') === 1) {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest2').src="img/cake2.jpg";
 		} else {
@@ -43,7 +43,7 @@
 	<script language="javascript">
 	  function applyFlags3(flags3) {
 		//applyFlags:callback函数名称
-		if (flags3.get('dangao3') === 'C') {
+		if (flags3.get('xingfuxibing3') === 'G') {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest3').src="img/cake3.jpg";
 		} else {
@@ -55,7 +55,7 @@
 	<script language="javascript">
 	  function applyFlags4(flag4) {
 		//applyFlags:callback函数名称
-		if (flags4.get('dange4') === 1) {
+		if (flags4.get('xingfuxibing4') === 0) {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest4').src="img/cake4.jpg";
 		} else {
@@ -64,7 +64,7 @@
 		
 	  }
 	</script>
-	<script language="javascript">
+	<!-- <script language="javascript">
 	  function applyFlags5(flags5) {
 		//applyFlags:callback函数名称
 		if (flags5.get('dangao5') === 'S') {
@@ -75,7 +75,7 @@
 		}
 		
 	  }
-	</script>
+	</script> -->
 
 	</head>
 	<body>
@@ -111,27 +111,22 @@
 				<div class="content">
 					<ul class="clear">
 						<li>
-							<img src="?" id="ABtest1" onerror="adhoc('getFlags', applyFlags1)" onclick="adhoc('track', 'guoshengri1', 1)" />
+							<img src="?" id="ABtest1" onerror="adhoc('getFlags', applyFlags1)" onclick="adhoc('track', 'dangaoclick1', 1)" />
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest2" onerror="adhoc('getFlags', applyFlags2)" onclick="adhoc('track', 'guoshengri2', 1)"/>
+							<img src="?" id="ABtest2" onerror="adhoc('getFlags', applyFlags2)" onclick="adhoc('track', 'dangaoclick2', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest3" onerror="adhoc('getFlags', applyFlags3)" onclick="adhoc('track', 'guoshengri3', 1)"/>
+							<img src="?" id="ABtest3" onerror="adhoc('getFlags', applyFlags3)" onclick="adhoc('track', 'dangaoclick3', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="img/cake1.jpg" />
-							<p>爆浆榴莲蛋糕</p>
-							<p>￥99.00</p>
-						</li>
-						<li>
-							<img src="?" id="ABtest5" onerror="adhoc('getFlags', applyFlags5)" onclick="adhoc('track', 'guoshengri5', 1)"/>
+							<img src="?" id="ABtest4" onerror="adhoc('getFlags', applyFlags4)" onclick="adhoc('track', 'dangaoclick4', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
@@ -141,7 +136,12 @@
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest4" onerror="adhoc('getFlags', applyFlags4)" onclick="adhoc('track', 'guoshengri4', 1)"/>
+							<img src="img/cake1.jpg" />
+							<p>爆浆榴莲蛋糕</p>
+							<p>￥99.00</p>
+						</li>
+						<li>
+							<img src="img/cake1.jpg" />
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
