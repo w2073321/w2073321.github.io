@@ -25,24 +25,12 @@
 		} else {
 		  document.getElementById('ABtest1').src="img/cake_07.jpg";
 		}
-		
-	  }
-	</script>
-	<script>
-	  function applyFlags2(flags2) {
-		//applyFlags:callback函数名称
 		if (flags2.get('xinfuxibing2') === 1) {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest2').src="img/cake2.jpg";
 		} else {
 		  document.getElementById('ABtest2').src="img/cake_07.jpg";
 		}
-		
-	  }
-	</script>
-	<script>
-	  function applyFlags3(flags3) {
-		//applyFlags:callback函数名称
 		if (flags3.get('xingfuxibing3') === 'G') {
 		  //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 		  document.getElementById('ABtest3').src="img/cake3.jpg";
@@ -52,10 +40,9 @@
 		
 		var s = flags3.get('xingfuxibing3');
 	  console.log('变量返回值3是',s);
+		
 	  }
-	  
-	</script>
-	
+	</script>	
 	</head>
 	<body>
 		<div id="details">
@@ -95,12 +82,12 @@
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest2" onerror="adhoc('getFlags', applyFlags2)" onclick="adhoc('track', 'dangaoclick2', 1)"/>
+							<img src="?" id="ABtest2" onerror="adhoc('getFlags', applyFlags1)" onclick="adhoc('track', 'dangaoclick2', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
 						<li>
-							<img src="?" id="ABtest3" onerror="adhoc('getFlags', applyFlags3)" onclick="adhoc('track', 'dangaoclick3', 1)"/>
+							<img src="?" id="ABtest3" onerror="adhoc('getFlags', applyFlags1)" onclick="adhoc('track', 'dangaoclick3', 1)"/>
 							<p>爆浆榴莲蛋糕</p>
 							<p>￥99.00</p>
 						</li>
