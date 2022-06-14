@@ -14,8 +14,8 @@
 		   window.ADHOC_HEATMAP_SERVER = 'https://heatmap-api.appadhoc.com'
 		   const appKey = "ADHOC_bf8c38d2-b8e5-4c08-8d99-e306d2e5c752"
 		 adhoc('init', {
-		   appKey: 'ADHOC_bf8c38d2-b8e5-4c08-8d99-e306d2e5c752', //创建应用时获得的appkey
-		   defaultFlags: {Tc_nf: 0}, //编程模式必填：设置试验变量默认值，通常为0
+		   appKey: 'ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5', //创建应用时获得的appkey
+		   defaultFlags: {Mapcity: 0}, //编程模式必填：设置试验变量默认值，通常为0
 		   heatmap: true ,
 		   setTimeout:2000,
 		   experimentCache:false,
@@ -26,7 +26,7 @@
 	   <script language="javascript">
 		   function applyFlags1(flags) {
 		   //applyFlags:callback函数名称
-		   if (flags.get('Tc_nf') === 1) {
+		   if (flags.get('Mapcity') === 1) {
 			 //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 			 document.getElementById('ABtest1').src="img/bg1.jpeg";
 			 //展示试验版本样式
@@ -36,8 +36,12 @@
 		   }
 		   
 		 }
-		     
-			
+  
+		 adhoc('track', 'clickTimes', 1 , function(){
+    return {
+        Emall: 'W023HEH5@126.COM'
+    }
+  });
 		 </script>
 
 <script type='text/javascript'>
