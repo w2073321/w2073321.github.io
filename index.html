@@ -6,69 +6,84 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<script src='https://sdk.appadhoc.com/ab.plus.heatmap.js'></script>
-		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-MCGNC6L"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R41BGXDHDE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R41BGXDHDE');
-</script>
+  
+		<script src="js/web-sesdk.js"></script>
+		<script src="js/sesdk-parameters-plugin.js"></script>
 		 <script>
-		   window.__ADHOC_EXP_URL__ = 'https://experiment.appadhoc.com/get_flags_async'
-		   window.__ADHOC_TRACKER_URL__ = 'https://tracker.appadhoc.com/tracker'
-		   window.ADHOC_HEATMAP_SERVER = 'https://heatmap-api.appadhoc.com'
-		   const appKey = "ADHOC_bf8c38d2-b8e5-4c08-8d99-e306d2e5c752"
-		 adhoc('init', {
-		   appKey: 'ADHOC_80d4cb94-4828-4d2a-92ab-449a2d480ad5', //创建应用时获得的appkey
-		   defaultFlags: {Mapcity: 0}, //编程模式必填：设置试验变量默认值，通常为0
-		   heatmap: true ,
-		   setTimeout:2000,
-		   experimentCache:false,
+		  // 加载参数下发SDK插件
+        SESDK.use(onlineParametersPlugin);
+          // 初始化SDK
+        SESDK.init(initParams);
+		SESDK.init({
+	   appKey: 'c57d0bae1a1dff69',
+       userId: '5c5a2f0fd35d9296',	   
+config: {
+    debugModel: true,
+    // customURL: 'http://xx.x',
+	autoTrackConfig: {
+      autoTrack: true,
+      autoTrackPageView: true,
+      autoTrackPageClick: true,
+      isTrackSinglePage: false,
+    },
+    remoteConfig: {
+      pollingInterval: 30,
+      enable: true,
+      mergeType: 1,
+      customIDProperties: { a: 1 },
+      customIDEventProperties: { e: 1 },
+      customIDUserProperties: { u: 1 },
+    },
+  },
+});
+      //初始化之后执行
+       SESDK.ready(callback);
+	   SESDK.use(sdkPlugin);
+// defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
+[
+   {
+          name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+          type : 2 , // 配置项的类型 1 string、2 number、3 boolean、4 json
+          value : "0", // 配置项的值
+   }
+] ;  
 
-		   })
-	   
-		 </script>
-	   <script language="javascript">
-		   function applyFlags1(flags) {
-		   //applyFlags:callback函数名称
-		   if (flags.get('Mapcity') === 1) {
+      //设置accountid
+	   SESDK.login('web1');
+	   //同步下发参数
+	   const value = SESDK.fastFetchRemoteConfig("banner");
+	   if (value === 1) {
 			 //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
 			 document.getElementById('ABtest1').src="img/bg1.jpeg";
 			 //展示试验版本样式
 		   } else {
 			 document.getElementById('ABtest1').src="img/bg.jpg";
 			 //展示原始版本样式
-		   }
-		   
-		 }
-  
-		 adhoc('track', 'clickTimes', 1 , function(){
-    return {
-        Emall: 'W023HEH5@126.COM'
-    }
-  });
-		 </script>
-
-<script type='text/javascript'>
-	window._vwo_code = window._vwo_code || (function(){
-	var account_id=609353,
-	settings_tolerance=2000,
-	library_tolerance=2500,
-	use_existing_jquery=false,
-	is_spa=1,
-	hide_element='body',
-	
-	/* DO NOT EDIT BELOW THIS LINE */
-	f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
-	window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
-	</script>
-	<!-- End VWO Async SmartCode -->
-
-
+		   };
+	   //异步下发参数
+    //    const a_value=SESDK.asyncFetchRemoteConfig("k1"); 
+	//    if (a_value=== 1) {
+	// 		 //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+	// 		 document.getElementById('ABtest1').src="img/bg1.jpeg";
+	// 		 //展示试验版本样式
+	// 	   } else {
+	// 		 document.getElementById('ABtest1').src="img/bg.jpg";
+	// 		 //展示原始版本样式
+	// 	   };
+	function Reg(){
+	SESDK.trackRegister({
+						regType: 'WeChat',
+						registerStatus: 'success',
+						customProperties: {
+						  one: '1',
+						}
+					  });
+	SESDK.track('testclick', {
+  one: '1',
+});   
+					}
+	   
+		</script>
 	</head>
 	<body>
 		<!--
@@ -105,7 +120,7 @@
 			<!--banner-->
 			<div class="banner">
 				<a href="details.html">
-					<img src="?" id="ABtest1" onerror="adhoc('getFlags', applyFlags1)" οnclick="adhoc('track','bannerclick',1)"/>
+					<img src="?" id="ABtest1"  οnclick="Reg()"/>
 				</a>
 			</div>
 			<div class="cake_type">
