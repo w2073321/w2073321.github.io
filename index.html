@@ -3,112 +3,26 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<link rel="shortcut icon" href="#"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="shortcut icon" href="#" />
 		<script src="js/web-sesdk.js"></script>
 		<script src="js/sesdk-parameters-plugin.js"></script>
-		
-		<script>
-		  // 加载参数下发SDK插件
-      window.SESDK.use(window.parametersPlugin);
-      // 初始化SDK
-		  SESDK.init({
-	      appKey: 'c57d0bae1a1dff69',
-        userId: '5c5a2f0fd35d9296',	   
-        config: {
-          debugModel: false,
-          // customURL: 'http://xx.x',
-          autoTrackConfig: {
-            autoTrack: true,
-            autoTrackPageView: true,
-            autoTrackPageClick: false,
-            isTrackSinglePage: false,
-          },
-          remoteConfig: {
-            pollingInterval: 30,
-            enable: true,
-            mergeType: 1,
-            customIDProperties: { a: 1 },
-            customIDEventProperties: { e: 1 },
-            customIDUserProperties: { u: 1 },
-          },
-        },
-      }); 
-	</script>
-     <script>
-      //设置accountid
-	    SESDK.login('web1');
-
-		// defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
-		SESDK.setRemoteDefaultConfig([
-   {
-          name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
-          typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
-          value : "0", // 配置项的值
-   }
-]);  
-</script> 
-     <script>
-	    //同步下发参数
-	    const value = SESDK.fastFetchRemoteConfig("banner");
-		function valueflag(){
-	   if (value === 1) {
-      //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-      document.getElementById('ABtest1').src="img/bg1.jpeg";
-      //展示试验版本样式
-      } else if (value === 0){
-      document.getElementById('ABtest1').src="img/bg.jpg";
-      //展示原始版本样式
-      };
-	}
-	   //异步下发参数
-    //    const a_value=SESDK.asyncFetchRemoteConfig("k1"); 
-	//    if (a_value=== 1) {
-	// 		 //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-	// 		 document.getElementById('ABtest1').src="img/bg1.jpeg";
-	// 		 //展示试验版本样式
-	// 	   } else {
-	// 		 document.getElementById('ABtest1').src="img/bg.jpg";
-	// 		 //展示原始版本样式
-	// 	   };   
-		</script>
-
-         <script>
-			//自定义指标上报
-			function Regcl(){
-				SESDK.trackRegister({
-									regType: 'WeChat',
-									registerStatus: 'success',
-									customProperties: {
-									  one: '1',
-									}
-								  });
-				SESDK.track('testclick', {
-			  one: '1',
-			}); 
-			
-			setTimeout(function(){
-				location.href = 'https://w2073321.github.io/details.html';
-			}, 1000);
-				   
-			}
-		</script>
 	</head>
 	<body>
 		<!--
 			页面的版心宽度  1251px
-		-->	
+		-->
 		<div id="box">
 			<!--头部-->
 			<div class="xf_header">
 				<header>
 					<a href="index.html">
-						<img src="img/logo_big01.png"/>
+						<img src="img/logo_big01.png" />
 					</a>
 					<div class="city">
-						<img src="img/icon-address.png"/>
+						<img src="img/icon-address.png" />
 						<span>武汉市</span>
 						<a href="#">切换城市</a>
 					</div>
@@ -121,9 +35,9 @@
 						<a href="#">关于我们</a>
 					</div>
 					<div class="link">
-						<img src="img/i-search.jpg"/>
-						<img src="img/i-cart.jpg"/>
-						<img src="img/i-user.jpg"/>
+						<img src="img/i-search.jpg" />
+						<img src="img/i-cart.jpg" />
+						<img src="img/i-user.jpg" />
 						<a href="#">联系我们</a>
 					</div>
 				</header>
@@ -131,13 +45,13 @@
 			<!--banner-->
 			<div class="banner">
 				<a>
-					<img src="img/hx.jpg" defer="valueflag" id="ABtest1"  οnclick="Regcl()"/>
+					<img src="img/hx.jpg" defer="valueflag" id="ABtest1" />
 				</a>
 			</div>
 			<div class="cake_type">
 				<div>
 					<a>
-						<img src="img/cake_03.jpg"/>
+						<img src="img/cake_03.jpg" />
 					</a>
 					<a>
 						<span>AFTERNOON TEA </span>
@@ -147,17 +61,17 @@
 				</div>
 				<div>
 					<a>
-						<img src="img/cake_05.jpg"/>
+						<img src="img/cake_05.jpg" />
 					</a>
 					<a>
-						<span>CAKE  </span>
+						<span>CAKE </span>
 						<span>蛋糕</span>
 					</a>
 					<p>“只有国王才有资格拥有的，享受众人给予的祝福”</p>
 				</div>
 				<div>
 					<a>
-						<img src="img/cake_07.jpg"/>
+						<img src="img/cake_07.jpg" />
 					</a>
 					<a>
 						<span>SOUVENIR </span>
@@ -181,7 +95,7 @@
 						</div>
 						<div class="tel">
 							<a href="#">
-								<img src="img/tel_03.jpg"/>
+								<img src="img/tel_03.jpg" />
 								<span>400-999-6665</span>
 							</a>
 							<a href="#">WEIBO</a>
@@ -202,3 +116,83 @@
 		</div>
 	</body>
 </html>
+<script>
+  // 加载参数下发SDK插件
+  window.SESDK.use(window.parametersPlugin);
+  // 初始化SDK
+  SESDK.init({
+    appKey: 'c57d0bae1a1dff69',
+    userId: '5c5a2f0fd35d9296',	   
+    config: {
+      debugModel: true,
+      // customURL: 'http://xx.x',
+      autoTrackConfig: {
+        autoTrack: true,
+        autoTrackPageView: true,
+        autoTrackPageClick: true,
+        isTrackSinglePage: false,
+      },
+      remoteConfig: {
+        pollingInterval: 30,
+        enable: true,
+        mergeType: 1,
+        customIDProperties: { a: 1 },
+        customIDEventProperties: { e: 1 },
+        customIDUserProperties: { u: 1 },
+      },
+    },
+  });
+
+  //设置accountid
+  SESDK.login('web1');
+  
+  // defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
+  SESDK.setRemoteDefaultConfig([
+      {
+            name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
+            value : "0", // 配置项的值
+      }
+  ]);
+
+  //同步下发参数
+  const value = SESDK.fastFetchRemoteConfig("banner");
+  function valueflag(){
+    if (value === 1) {
+    //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+    document.getElementById('ABtest1').src="img/bg1.jpeg";
+    //展示试验版本样式
+    } else if (value === 0){
+    document.getElementById('ABtest1').src="img/bg.jpg";
+    //展示原始版本样式
+    };
+  }
+                   //异步下发参数
+                  //    const a_value=SESDK.asyncFetchRemoteConfig("k1"); 
+                //    if (a_value=== 1) {
+                // 		 //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+                // 		 document.getElementById('ABtest1').src="img/bg1.jpeg";
+                // 		 //展示试验版本样式
+                // 	   } else {
+                // 		 document.getElementById('ABtest1').src="img/bg.jpg";
+                // 		 //展示原始版本样式
+                // 	   };
+
+  //自定义指标上报
+document.getElementById('ABtest1').addEventListener('click', function(e){
+  SESDK.trackRegister({
+    regType: 'WeChat',
+    registerStatus: 'success',
+    customProperties: {
+      one: '1',
+    }
+  });
+  SESDK.track('testclick', {
+    one: '1',
+  }); 
+
+  setTimeout(function(){
+    location.href = 'https://w2073321.github.io/details.html';
+  }, 1000);
+}, false);
+</script>
