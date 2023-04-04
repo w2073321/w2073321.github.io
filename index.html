@@ -68,25 +68,26 @@
 	// 	   } else {
 	// 		 document.getElementById('ABtest1').src="img/bg.jpg";
 	// 		 //展示原始版本样式
-	// 	   };
-	function Reg(){
-	SESDK.trackRegister({
-						regType: 'WeChat',
-						registerStatus: 'success',
-						customProperties: {
-						  one: '1',
-						}
-					  });
-	SESDK.track('testclick', {
-  one: '1',
-}); 
-
-setTimeout(function(){
-    location.href = 'https://w2073321.github.io/details.html';
-}, 1000);
-       
-}
-	   
+	// 	   };   
+		</script>
+         <script>
+			function Reg(){
+				SESDK.trackRegister({
+									regType: 'WeChat',
+									registerStatus: 'success',
+									customProperties: {
+									  one: '1',
+									}
+								  });
+				SESDK.track('testclick', {
+			  one: '1',
+			}); 
+			
+			setTimeout(function(){
+				location.href = 'https://w2073321.github.io/details.html';
+			}, 1000);
+				   
+			}
 		</script>
 	</head>
 	<body>
