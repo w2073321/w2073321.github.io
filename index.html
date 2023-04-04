@@ -40,7 +40,7 @@
 	    SESDK.login('web1');
 	    //同步下发参数
 	    const value = SESDK.fastFetchRemoteConfig("banner");
-		
+		function valueflag(){
 	   if (value === 1) {
       //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
       document.getElementById('ABtest1').src="img/bg1.jpeg";
@@ -49,6 +49,7 @@
       document.getElementById('ABtest1').src="img/bg.jpg";
       //展示原始版本样式
       };
+	}
 	   //异步下发参数
     //    const a_value=SESDK.asyncFetchRemoteConfig("k1"); 
 	//    if (a_value=== 1) {
@@ -109,7 +110,7 @@
 			<!--banner-->
 			<div class="banner">
 				<a href="details.html">
-					<img src="?" defer="true" id="ABtest1"  οnclick="Reg()"/>
+					<img src="?" defer="valueflag" id="ABtest1"  οnclick="Reg()"/>
 				</a>
 			</div>
 			<div class="cake_type">
