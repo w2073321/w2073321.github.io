@@ -135,7 +135,7 @@
       remoteConfig: {
         pollingInterval: 30,
         enable: true,
-        mergeType: 1,
+        mergeType: 0,
         customIDProperties: { a: 1 },
         customIDEventProperties: { e: 1 },
         customIDUserProperties: { u: 1 },
@@ -156,17 +156,18 @@
   ]);
 
   //同步下发参数
+  SESDK.ready(function(){
   const value = SESDK.fastFetchRemoteConfig("banner");
   function valueflag(){
-    if (value === 1) {
+    if (value === "1") {
     //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
     document.getElementById('ABtest1').src="img/bg1.jpeg";
     //展示试验版本样式
-    } else if (value === 0){
+    } else if (value === "0"){
     document.getElementById('ABtest1').src="img/bg.jpg";
     //展示原始版本样式
     };
-  }
+  }})
                    //异步下发参数
                   //    const a_value=SESDK.asyncFetchRemoteConfig("k1"); 
                 //    if (a_value=== 1) {
