@@ -9,6 +9,7 @@
 		<link rel="shortcut icon" href="#"/>
 		<script src="js/web-sesdk.js"></script>
 		<script src="js/sesdk-parameters-plugin.js"></script>
+		
 		<script>
 		  // 加载参数下发SDK插件
       window.SESDK.use(window.parametersPlugin);
@@ -35,7 +36,8 @@
           },
         },
       }); 
-
+	</script>
+     <script>
       //设置accountid
 	    SESDK.login('web1');
 
@@ -46,7 +48,9 @@
           typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
           value : "0", // 配置项的值
    }
-]);   
+]);  
+</script> 
+     <script>
 	    //同步下发参数
 	    const value = SESDK.fastFetchRemoteConfig("banner");
 		function valueflag(){
@@ -70,7 +74,9 @@
 	// 		 //展示原始版本样式
 	// 	   };   
 		</script>
+
          <script>
+			//自定义指标上报
 			function Reg(){
 				SESDK.trackRegister({
 									regType: 'WeChat',
