@@ -51,7 +51,7 @@
 			<div class="cake_type">
 				<div>
 					<a>
-						<img src="img/cake_03.jpg" />
+						<img src="" id="ABtest2"/>
 					</a>
 					<a>
 						<span>AFTERNOON TEA </span>
@@ -152,11 +152,16 @@
             name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "0", // 配置项的值
+      },
+	  {
+            name : "drown", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            typ : 3, // 配置项的类型 1 string、2 number、3 boolean、4 json
+            value : "true", // 配置项的值
       }
   ]);
 
   //同步下发参数
-  SESDK.ready(function(){
+ SESDK.ready(function(){
     const value = SESDK.fastFetchRemoteConfig("banner");
     console.log(value, typeof value);
     if (value === "1") {
@@ -167,19 +172,22 @@
     document.getElementById('ABtest1').src="img/bg.jpg";
     //展示原始版本样式
     };
-  })
-                  // 异步下发参数
-				  SESDK.ready(function(){
-    const a_value=SESDK.asyncFetchRemoteConfig("k1"); 
-    if (a_value=== 1) {
-                		 //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
-                		 document.getElementById('ABtest1').src="img/bg1.jpeg";
+});
+     
+   // 异步下发参数
+	 
+    SESDK.asyncFetchRemoteConfig("drown").then(function(a_value){
+		if (a_value=== "false") {
+                		 //试验变量名称，和试验平台填写的名称保持一致；
+                		 document.getElementById('ABtest2').src="img/cake_04.jpg";
                 		 //展示试验版本样式
-        } else {
-                		 document.getElementById('ABtest1').src="img/bg.jpg";
+        } else if (a_value=== "true"){
+                		 document.getElementById('ABtest2').src="img/cake_03.jpg";
                 		 //展示原始版本样式
                 };
-					})			   
+	}); 
+    
+				   
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
@@ -190,7 +198,7 @@ document.getElementById('ABtest1').addEventListener('click', function(e){
       one: '1',
     }
   });
-  SESDK.track('_testclick', {
+  SESDK.track('add_cart', {
     one: '1',
   }); 
 
