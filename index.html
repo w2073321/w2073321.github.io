@@ -144,7 +144,7 @@
   });
 
   //设置accountid
-  SESDK.login('web2');
+  SESDK.login('web3');
   
   // defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
   SESDK.setRemoteDefaultConfig([
@@ -177,6 +177,7 @@
    // 异步下发参数
 	 
     SESDK.asyncFetchRemoteConfig("drown").then(function(a_value){
+		console.log(a_value, typeof a_value);
 		if (a_value=== "false") {
                 		 //试验变量名称，和试验平台填写的名称保持一致；
                 		 document.getElementById('ABtest2').src="img/cake4.jpg";
