@@ -144,7 +144,9 @@
   });
 
   //设置accountid
-  SESDK.login('web42');
+  let time = +new Date();
+  console.log(time);
+  SESDK.login(time);
   
   // defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
   SESDK.setRemoteDefaultConfig([
