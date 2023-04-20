@@ -9,6 +9,32 @@
 		<link rel="shortcut icon" href="#" />
 		<script src="js/web-sesdk.js"></script>
 		<script src="js/sesdk-parameters-plugin.js"></script>
+		<script src='https://sdk.appadhoc.com/ab.plus.js'></script>
+		<script>
+
+			adhoc('init', {
+			  appKey: 'ADHOC_318b02a7-d998-4ae5-bae7-3170b6c6636a', //创建应用时获得的appkey
+			  crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
+			  clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
+			  })		  
+			</script>
+<script>
+	function applyFlags(flags) {
+	  //applyFlags:callback函数名称
+	  if (flags.get('Beastest') === 1) {
+		//isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
+		var text = "请填写试验版本要展示的文案！";
+		console.log(text);
+	  } else {
+		var text = "请填写原始版本要展示的文案！";
+		console.log(text);
+	  }
+  
+	}
+	adhoc('getFlags', applyFlags);
+	adhoc('track', 'bannerclick', 1);
+  </script>
+
 	</head>
 	<body>
 		<!--
