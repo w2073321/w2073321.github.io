@@ -145,10 +145,11 @@
   });
 
   //设置accountid
-  let time = Date.now();
-  SESDK.login(time);
+  let UUID =URL.createObjectURL(new Blob()).substr(-36);
+  
+  SESDK.login(UUID);
   var Acc = SESDK.getAccountId();
-  console.log(time);
+  console.log(UUID);
   //设置访客ID
   SESDK.setVisitorId('vid8709901241');
   var Visit =  SESDK.getVisitorId();
