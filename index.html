@@ -125,7 +125,7 @@
     userId: '5c5a2f0fd35d9296',	   
     config: {
       debugModel: false,
-      // customURL: 'http://xx.x',
+    //    customURL: 'https://w2073321.github.io/',
       autoTrackConfig: {
         autoTrack: true,
         autoTrackPageView: true,
@@ -139,21 +139,32 @@
         customIDProperties: { a: 1 },
         customIDEventProperties: { e: 1 },
         customIDUserProperties: { u: 1 },
+		
       },
     },
   });
 
   //设置accountid
-  let time = +new Date();
-  console.log(time);
+  let time = Date.now();
   SESDK.login(time);
-  
+  var Acc = SESDK.getAccountId();
+  console.log(time);
+  //设置访客ID
+  SESDK.setVisitorId('vid8709901241');
+  var Visit =  SESDK.getVisitorId();
+  console.log(Visit);
+
   // defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
   SESDK.setRemoteDefaultConfig([
       {
             name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "0", // 配置项的值
+      },
+	  {
+            name : "drown", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            typ : 3, // 配置项的类型 1 string、2 number、3 boolean、4 json
+            value : "true", // 配置项的值
       },
 	  {
             name : "drown", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
