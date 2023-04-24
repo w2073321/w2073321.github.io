@@ -192,10 +192,11 @@
   SESDK.setVisitorId('vid8709901241');
   var Visit =  SESDK.getVisitorId();
   console.log(Visit);
-  setTimeout(function(){
-    SESDK.logout();
-  }, 3000);
-   SESDK.logout();
+  //清除用户ID
+//   setTimeout(function(){
+//     SESDK.logout();
+//   }, 3000);
+
   // defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
   SESDK.setRemoteDefaultConfig([
       {
@@ -243,7 +244,10 @@
                 };
 	}); 
     
-				   
+//设置用户属性
+SESDK.userInit({
+regtesttime: "2021-03-01 12:34:56.789", // 自定义属性
+});			   
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
