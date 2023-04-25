@@ -251,9 +251,10 @@
 // SESDK.userUpdate({
 // rolename: "大boss", // 自定义属性
 // });	
-SESDK.userAdd({
-qian: 2, // 自定义属性
-});	   
+// SESDK.userAdd({
+// qian: 2, // 自定义属性
+// });	
+SESDK.userUnset(["rolename"]);   
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
