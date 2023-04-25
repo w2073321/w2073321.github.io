@@ -254,7 +254,11 @@
 // SESDK.userAdd({
 // qian: 2, // 自定义属性
 // });	
-SESDK.userUnset(["rolename"]);   
+
+// SESDK.userUnset(["rolename"]);   
+SESDK.userAppend({
+location: ["BeiJing"], // 自定义属性
+});
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
