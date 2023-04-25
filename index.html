@@ -145,7 +145,8 @@
 <script>
   // 加载参数下发SDK插件
   window.SESDK.use(window.parametersPlugin);
-  SESDK.setSuperProperties(gonggongshuxing,'下载');
+  
+  
   // 初始化SDK
   SESDK.init({
     appKey: 'caea8a9b4a0021cc',
@@ -260,7 +261,9 @@
 // SESDK.userAppend({
 // location: ["BeiJing"], // 自定义属性
 // });
-   SESDK.userDelete(Visit);
+//    SESDK.userDelete(Visit);
+
+   SESDK.setSuperProperties(gonggongshuxing,'下载');
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
