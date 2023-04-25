@@ -247,7 +247,10 @@
 //设置用户属性
 SESDK.userInit({
 regtesttime: "2021-03-01 12:34:56.789", // 自定义属性
-});			   
+});	
+SESDK.userUpdate({
+rolename: "大boss", // 自定义属性
+});		   
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
