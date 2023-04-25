@@ -189,9 +189,9 @@
   var Acc = SESDK.getAccountId();
   console.log(UUID);
   //设置访客ID
-  SESDK.setVisitorId('vid8709901241');
-  var Visit =  SESDK.getVisitorId();
-  console.log(Visit);
+//   SESDK.setVisitorId('vid8709901241');
+//   var Visit =  SESDK.getVisitorId();
+//  console.log(Visit);
   //清除用户ID
 //   setTimeout(function(){
 //     SESDK.logout();
@@ -256,9 +256,10 @@
 // });	
 
 // SESDK.userUnset(["rolename"]);   
-SESDK.userAppend({
-location: ["BeiJing"], // 自定义属性
-});
+// SESDK.userAppend({
+// location: ["BeiJing"], // 自定义属性
+// });
+   SESDK.userDelete(Visit);
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
