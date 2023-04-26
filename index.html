@@ -177,10 +177,10 @@
   });
 
   //设置accountid
-  var uuid = mydate.getDay()+ mydate.getHours()+ mydate.getMinutes()+mydate.getSeconds()+mydate.getMilliseconds()+ Math.round(Math.random() * 10000);
-  SESDK.login(uuid);
+  var timestamp = Date.parse(new Date());
+  SESDK.login(timestamp);
   var Acc = SESDK.getAccountId();
-  console.log(uuid);
+  console.log(Acc);
   //设置访客ID
   let UUID =URL.createObjectURL(new Blob()).substr(-36);
   SESDK.setVisitorId(UUID);
