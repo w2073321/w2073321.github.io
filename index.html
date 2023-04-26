@@ -87,7 +87,7 @@
 				</div>
 				<div>
 					<a>
-						<img src="img/cake_05.jpg" />
+						<img src="" id="ABtest3"/>
 					</a>
 					<a>
 						<span>CAKE </span>
@@ -149,8 +149,12 @@
   
   // 初始化SDK
   SESDK.init({
-    appKey: 'caea8a9b4a0021cc',
-    userId: '5c5a2f0fd35d9296',	   
+	//正式环境
+    // appKey: 'caea8a9b4a0021cc',
+    // userId: '5c5a2f0fd35d9296',	
+	//测试环境
+    appKey: 'cea95ae6fc1c73e5',
+    userId: '1fca0a4b93fa7170',	   
     config: {
       debugModel: false,
     //  customURL: 'https://w2073321.github.io/',
@@ -173,27 +177,28 @@
   });
 
   //设置accountid
-  let UUID =URL.createObjectURL(new Blob()).substr(-36);
-//   function uuid() {
-//     var s = [];
-//     var hexDigits = "0123456789abcdef";
-//     for (var i = 0; i < 36; i++) {
-//         s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
-//     }
-//     s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
-//     s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
-//     s[8] = s[13] = s[18] = s[23] = "-";
+  
+  function uuid() {
+    var s = [];
+    var hexDigits = "0123456789abcdef";
+    for (var i = 0; i < 36; i++) {
+        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+    }
+    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+    s[8] = s[13] = s[18] = s[23] = "-";
  
-//     var uuid = s.join("");
-//     return uuid;
-// }
-  SESDK.login(UUID);
+    var uuid = s.join("");
+    return uuid;
+}
+  SESDK.login(uuid);
   var Acc = SESDK.getAccountId();
-  console.log(UUID);
+  console.log(uuid);
   //设置访客ID
-//   SESDK.setVisitorId('vid8709901241');
-//   var Visit =  SESDK.getVisitorId();
-//  console.log(Visit);
+  let UUID =URL.createObjectURL(new Blob()).substr(-36);
+  SESDK.setVisitorId(UUID);
+  var Visit =  SESDK.getVisitorId();
+ console.log(Visit);
   //清除用户ID
 //   setTimeout(function(){
 //     SESDK.logout();
@@ -201,26 +206,34 @@
 
   // defaultConfig 默认配置，一个参数配置为一个对象，格式如下：
   SESDK.setRemoteDefaultConfig([
-      {
-            name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+    //   {
+    //         name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+    //         typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
+    //         value : "0", // 配置项的值
+    //   },
+	//   {
+    //         name : "drown", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+    //         typ : 3, // 配置项的类型 1 string、2 number、3 boolean、4 json
+    //         value : "true", // 配置项的值
+    //   },
+	  {
+            name : "szw_s", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            typ : 1, // 配置项的类型 1 string、2 number、3 boolean、4 json
+            value : "A", // 配置项的值
+      },{
+		    name : "szw_n", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "0", // 配置项的值
-      },
-	  {
-            name : "drown", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+	  },{
+		    name : "szw_b", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 3, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "true", // 配置项的值
-      },
-	  {
-            name : "drown", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
-            typ : 3, // 配置项的类型 1 string、2 number、3 boolean、4 json
-            value : "true", // 配置项的值
-      }
+	  }
   ]);
 
   //同步下发参数
  SESDK.ready(function(){
-    const value = SESDK.fastFetchRemoteConfig("banner");
+    const value = SESDK.fastFetchRemoteConfig("szw_n");
     console.log(value, typeof value);
     if (value === "1") {
     //isNewHomePage:试验变量名称，和试验平台填写的名称保持一致；
@@ -234,14 +247,26 @@
      
    // 异步下发参数
 	 
-    SESDK.asyncFetchRemoteConfig("drown").then(function(a_value){
+    SESDK.asyncFetchRemoteConfig("szw_s").then(function(a_value){
 		console.log(a_value, typeof a_value);
-		if (a_value=== "false") {
+		if (a_value=== "B") {
                 		 //试验变量名称，和试验平台填写的名称保持一致；
                 		 document.getElementById('ABtest2').src="img/cake4.jpg";
                 		 //展示试验版本样式
-        } else if (a_value=== "true"){
+        } else if (a_value=== "A"){
                 		 document.getElementById('ABtest2').src="img/cake_03.jpg";
+                		 //展示原始版本样式
+                };
+	}); 
+
+	SESDK.asyncFetchRemoteConfig("szw_b").then(function(a_value){
+		console.log(a_value, typeof a_value);
+		if (a_value=== "false") {
+                		 //试验变量名称，和试验平台填写的名称保持一致；
+                		 document.getElementById('ABtest3').src="img/cake3.jpg";
+                		 //展示试验版本样式
+        } else if (a_value=== "true"){
+                		 document.getElementById('ABtest3').src="img/cake_05.jpg";
                 		 //展示原始版本样式
                 };
 	}); 
@@ -262,8 +287,10 @@
 // location: ["BeiJing"], // 自定义属性
 // });
 //    SESDK.userDelete(Visit);
+//    
+//    SESDK.setSuperProperties({gonggongshuxing:'下载'});
 
-   SESDK.setSuperProperties({gonggongshuxing:'下载'});
+   SESDK.unsetSuperProperty(key);
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
@@ -274,7 +301,7 @@ document.getElementById('ABtest1').addEventListener('click', function(e){
       one: '1',
     }
   });
-  SESDK.track('add_cart', {
+  SESDK.track('web_add_cart', {
     one: '1',
   }); 
 
