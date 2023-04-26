@@ -177,7 +177,7 @@
   });
 
   //设置accountid
-  var uuid = "SE"+mydate.getDay()+ mydate.getHours()+ mydate.getMinutes()+mydate.getSeconds()+mydate.getMilliseconds()+ Math.round(Math.random() * 10000);
+  var uuid = mydate.getDay()+ mydate.getHours()+ mydate.getMinutes()+mydate.getSeconds()+mydate.getMilliseconds()+ Math.round(Math.random() * 10000);
   SESDK.login(uuid);
   var Acc = SESDK.getAccountId();
   console.log(uuid);
