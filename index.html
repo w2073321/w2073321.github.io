@@ -215,6 +215,10 @@
 		    name : "szw_b", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 3, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "true", // 配置项的值
+	  },{
+		    name : "szw_u", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            typ : 1, // 配置项的类型 1 string、2 number、3 boolean、4 json
+            value : "UA", // 配置项的值
 	  }
   ]);
 
@@ -230,6 +234,11 @@
     document.getElementById('ABtest1').src="img/bg.jpg";
     //展示原始版本样式
     };
+});
+SESDK.ready(function(){
+    const value = SESDK.fastFetchRemoteConfig("szw_u");
+    console.log(value, typeof value);
+    
 });
      
    // 异步下发参数
