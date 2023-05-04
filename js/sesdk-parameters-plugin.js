@@ -1,4 +1,9 @@
-/** * sesdk-parameters-plugin.dev.js * An SDK for the SolarEngine intelligent marketing service platform * 参数下发SDK插件接入文档: https://alidocs.dingtalk.com/i/nodes/7Y36k14mK9AV3Y0B97w185NqapjblR2D * 版本号: 1.0.2 */
+/**
+ * sesdk-parameters-plugin.dev.js
+ * An SDK for the SolarEngine intelligent marketing service platform
+ * 参数下发SDK插件接入文档: https://alidocs.dingtalk.com/i/nodes/7Y36k14mK9AV3Y0B97w185NqapjblR2D
+ * 版本号: 1.0.2
+ */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -23,7 +28,7 @@
     return _extends.apply(this, arguments);
   }
 
-  var onlineConfigHost = 'test5-solar.detailroi.com';
+  var onlineConfigHost = 'test1-solar.detailroi.com';
   var API = {
     // 请求在线配置接口
     onlineConfig: "//" + onlineConfigHost + "/rule/config/get"
