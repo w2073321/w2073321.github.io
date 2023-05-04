@@ -177,8 +177,9 @@
   });
 
   //设置accountid
-  var timestamp = Date.parse(new Date());
-  SESDK.login(timestamp);
+//   var timestamp = Date.parse(new Date());
+var x=(int)(Math.random()*100);
+  SESDK.login('1233345'+x);
   var Acc = SESDK.getAccountId();
   console.log(Acc);
   //设置访客ID
