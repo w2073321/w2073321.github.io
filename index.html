@@ -146,7 +146,7 @@
   // 加载参数下发SDK插件
   window.SESDK.use(window.parametersPlugin);
   
-  
+  var x=Math.floor(Math.random()*100);
   // 初始化SDK
   SESDK.init({
 	//正式环境
@@ -168,7 +168,7 @@
         pollingInterval: 30,
         enable: true,
         mergeType: 0,
-        customIDProperties: { a: 1 },
+        customIDProperties: {Custom_zswid:'20230505'+x},
         customIDEventProperties: { e: 1 },
         customIDUserProperties: { u: 1 },
 		
@@ -178,7 +178,7 @@
 
   //设置accountid
 //   var timestamp = Date.parse(new Date());
-var x=Math.floor(Math.random()*100);
+
   SESDK.login('1233345'+x);
   var Acc = SESDK.getAccountId();
   console.log(Acc);
@@ -238,6 +238,10 @@ var x=Math.floor(Math.random()*100);
 });
 SESDK.asyncFetchRemoteConfig("szw_u").then(function(uvalue){
     console.log(uvalue, typeof uvalue);
+    
+});
+SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
+    console.log(zvalue, typeof zvalue);
     
 });
      
