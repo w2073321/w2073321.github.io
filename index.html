@@ -150,11 +150,11 @@
   // 初始化SDK
   SESDK.init({
 	//正式环境
-    appKey: 'caea8a9b4a0021cc',
-    userId: '5c5a2f0fd35d9296',	
+    // appKey: 'caea8a9b4a0021cc',
+    // userId: '5c5a2f0fd35d9296',	
 	//测试环境
-    // appKey: 'cea95ae6fc1c73e5',
-    // userId: '1fca0a4b93fa7170',	   
+    appKey: 'cea95ae6fc1c73e5',
+    userId: '1fca0a4b93fa7170',	   
     config: {
       debugModel: false,
     //  customURL: 'https://w2073321.github.io/',
@@ -220,6 +220,11 @@
 		    name : "szw_u", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 1, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "UA", // 配置项的值
+	  },
+	  {
+		    name : "SZW_F", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
+            value : "0", // 配置项的值
 	  }
   ]);
 
@@ -259,13 +264,13 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
                 };
 	}); 
 
-	SESDK.asyncFetchRemoteConfig("szw_b").then(function(a_value){
+	SESDK.asyncFetchRemoteConfig("SZW_F").then(function(a_value){
 		console.log(a_value, typeof a_value);
-		if (a_value=== "false") {
+		if (a_value=== "0") {
                 		 //试验变量名称，和试验平台填写的名称保持一致；
                 		 document.getElementById('ABtest3').src="img/cake3.jpg";
                 		 //展示试验版本样式
-        } else if (a_value=== "true"){
+        } else if (a_value=== "1"){
                 		 document.getElementById('ABtest3').src="img/cake_05.jpg";
                 		 //展示原始版本样式
                 };
@@ -290,7 +295,7 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 //    
 //    SESDK.setSuperProperties({gonggongshuxing:'下载'});
 
-    SESDK.unsetSuperProperty('gonggongshuxing');
+    // SESDK.unsetSuperProperty('gonggongshuxing');
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
