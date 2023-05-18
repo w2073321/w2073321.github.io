@@ -254,11 +254,11 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 	 
     SESDK.asyncFetchRemoteConfig("SZW_ZF").then(function(a_value){
 		console.log(a_value, typeof a_value);
-		if (a_value=== "B") {
+		if (a_value=== "b") {
                 		 //试验变量名称，和试验平台填写的名称保持一致；
                 		 document.getElementById('ABtest2').src="img/cake4.jpg";
                 		 //展示试验版本样式
-        } else if (a_value=== "A"){
+        } else if (a_value=== "a"){
                 		 document.getElementById('ABtest2').src="img/cake_03.jpg";
                 		 //展示原始版本样式
                 };
