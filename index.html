@@ -150,11 +150,11 @@
   // 初始化SDK
   SESDK.init({
 	//正式环境
-    // appKey: 'caea8a9b4a0021cc',
-    // userId: '5c5a2f0fd35d9296',	
+    appKey: 'caea8a9b4a0021cc',
+    userId: '5c5a2f0fd35d9296',	
 	//测试环境
-    appKey: 'cea95ae6fc1c73e5',
-    userId: '1fca0a4b93fa7170',	   
+    // appKey: 'cea95ae6fc1c73e5',
+    // userId: '1fca0a4b93fa7170',	   
     config: {
       debugModel: false,
     //  customURL: 'https://w2073321.github.io/',
@@ -264,13 +264,13 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
                 };
 	}); 
 
-	SESDK.asyncFetchRemoteConfig("SZW_F").then(function(a_value){
+	SESDK.asyncFetchRemoteConfig("drown").then(function(a_value){
 		console.log(a_value, typeof a_value);
-		if (a_value=== "0") {
+		if (a_value=== "false") {
                 		 //试验变量名称，和试验平台填写的名称保持一致；
                 		 document.getElementById('ABtest3').src="img/cake3.jpg";
                 		 //展示试验版本样式
-        } else if (a_value=== "1"){
+        } else if (a_value=== "true"){
                 		 document.getElementById('ABtest3').src="img/cake_05.jpg";
                 		 //展示原始版本样式
                 };
