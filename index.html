@@ -179,12 +179,12 @@
   //设置accountid
 //   var timestamp = Date.parse(new Date());
 
-  SESDK.login('12333454'+x);
+  SESDK.login('acc'+x);
   var Acc = SESDK.getAccountId();
   console.log(Acc);
   //设置访客ID
   let UUID =URL.createObjectURL(new Blob()).substr(-36);
-  SESDK.setVisitorId(UUID);
+  SESDK.setVisitorId('vis'+x);
   var Visit =  SESDK.getVisitorId();
  console.log(Visit);
   //清除用户ID
