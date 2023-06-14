@@ -296,7 +296,8 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 //    
 //    SESDK.setSuperProperties({gonggongshuxing:'下载'});
 
-     SESDK.unsetSuperProperty('gonggongshuxing');
+    //  SESDK.unsetSuperProperty('gonggongshuxing');
+	SESDK.clearSuperProperties();
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
