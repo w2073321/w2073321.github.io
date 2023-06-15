@@ -369,17 +369,24 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 // }
 // })
    //订单事件
-   SESDK.trackOrder({
-   orderId: '12345678',
-   payAmount: 1234.5678,
-   currencyType: 'USD',
-   payType: 'alipay',
-   status: 'this is fail status',
+//    SESDK.trackOrder({
+//    orderId: '12345678',
+//    payAmount: 1234.5678,
+//    currencyType: 'USD',
+//    payType: 'alipay',
+//    status: 'this is fail status',
+//    customProperties: {
+// ordertest: '1',
+// }
+// })
+   //注册事件
+   SESDK.trackRegister({
+   regType: 'WeChat',
+   registerStatus: 'success',
    customProperties: {
-ordertest: '1',
+Registertest: '1',
 }
 })
-
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
   SESDK.trackRegister({
