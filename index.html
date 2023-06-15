@@ -311,7 +311,22 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
     //设置渠道参数
 	// SESDK.setChannel('youku');
 	//设置页面title信息
-	SESDK.setReferrerTitle('index_home.html');  
+	// SESDK.setReferrerTitle('index_home.html');  
+	//变现广告展示事件
+	SESDK.trackAdImpression({
+    adNetworkPlatform: 'oppo',
+    adType: 1,
+    adNetworkAppID: '123',
+    adId: '123',
+    mediationPlatform: 'custom',
+    ecpm: 13.140001,
+    currency: 'USD',
+    rendered: true,
+    customProperties: {
+    imptest: '1',
+}
+})
+
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
