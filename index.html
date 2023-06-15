@@ -327,28 +327,45 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 // }
 // })
     //变现广告点击事件
-	SESDK.trackAdClick({
-    adNetworkPlatform: 'oppo',
-    adType: 1,
-    adId: '123',
-    mediationPlatform: 'custom',
-    customProperties: {
-    adclicktest: '1',
-}
-})
+// 	SESDK.trackAdClick({
+//     adNetworkPlatform: 'oppo',
+//     adType: 1,
+//     adId: '123',
+//     mediationPlatform: 'custom',
+//     customProperties: {
+//     adclicktest: '1',
+// }
+// })
     //应用内购点击事件
-     SESDK.trackIAP({
-     orderId: '12345678',
-     payAmount: 1234.5678,
-     currencyType: 'USD',
-     payType: 'alipay',
-     productID: '12345678',
-     productName: 'this is product name',
-     productCount: 10,
-     payStatus: 1,
-     failReason: 'this is fail reason',
+//      SESDK.trackIAP({
+//      orderId: '12345678',
+//      payAmount: 1234.5678,
+//      currencyType: 'USD',
+//      payType: 'alipay',
+//      productID: '12345678',
+//      productName: 'this is product name',
+//      productCount: 10,
+//      payStatus: 1,
+//      failReason: 'this is fail reason',
+//      customProperties: {
+// trackapitest: '1',
+// }
+// })
+     //自归因安装事件 
+	 SESDK.trackAppAttr({
+     adNetwork: '123456',
+     subChannel: '123456',
+     adAccountID: '123456',
+     adAccountName: '123456',
+     adCampaignID: '123456',
+     adCampaignName: '123456',
+     adOfferID: '123456',
+     adOfferName: '123456',
+     adCreativeID: '123456',
+     adCreativeName: '123456',
+     attributionPlatform: '123456',
      customProperties: {
-trackapitest: '1',
+trackappattrtest: '1',
 }
 })
 
