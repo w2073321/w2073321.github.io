@@ -239,6 +239,11 @@
 	  }
   ]);
 
+  //时长事件开始计时
+  SESDK.Start('testEvent', {
+
+});
+
   //同步下发参数
  SESDK.ready(function(){
     const value = SESDK.fastFetchRemoteConfig("szw_n");
@@ -401,6 +406,10 @@ document.getElementById('ABtest1').addEventListener('click', function(e){
     one: '1',
   }); 
 
+  //时长事件结束计时
+  SESDK.eventFinish('testEvent', {
+finishtest: '1',
+});
   setTimeout(function(){
     location.href = 'https://w2073321.github.io/details.html';
   }, 1000);
