@@ -308,8 +308,10 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 
     //   SESDK.unsetSuperProperty('ceshigonggongshuxing');
 	// SESDK.clearSuperProperties();
-   //设置渠道参数
-	SESDK.setChannel('youku');
+    //设置渠道参数
+	// SESDK.setChannel('youku');
+	//设置页面title信息
+	SESDK.setReferrerTitle('index_home.html');  
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
