@@ -379,17 +379,18 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 // ordertest: '1',
 // }
 // })
-   //注册事件
-   SESDK.trackRegister({
-   regType: 'WeChat',
-   registerStatus: 'success',
+   //登录事件
+   SESDK.trackLogin({
+   loginType: 'WeChat',
+   loginStatus: 'success',
    customProperties: {
-Registertest: '1',
+logintest: '1',
 }
 })
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
-  SESDK.trackRegister({
+    //注册事件
+	SESDK.trackRegister({
     regType: 'WeChat',
     registerStatus: 'success',
     customProperties: {
