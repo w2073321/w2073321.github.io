@@ -240,7 +240,7 @@
   ]);
 
   //时长事件开始计时
-  SESDK.Start('testEvent', {
+  SESDK.Start('_webStart', {
 
 });
 
@@ -407,7 +407,7 @@ document.getElementById('ABtest1').addEventListener('click', function(e){
   }); 
 
   //时长事件结束计时
-  SESDK.eventFinish('testEvent', {
+  SESDK.eventFinish('_webStart', {
 finishtest: '1',
 });
   setTimeout(function(){
