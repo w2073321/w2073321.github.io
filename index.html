@@ -154,7 +154,8 @@
 //   allfood: '山西刀削面'
 //    });
   //清除预置事件属性
-  SESDK.setPresetEvent('webInstall', null);
+//   SESDK.setPresetEvent('webInstall', null);
+
 
   // 初始化SDK
   SESDK.init({
@@ -305,8 +306,10 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
 //    
     // SESDK.setSuperProperties({'ceshigonggongshuxing':'chimian'});
 
-      SESDK.unsetSuperProperty('ceshigonggongshuxing');
+    //   SESDK.unsetSuperProperty('ceshigonggongshuxing');
 	// SESDK.clearSuperProperties();
+   //设置渠道参数
+	SESDK.setChannel('youku');
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
