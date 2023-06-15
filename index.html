@@ -336,6 +336,21 @@ SESDK.asyncFetchRemoteConfig("szw_z").then(function(zvalue){
     adclicktest: '1',
 }
 })
+    //应用内购点击事件
+     SESDK.trackIAP({
+     orderId: '12345678',
+     payAmount: 1234.5678,
+     currencyType: 'USD',
+     payType: 'alipay',
+     productID: '12345678',
+     productName: 'this is product name',
+     productCount: 10,
+     payStatus: 1,
+     failReason: 'this is fail reason',
+     customProperties: {
+trackapitest: '1',
+}
+})
 
   //自定义指标上报
 document.getElementById('ABtest1').addEventListener('click', function(e){
