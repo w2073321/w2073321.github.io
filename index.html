@@ -143,10 +143,18 @@
 	</body>
 </html>
 <script>
+
+
   // 加载参数下发SDK插件
   window.SESDK.use(window.parametersPlugin);
   
   var x=Math.floor(Math.random()*100);
+  // 设置预置事件属性
+  SESDK.setPresetEvent('webInstall', {
+  liulan: shuiguo,
+  qiezi: shucai
+   });
+
   // 初始化SDK
   SESDK.init({
 	//正式环境
