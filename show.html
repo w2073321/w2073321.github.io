@@ -19,27 +19,6 @@
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
-<!-- sdk 初始化-->
-    <script src="https://sdk.appadhoc.com/ab.plus.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      adhoc('init', {
-        appKey: 'ADHOC_013d0fee-02c3-42be-b587-d9e15913335d', //创建应用时获得的appkey
-        crossDomain: 'w2073321.github.io', //跨页面统计设置主域名, 选填, 例如 'dev.com'
-        clientIdDomain: 'w2073321.github.io', // 指定设置clientid存储的主域名, 选填, 例如 'dev.com'
-      })
-    </script>
-    <script>
-      function applyFlags(flags) {
-        if(flags.get('QQ_bianlaing') === 1) {
-          var text = " Hey，我是试验版 :) ";
-        } else {
-          var text = " Hey, 我是原始版本！";
-        }
-        document.getElementById('flags').innerHTML = text;
-      }
-      adhoc('getFlags',applyFlags);
-    </script>
-    <!-- sdk end -->
 </head>
 <body>
 <div class="page" id="topnav">
