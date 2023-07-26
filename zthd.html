@@ -19,6 +19,9 @@
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
+<script src="js/web-cn-sesdk.js"></script>
+<script src="js/sesdk-parameters-plugin.js"></script>
+<script src="js/sesdk-multilinktest-plugin.js"></script>
 </head>
 <body>
 <div class="page" id="topnav">
@@ -69,3 +72,42 @@
 
 </body>
 </html>
+<script>
+	// 初始化SDK
+	SESDK.init({
+		//正式环境
+		// appKey: 'c57d0bae1a1dff69',
+		// userId: '5c5a2f0fd35d9296',	
+		//测试环境
+		appKey: '4c3e7d87ebac99cd',
+		userId: '1fca0a4b93fa7170',	
+		
+		config: {
+		  debugModel: false,
+		  multilinkTestConfig: {
+		  enable: true,
+		  isSetMask: true,
+		  maskTimeoutCloseTime: 500,
+		  customIDProperties: { a:"s" },
+		  customIDEventProperties: { e: "z"},
+		  customIDUserProperties: { u: "w" },
+		},
+		//  customURL: 'https://w2073321.github.io/',
+		  autoTrackConfig: {
+			autoTrack: true,
+			autoTrackPageView: true,
+			autoTrackPageClick: true,
+			isTrackSinglePage: false,
+		  },
+		  remoteConfig: {
+			pollingInterval: 30,
+			enable: true,
+			mergeType: 0,
+			customIDProperties: {Custom_zswid:'20230505'+x},
+			customIDEventProperties: { e: 1 },
+			customIDUserProperties: { u: 1 },
+			
+		  },
+		},
+	  });  
+	</script> 
