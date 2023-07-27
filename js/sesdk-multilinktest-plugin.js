@@ -253,12 +253,12 @@
             retryCount = JSSDK.settingData.multilinkRetryTimes;
           }
 
-          console('开始发请求');
+          console.log('开始发请求');
 
           JSSDK.HttpHelper.post("//" + JSSDK.settingData.ruleDomain + "/rule/config/multilink/get", requestData, {
             timeout: JSSDK.settingData.multilinkTimeout * 1000
           }).then(function (res) {
-            console('请求回来了');
+            console.log('请求回来了');
             sdkReportData.t1 = +new Date();
 
             if ((res == null ? void 0 : res.code) === 0) {
@@ -273,7 +273,7 @@
             };
             sendRuntimeReportData(JSSDK, sdkReportData, responseData);
           })["catch"](function (error) {
-            console('请求失败', JSON.stringify(error));
+            console.log('请求失败', JSON.stringify(error));
             if (retryCount > 0) {
               retryCount--;
 
@@ -299,7 +299,7 @@
         handleServerConfig: function handleServerConfig(data) {
           var _serverConfig$, _serverConfig$2, _serverConfig$3, _serverConfig$4, _serverConfig$5, _serverConfig$6, _serverConfig$7;
 
-          console('请求结果返回成功');
+          console.log('请求结果返回成功');
           var serverConfig = data.params || [];
           var url = JSSDK.trimStr(((_serverConfig$ = serverConfig[0]) == null ? void 0 : _serverConfig$.url) || '');
           var failRes = !(serverConfig == null ? void 0 : serverConfig.length) || !url;
@@ -309,13 +309,13 @@
             JSSDK.customEvents.$emit('multilinkTest');
           }
 
-          console('1' + failRes + isTestPage); // 没有返回对应的配置，则终止逻辑即可
+          console.log('1' + failRes + isTestPage); // 没有返回对应的配置，则终止逻辑即可
 
           if (failRes) {
             return;
           }
 
-          console('2' + failRes + isTestPage);
+          console.log('2' + failRes + isTestPage);
           var multilinkRes = {
             url: url,
             subjectId: (_serverConfig$2 = serverConfig[0]) == null ? void 0 : _serverConfig$2.subject_id,
@@ -332,7 +332,7 @@
             this.trackTriageEvents(multilinkRes);
           }
 
-          console('3' + failRes + isTestPage); // 缓存服务端配置上一次的ab实验配置
+          console.log('3' + failRes + isTestPage); // 缓存服务端配置上一次的ab实验配置
 
           JSSDK.Storage.setItem(storageKey.multilinkHistory, serverConfig.map(function (item) {
             return {
@@ -340,13 +340,13 @@
               group_id: item.group_id
             };
           }));
-          console('4' + failRes + isTestPage); // 试验页面非当前页面时，需要跳转处理
+          console.log('4' + failRes + isTestPage); // 试验页面非当前页面时，需要跳转处理
 
           if (!isTestPage) {
-            console('5' + failRes + isTestPage); // 这里需要等待分流事件发出，再进行页面跳转
+            console.log('5' + failRes + isTestPage); // 这里需要等待分流事件发出，再进行页面跳转
 
             setTimeout(function () {
-              console('6' + failRes + isTestPage);
+              console.log('6' + failRes + isTestPage);
               location.href = multilinkRes.url;
             }, alreadySend ? 0 : JSSDK.settingData.multilinkJumpWaitSendEvent * 1000);
           }
@@ -419,7 +419,7 @@
     // 插件初始化
     init: function init(JSSDK) {
       if (!(JSSDK == null ? void 0 : JSSDK.NATIVE) || typeof (JSSDK == null ? void 0 : JSSDK.extend) !== 'function') {
-        return console.error('The plugin cannot be used alone, it depends on the webSDK.');
+        return console.log.error('The plugin cannot be used alone, it depends on the webSDK.');
       }
 
       initParameters(JSSDK);
