@@ -253,12 +253,12 @@
             retryCount = JSSDK.settingData.multilinkRetryTimes;
           }
 
-          alert('开始发请求');
+          console('开始发请求');
 
           JSSDK.HttpHelper.post("//" + JSSDK.settingData.ruleDomain + "/rule/config/multilink/get", requestData, {
             timeout: JSSDK.settingData.multilinkTimeout * 1000
           }).then(function (res) {
-            alert('请求回来了');
+            console('请求回来了');
             sdkReportData.t1 = +new Date();
 
             if ((res == null ? void 0 : res.code) === 0) {
@@ -273,7 +273,7 @@
             };
             sendRuntimeReportData(JSSDK, sdkReportData, responseData);
           })["catch"](function (error) {
-            alert('请求失败', JSON.stringify(error));
+            console('请求失败', JSON.stringify(error));
             if (retryCount > 0) {
               retryCount--;
 
@@ -299,7 +299,7 @@
         handleServerConfig: function handleServerConfig(data) {
           var _serverConfig$, _serverConfig$2, _serverConfig$3, _serverConfig$4, _serverConfig$5, _serverConfig$6, _serverConfig$7;
 
-          alert('请求结果返回成功');
+          console('请求结果返回成功');
           var serverConfig = data.params || [];
           var url = JSSDK.trimStr(((_serverConfig$ = serverConfig[0]) == null ? void 0 : _serverConfig$.url) || '');
           var failRes = !(serverConfig == null ? void 0 : serverConfig.length) || !url;
@@ -309,13 +309,13 @@
             JSSDK.customEvents.$emit('multilinkTest');
           }
 
-          alert('1' + failRes + isTestPage); // 没有返回对应的配置，则终止逻辑即可
+          console('1' + failRes + isTestPage); // 没有返回对应的配置，则终止逻辑即可
 
           if (failRes) {
             return;
           }
 
-          alert('2' + failRes + isTestPage);
+          console('2' + failRes + isTestPage);
           var multilinkRes = {
             url: url,
             subjectId: (_serverConfig$2 = serverConfig[0]) == null ? void 0 : _serverConfig$2.subject_id,
@@ -332,7 +332,7 @@
             this.trackTriageEvents(multilinkRes);
           }
 
-          alert('3' + failRes + isTestPage); // 缓存服务端配置上一次的ab实验配置
+          console('3' + failRes + isTestPage); // 缓存服务端配置上一次的ab实验配置
 
           JSSDK.Storage.setItem(storageKey.multilinkHistory, serverConfig.map(function (item) {
             return {
@@ -340,13 +340,13 @@
               group_id: item.group_id
             };
           }));
-          alert('4' + failRes + isTestPage); // 试验页面非当前页面时，需要跳转处理
+          console('4' + failRes + isTestPage); // 试验页面非当前页面时，需要跳转处理
 
           if (!isTestPage) {
-            alert('5' + failRes + isTestPage); // 这里需要等待分流事件发出，再进行页面跳转
+            console('5' + failRes + isTestPage); // 这里需要等待分流事件发出，再进行页面跳转
 
             setTimeout(function () {
-              alert('6' + failRes + isTestPage);
+              console('6' + failRes + isTestPage);
               location.href = multilinkRes.url;
             }, alreadySend ? 0 : JSSDK.settingData.multilinkJumpWaitSendEvent * 1000);
           }
