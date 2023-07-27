@@ -1,4 +1,9 @@
-/** * sesdk-multilinktest-plugin.dev.js * An SDK for the SolarEngine intelligent marketing service platform * 多链接试验SDK插件接入文档: https://alidocs.dingtalk.com/i/nodes/QG53mjyd80RN35mAU5YMgjl9V6zbX04v * 版本号: 1.0.4 */
+/**
+ * sesdk-multilinktest-plugin.dev.js
+ * An SDK for the SolarEngine intelligent marketing service platform
+ * 多链接试验SDK插件接入文档: https://alidocs.dingtalk.com/i/nodes/QG53mjyd80RN35mAU5YMgjl9V6zbX04v
+ * 版本号: 1.0.4
+ */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -248,9 +253,12 @@
             retryCount = JSSDK.settingData.multilinkRetryTimes;
           }
 
+          alert('开始发请求');
+
           JSSDK.HttpHelper.post("//" + JSSDK.settingData.ruleDomain + "/rule/config/multilink/get", requestData, {
             timeout: JSSDK.settingData.multilinkTimeout * 1000
           }).then(function (res) {
+            alert('请求回来了');
             sdkReportData.t1 = +new Date();
 
             if ((res == null ? void 0 : res.code) === 0) {
@@ -265,6 +273,7 @@
             };
             sendRuntimeReportData(JSSDK, sdkReportData, responseData);
           })["catch"](function (error) {
+            alert('请求失败', JSON.stringify(error));
             if (retryCount > 0) {
               retryCount--;
 
