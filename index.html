@@ -146,4 +146,17 @@ SESDK.init({
       },
     },
   });  
+
+  //同步下发参数
+ SESDK.ready(function(){
+    const value = SESDK.fastFetchRemoteConfig("DLJ");
+    console.log(value, typeof value);
+    if (value === "b") {
+    
+   
+    //展示试验版本样式
+    } else if (value === "a"){
+    //展示原始版本样式
+    };
+});
 </script> 
