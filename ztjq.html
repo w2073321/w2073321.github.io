@@ -1,5 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<script src="js/web-cn-sesdk.js"></script>
+<script src="js/sesdk-parameters-plugin.js"></script>
+<script src="js/sesdk-multilinktest-plugin.js"></script>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=640,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=true;">
@@ -67,4 +70,9 @@
 </div>
 
 </body>
+<script>
+  SESDK.track('web_duolianjie_click', {
+    "multilink_click": '2',
+  }); 
+</script>
 </html>
