@@ -19,9 +19,8 @@
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
-<script src="js/web-cn-sesdk.js"></script>
-<script src="js/sesdk-parameters-plugin.js"></script>
-<script src="js/sesdk-multilinktest-plugin.js"></script>
+<script src="js/web-cscn-sesdk.js"></script>
+
 </head>
 <body>
 <div class="page" id="topnav">
@@ -74,35 +73,32 @@
 		// appKey: 'c57d0bae1a1dff69',
 		// userId: '5c5a2f0fd35d9296',	
 		//测试环境
-		appKey: '4c3e7d87ebac99cd',
+		appKey: '44623b2c011df10d',
 		userId: '1fca0a4b93fa7170',	
 		
 		config: {
 		  debugModel: false,
-		  multilinkTestConfig: {
-		  enable: true,
-		  isSetMask: true,
-		  maskTimeoutCloseTime: 500,
-		  customIDProperties: { "a":"s" },
-      customIDEventProperties: { "e": "z"},
-      customIDUserProperties: { "u": "w" },
-		},
 		//  customURL: 'https://w2073321.github.io/',
 		  autoTrackConfig: {
 			autoTrack: true,
 			autoTrackPageView: true,
 			autoTrackPageClick: true,
 			isTrackSinglePage: false,
-		  },
-		  remoteConfig: {
-			pollingInterval: 30,
-			enable: true,
-			mergeType: 0,
-			customIDProperties: {custom_zswid:20230505},
-			customIDEventProperties: { e: 1 },
-			customIDUserProperties: { u: 1 },
-			
-		  },
+		  }
 		},
 	  });  
+
+	  //注册事件
+SESDK.trackRegister({
+    regType: 'WeChat',
+    registerStatus: 'success',
+    customProperties: {
+      age: "12",
+    }
+  });
+
+	  //自定义事件上报
+SESDK.track('web_buy_click', {
+    "flowers": '橘子花',
+  }); 
 	</script> 
