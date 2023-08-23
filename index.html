@@ -155,13 +155,13 @@ SESDK.init({
   ]);
   //同步下发参数
  SESDK.ready(function(){
-    const value = SESDK.fastFetchRemoteConfig("banner");
+    const value = SESDK.fastFetchRemoteConfig("DLJ");
     console.log(value, typeof value);
-    if (value === "1") {
+    if (value === "b") {
     
    
     //展示试验版本样式
-    } else if (value === "0"){
+    } else if (value === "a"){
     //展示原始版本样式
     };
 });
