@@ -108,10 +108,7 @@ $("#shownr img").delay(500).show(500)
 <script>
   window.SESDK.prevInit(1);
   window.SESDK.use(window.webabtestPlugin);
-  window.SESDK.login('account-id-1');
-    window.SESDK.setVisitorId('VisitorId-id-1');
-    window.SESDK.setChannel('channel-1');
-    window.SESDK.setReferrerTitle('title-1');
+ 
 
 // 初始化SDK
 SESDK.init({
@@ -159,6 +156,11 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
+  window.SESDK.login('account-id-1');
+    window.SESDK.setVisitorId('VisitorId-id-1');
+    window.SESDK.setChannel('channel-1');
+    window.SESDK.setReferrerTitle('title-1');
+
   //同步下发参数
  SESDK.ready(function(){
     const value = SESDK.fastFetchRemoteConfig("DLJ");
