@@ -109,7 +109,7 @@ $("#shownr img").delay(500).show(500)
   window.SESDK.prevInit(1);
   window.SESDK.use(window.webabtestPlugin);
  
-
+  var x=Math.floor(Math.random()*100);
 // 初始化SDK
 SESDK.init({
 	//正式环境
@@ -156,10 +156,19 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
-  window.SESDK.login('account-id-1');
-    window.SESDK.setVisitorId('VisitorId-id-1');
-    window.SESDK.setChannel('channel-1');
-    window.SESDK.setReferrerTitle('title-1');
+  SESDK.login('2038476949'+x);
+  var Acc = SESDK.getAccountId();
+  console.log(Acc);
+  //设置访客ID
+  let UUID =URL.createObjectURL(new Blob()).substr(-36);
+  SESDK.setVisitorId('5038476949'+x);
+  var Visit =  SESDK.getVisitorId();
+ console.log(Visit);
+ 
+  // window.SESDK.login('account-id-1');
+  //   window.SESDK.setVisitorId('VisitorId-id-1');
+  //   window.SESDK.setChannel('channel-1');
+  //   window.SESDK.setReferrerTitle('title-1');
 
   //同步下发参数
  SESDK.ready(function(){
