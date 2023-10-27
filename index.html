@@ -156,7 +156,7 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
-  SESDK.login('2038476949'+x);
+  SESDK.login('f1aaa957-df6b-40b8-b0e9-58010608e103');
   var Acc = SESDK.getAccountId();
   console.log(Acc);
   //设置访客ID
@@ -194,6 +194,32 @@ SESDK.ready(function(){
    
     //展示试验版本样式
     } else if (value === "A"){
+    //展示原始版本样式
+    };
+});
+SESDK.ready(function(){
+    
+    const value1 = SESDK.fastFetchRemoteConfig("AB_u");
+
+    console.log(value, typeof value);
+    if (value === "B") {
+    
+   
+    //展示试验版本样式
+    } else if (value === "A"){
+    //展示原始版本样式
+    };
+});
+SESDK.ready(function(){
+    
+    const value2 = SESDK.fastFetchRemoteConfig("AB_a");
+
+    console.log(value, typeof value);
+    if (value === "true") {
+    
+   
+    //展示试验版本样式
+    } else if (value === "false"){
     //展示原始版本样式
     };
 });
