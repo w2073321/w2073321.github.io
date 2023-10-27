@@ -173,6 +173,8 @@ SESDK.init({
   //同步下发参数
  SESDK.ready(function(){
     const value = SESDK.fastFetchRemoteConfig("AB_d");
+    const value1 = SESDK.fastFetchRemoteConfig("AB_u");
+
     console.log(value, typeof value);
     if (value === "2") {
     
