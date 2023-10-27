@@ -173,7 +173,7 @@ SESDK.init({
   //同步下发参数
  SESDK.ready(function(){
     const value = SESDK.fastFetchRemoteConfig("AB_d");
-    const value1 = SESDK.fastFetchRemoteConfig("AB_u");
+   
 
     console.log(value, typeof value);
     if (value === "2") {
@@ -181,6 +181,19 @@ SESDK.init({
    
     //展示试验版本样式
     } else if (value === "1"){
+    //展示原始版本样式
+    };
+});
+SESDK.ready(function(){
+    
+    const value1 = SESDK.fastFetchRemoteConfig("AB_u");
+
+    console.log(value, typeof value);
+    if (value === "B") {
+    
+   
+    //展示试验版本样式
+    } else if (value === "A"){
     //展示原始版本样式
     };
 });
