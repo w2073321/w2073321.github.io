@@ -151,7 +151,7 @@ SESDK.init({
   //设置defult值
   SESDK.setRemoteDefaultConfig([
       {
-            name : "banner", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+            name : "AB_d", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
             typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
             value : "0", // 配置项的值
       }, 
@@ -172,13 +172,13 @@ SESDK.init({
 
   //同步下发参数
  SESDK.ready(function(){
-    const value = SESDK.fastFetchRemoteConfig("DLJ");
+    const value = SESDK.fastFetchRemoteConfig("AB_d");
     console.log(value, typeof value);
-    if (value === "b") {
+    if (value === "2") {
     
    
     //展示试验版本样式
-    } else if (value === "a"){
+    } else if (value === "1"){
     //展示原始版本样式
     };
 });
