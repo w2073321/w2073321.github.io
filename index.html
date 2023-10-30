@@ -141,7 +141,7 @@ SESDK.init({
         pollingInterval: 30,
         enable: true,
         mergeType: 0,
-        customIDProperties: {custom_zswid:"773900193"},
+        customIDProperties: {custom_zswid:773900193},
         customIDEventProperties: { e: 1 },
         customIDUserProperties: { u: 1 },
 		    requestTimeout:5000
@@ -171,33 +171,34 @@ SESDK.init({
   //   window.SESDK.setReferrerTitle('title-1');
 
   //同步下发参数
- SESDK.ready(function(){
-    const value = SESDK.fastFetchRemoteConfig("AB_d");
+//  SESDK.ready(function(){
+//     const value = SESDK.fastFetchRemoteConfig("AB_d");
    
 
-    console.log(value, typeof value);
-    if (value === "2") {
+//     console.log(value, typeof value);
+//     if (value === "2") {
     
    
-    //展示试验版本样式
-    } else if (value === "1"){
-    //展示原始版本样式
-    };
-});
+//     //展示试验版本样式
+//     } else if (value === "1"){
+//     //展示原始版本样式
+//     };
+// });
+// SESDK.ready(function(){
+    
+//     const value2 = SESDK.fastFetchRemoteConfig("AB_x");
+
+//     console.log(value, typeof value);
+//     if (value === "B") {
+    
+   
+//     //展示试验版本样式
+//     } else if (value === "A"){
+//     //展示原始版本样式
+//     };
+// });
 SESDK.ready(function(){
     
-    const value2 = SESDK.fastFetchRemoteConfig("AB_x");
-
-    console.log(value, typeof value);
-    if (value === "B") {
-    
-   
-    //展示试验版本样式
-    } else if (value === "A"){
-    //展示原始版本样式
-    };
-});
-SESDK.ready(function(){    
     const value3 = SESDK.fastFetchRemoteConfig("AB_u");
     console.log(value, typeof value);
     if (value === "false") {
