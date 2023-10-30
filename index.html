@@ -183,22 +183,22 @@ SESDK.ready(function(){
     
     const value2 = SESDK.fastFetchRemoteConfig("AB_x");
 
-    console.log(value, typeof value);
-    if (value === "B") {
+    console.log(value2, typeof value2);
+    if (value2 === "B") {
     
    
     //展示试验版本样式
-    } else if (value === "A"){
+    } else if (value2 === "A"){
     //展示原始版本样式
     };
 });
 SESDK.ready(function(){
     
     const value3 = SESDK.fastFetchRemoteConfig("AB_u");
-    console.log(value, typeof value);
-    if (value === "false") {
+    console.log(value3, typeof value3);
+    if (value3 === "false") {
     //展示试验版本样式
-    } else if (value === "true"){
+    } else if (value3 === "true"){
     //展示原始版本样式
     };
 });
