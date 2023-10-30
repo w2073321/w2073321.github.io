@@ -70,15 +70,18 @@
 
 </body>
 <script>
- window.SESDK.use(window.webabtestPlugin);
+   window.SESDK.prevInit(1);
+  window.SESDK.use(window.webabtestPlugin);
+ 
+  var x=Math.floor(Math.random()*100);
 // 初始化SDK
 SESDK.init({
 	//正式环境
-    appKey: 'c57d0bae1a1dff69',
-    userId: '5c5a2f0fd35d9296',	
+    // appKey: 'c57d0bae1a1dff69',
+    // userId: '5c5a2f0fd35d9296',	
 	//测试环境
-    // appKey: '4c3e7d87ebac99cd',
-    // userId: '1fca0a4b93fa7170',	
+    appKey: '69dc1680625e0432',
+    userId: '1fca0a4b93fa7170',	
     
     config: {
       debugModel: false,
@@ -87,9 +90,9 @@ SESDK.init({
       enable: true,
       isSetMask: true,
       maskTimeoutCloseTime: 5000,
-      customIDProperties: { "a":"s" },
-      customIDEventProperties: { "e": "z"},
-      customIDUserProperties: { "u": "w" },
+      // customIDProperties: { "a":"s" },
+      // customIDEventProperties: { "e": "z"},
+      // customIDUserProperties: { "u": "w" },
     },
     //  customURL: 'https://w2073321.github.io/',
       autoTrackConfig: {
@@ -102,10 +105,10 @@ SESDK.init({
         pollingInterval: 30,
         enable: true,
         mergeType: 0,
-        customIDProperties: {custom_zswid:20230505},
+        customIDProperties: {custom_zswid:773900193},
         customIDEventProperties: { e: 1 },
         customIDUserProperties: { u: 1 },
-		
+		    requestTimeout:5000
       },
     },
   });  
