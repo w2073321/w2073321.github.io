@@ -116,7 +116,7 @@ SESDK.init({
     // appKey: 'c57d0bae1a1dff69',
     // userId: '5c5a2f0fd35d9296',	
 	//测试环境
-    appKey: '133b1b67b2e08f06',
+    appKey: '69dc1680625e0432',
     userId: '1fca0a4b93fa7170',	
     
     config: {
@@ -156,7 +156,7 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
-  SESDK.login('f1aaa957-df6b-40b8-b0e9-58010608e103');
+  SESDK.login('2038476949'+x);
   var Acc = SESDK.getAccountId();
   console.log(Acc);
   //设置访客ID
@@ -184,32 +184,32 @@ SESDK.init({
     //展示原始版本样式
     };
 });
-SESDK.ready(function(){
+// SESDK.ready(function(){
     
-    const value2 = SESDK.fastFetchRemoteConfig("AB_KA");
+//     const value2 = SESDK.fastFetchRemoteConfig("AB_KA");
 
-    console.log(value, typeof value);
-    if (value === "B") {
+//     console.log(value, typeof value);
+//     if (value === "B") {
     
    
-    //展示试验版本样式
-    } else if (value === "A"){
-    //展示原始版本样式
-    };
-});
-SESDK.ready(function(){
+//     //展示试验版本样式
+//     } else if (value === "A"){
+//     //展示原始版本样式
+//     };
+// });
+// SESDK.ready(function(){
     
-    const value1 = SESDK.fastFetchRemoteConfig("AB_u");
+//     const value1 = SESDK.fastFetchRemoteConfig("AB_u");
 
-    console.log(value, typeof value);
-    if (value === "B") {
+//     console.log(value, typeof value);
+//     if (value === "B") {
     
    
-    //展示试验版本样式
-    } else if (value === "A"){
-    //展示原始版本样式
-    };
-});
+//     //展示试验版本样式
+//     } else if (value === "A"){
+//     //展示原始版本样式
+//     };
+// });
 
 //自定义事件上报
 SESDK.track('web_duolianjie_click', {
