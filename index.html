@@ -197,19 +197,15 @@ SESDK.ready(function(){
     //展示原始版本样式
     };
 });
-// SESDK.ready(function(){
-    
-//     const value1 = SESDK.fastFetchRemoteConfig("AB_u");
-
-//     console.log(value, typeof value);
-//     if (value === "B") {
-    
-   
-//     //展示试验版本样式
-//     } else if (value === "A"){
-//     //展示原始版本样式
-//     };
-// });
+SESDK.ready(function(){    
+    const value3 = SESDK.fastFetchRemoteConfig("AB_u");
+    console.log(value, typeof value);
+    if (value === "false") {
+    //展示试验版本样式
+    } else if (value === "true"){
+    //展示原始版本样式
+    };
+});
 
 //自定义事件上报
 SESDK.track('web_duolianjie_click', {
