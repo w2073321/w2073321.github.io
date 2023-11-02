@@ -181,14 +181,14 @@ SESDK.init({
 });
 SESDK.ready(function(){
     
-    const value2 = SESDK.fastFetchRemoteConfig("AB_x");
+    const value2 = SESDK.fastFetchRemoteConfig("vid");
 
     console.log(value2, typeof value2);
-    if (value2 === "B") {
+    if (value2 === "1") {
     
    
     //展示试验版本样式
-    } else if (value2 === "A"){
+    } else if (value2 === "0"){
     //展示原始版本样式
     };
 });
