@@ -110,6 +110,13 @@ $("#shownr img").delay(500).show(500)
   window.SESDK.use(window.webabtestPlugin);
  
   var x=Math.floor(Math.random()*100);
+
+
+  SESDK.setSuperProperties({
+    "multilink_click": 'shoucang',
+    "num_click": 1,
+    "bool_click": true,
+});
 // 初始化SDK
 SESDK.init({
 	//正式环境
@@ -216,7 +223,7 @@ SESDK.ready(function(){
 SESDK.track('web_duolianjie_click', {
     "multilink_click": 'shoucang',
     "num_click": 1,
-    "bool_click": true
+    "bool_click": true,
   }); 
 
 </script> 
