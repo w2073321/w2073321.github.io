@@ -127,8 +127,8 @@ SESDK.init({
     userId: '1fca0a4b93fa7170',	
     // appKey: '0d2dededcb7868c4',
     
-    appKey: '1f49ddbd7da65e96',
-    // appKey: '6e32f460093e5524',
+    // appKey: '1f49ddbd7da65e96',
+    appKey: '6e32f460093e5524',
     // appKey: '2efc263b95b93395',
     config: {
       debugModel: false,
@@ -167,9 +167,9 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
-  // SESDK.login('203847694998');
-  // var Acc = SESDK.getAccountId();
-  // console.log(Acc);
+  SESDK.login('203847694998'+x);
+  var Acc = SESDK.getAccountId();
+  console.log(Acc);
   //设置访客ID
   let UUID =URL.createObjectURL(new Blob()).substr(-36);
   SESDK.setVisitorId('f818365a4695281c');
