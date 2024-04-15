@@ -29,8 +29,8 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
-<script src="js/web-cn-sesdk.js"></script>
-<script src="js/sesdk-webabtest-plugin.js"></script>
+<script src="js/web-cn-sesdk-umd.js"></script>
+<script src="js/sesdk-webabtest-plugin-umd.js"></script>
 
 
 
@@ -120,15 +120,15 @@ $("#shownr img").delay(500).show(500)
 // 初始化SDK
 SESDK.init({
 	//正式环境
-    // appKey: 'c57d0bae1a1dff69',
-    // userId: '5c5a2f0fd35d9296',	
+    appKey: 'c57d0bae1a1dff69',
+    userId: '5c5a2f0fd35d9296',	
 	//测试环境
     // appKey: '8bd665638d705875',
-    userId: '1fca0a4b93fa7170',	
+    // userId: '1fca0a4b93fa7170',	
     // appKey: '0d2dededcb7868c4',
     
     // appKey: '1f49ddbd7da65e96',
-    appKey: '6e32f460093e5524',
+    // appKey: '6e32f460093e5524',
     // appKey: '2efc263b95b93395',
     config: {
       debugModel: false,
@@ -167,9 +167,9 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
-  // SESDK.login('203847694998'+x);
-  // var Acc = SESDK.getAccountId();
-  // console.log(Acc);
+  SESDK.login('');
+  var Acc = SESDK.getAccountId();
+  console.log(Acc);
   //设置访客ID
   let UUID =URL.createObjectURL(new Blob()).substr(-36);
   SESDK.setVisitorId('f818365a4695281c');
