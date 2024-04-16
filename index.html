@@ -322,14 +322,3 @@ SESDK.ready(function(){
 // });
 
 </script> 
-<script type="text/javascript">
-  window.addEventListener('load', function() {
-    var currentUrl = window.location.href;
-    var internalPrefix = ''; // 替换为你的内部域名前缀
-  
-    if (currentUrl.startsWith(internalPrefix)) {
-        var newUrl = currentUrl.replace(internalPrefix, '');
-        window.location = newUrl;
-    }
-  });
-  </script>
