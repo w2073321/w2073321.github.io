@@ -111,11 +111,11 @@ $("#shownr img").delay(500).show(500)
   var x=Math.floor(Math.random()*100);
 
 
-  SESDK.setSuperProperties({
-    "multilink_click": 'shoucang',
-    "num_click": 1,
-    "bool_click": true,
-});
+//   SESDK.setSuperProperties({
+//     "multilink_click": 'shoucang',
+//     "num_click": 1,
+//     "bool_click": true,
+// });
 window.SESDK.prevInit(1);
 // 初始化SDK
 SESDK.init({
@@ -224,9 +224,9 @@ SESDK.ready(function(){
 
 //自定义事件上报
 SESDK.track('web_duolianjie_click', {
-    "multilink_click": 'shoucang',
-    "num_click": 1,
-    "bool_click": true,
+    "multilink_click": 'shoucang'
+    // "num_click": 1,
+    // "bool_click": true,
   }); 
 //变现广告展示事件
 	SESDK.trackAdImpression({
@@ -312,12 +312,12 @@ SESDK.trackRegister({
     }
   });
   //追加用户属性
-  SESDK.userAdd({
-    num_click:223,
-                                                       bool_click: false,
-                                                       multilink_click: shoucang,
-                                                       job_click: "厨师",
-                                                       age_click: 33,
-});
+//   SESDK.userAdd({
+//     num_click:223,
+//                                                        bool_click: false,
+//                                                        multilink_click: shoucang,
+//                                                        job_click: "厨师",
+//                                                        age_click: 33,
+// });
 
 </script> 
