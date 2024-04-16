@@ -106,8 +106,7 @@ $("#shownr img").delay(500).show(500)
 </body>
 </html>
 <script>
-  window.SESDK.prevInit(1);
-  window.SESDK.use(window.webabtestPlugin);
+  
  
   var x=Math.floor(Math.random()*100);
 
@@ -117,6 +116,7 @@ $("#shownr img").delay(500).show(500)
     "num_click": 1,
     "bool_click": true,
 });
+window.SESDK.prevInit(1);
 // 初始化SDK
 SESDK.init({
 	//正式环境
@@ -158,7 +158,9 @@ SESDK.init({
 		    requestTimeout:5000
       },
     },
-  });  
+  }); 
+  window.SESDK.use(window.webabtestPlugin);
+ 
   //设置defult值
   SESDK.setRemoteDefaultConfig([
       {
