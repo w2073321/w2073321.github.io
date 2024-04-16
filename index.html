@@ -19,6 +19,7 @@ $("#shownr img").delay(500).show(500)
 
 	
 })
+
 </script>
 <style>
 #shownr img { display:none;}
@@ -31,7 +32,6 @@ $("#shownr img").delay(500).show(500)
 <![endif]-->
 <script src="js/web-cn-sesdk-umd.js"></script>
 <script src="js/sesdk-webabtest-plugin-umd.js"></script>
-
 
 
 </head>
@@ -93,12 +93,13 @@ $("#shownr img").delay(500).show(500)
 </div>
 </div>
 <div class="page endnav" style="background-image:url(images/index_06.jpg);">
+  
 <table width="640" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td width="160" height="66" align="center"><a href="contact.html">联系我们</a></td>
     <td width="160" align="center"><a href="map.html">交通指南</a></td>
     <td width="160" align="center"><a href="news.html">新闻公告</a></td>
-    <td width="160" align="center"><a href="www.baidu.com" target="_blank">跳转站外搜索</a></td>
+    <td width="160" align="center"><a href="www.baidu.com" target="_blank" >跳转站外</a></td>
   </tr>
 </table>
 </div>
@@ -321,3 +322,14 @@ SESDK.ready(function(){
 // });
 
 </script> 
+<script type="text/javascript">
+  window.addEventListener('load', function() {
+    var currentUrl = window.location.href;
+    var internalPrefix = ''; // 替换为你的内部域名前缀
+  
+    if (currentUrl.startsWith(internalPrefix)) {
+        var newUrl = currentUrl.replace(internalPrefix, '');
+        window.location = newUrl;
+    }
+  });
+  </script>
