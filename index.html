@@ -30,7 +30,7 @@ $("#shownr img").delay(500).show(500)
   DD_belatedPNG.fix('*');
   </script>
 <![endif]-->
-<script src="js/web-us-sesdk-umd.js"></script>
+<script src="js/web-cn-sesdk-umd.js"></script>
 <script src="js/sesdk-webabtest-plugin-umd.js"></script>
 
 
@@ -121,10 +121,10 @@ window.SESDK.prevInit(1);
 // 初始化SDK
 SESDK.init({
 	//正式国内环境
-    //  appKey: '928b43d83e821220',
+      appKey: '928b43d83e821220',
   //正式海外环境  
-    appKey: 'cee27e71b641e5f5',
-    userId: '5c5a2f0fd35d9296',	
+    //appKey: 'cee27e71b641e5f5',
+    //userId: '5c5a2f0fd35d9296',	
 	//测试环境
     // appKey: '8bd665638d705875',
     // userId: '1fca0a4b93fa7170',	
@@ -218,6 +218,16 @@ SESDK.ready(function(){
     //展示原始版本样式
     };
 });
+SESDK.ready(function(){
+    
+    const value4 = SESDK.fastFetchRemoteConfig("Cud");
+    console.log(value4, typeof value4);
+    if (value4 === "B") {
+    //展示试验版本样式
+    } else if (value4 === "A"){
+    //展示原始版本样式
+    };
+});
 // window.SESDK.login('account-id-1');
   //   window.SESDK.setVisitorId('VisitorId-id-1');
   //   window.SESDK.setChannel('channel-1');
@@ -226,11 +236,11 @@ SESDK.ready(function(){
 
 
 //自定义事件上报
-// SESDK.track('web_duolianjie_click', {
-//     "multilink_click": 'shoucang'
-//     // "num_click": 1,
-//     // "bool_click": true,
-//   }); 
+SESDK.track('web_duolianjie_click', {
+    "multilink_click": 'shoucang'
+    // "num_click": 1,
+    // "bool_click": true,
+  }); 
 //变现广告展示事件
 // 	SESDK.trackAdImpression({
 //     adNetworkPlatform: 'oppo',
