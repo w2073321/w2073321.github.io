@@ -155,7 +155,7 @@ SESDK.init({
         pollingInterval: 30,
         enable: true,
         mergeType: 0,
-        customIDProperties: {"custom_zswid":"590014321"},
+        customIDProperties: {"custom_zswid":"59001"},
         customIDEventProperties: { e: 1 },
         customIDUserProperties: { u: 1 },
 		    requestTimeout:5000
@@ -172,12 +172,12 @@ SESDK.init({
             value : "0", // 配置项的值
       }, 
   ]);
-  SESDK.login('');
+  SESDK.login('accid'+x);
   var Acc = SESDK.getAccountId();
   console.log(Acc);
   //设置访客ID
   let UUID =URL.createObjectURL(new Blob()).substr(-36);
-  SESDK.setVisitorId('f818365a4695281c');
+  SESDK.setVisitorId('vid'+x);
   var Visit =  SESDK.getVisitorId();
  console.log(Visit);
  
