@@ -240,7 +240,7 @@ SESDK.ready(function(){
 
 //自定义事件上报
 SESDK.track('web_duolianjie_click', {
-    "multilink_clickBL": false
+    "multilinkBL": false
     // "num_click": 1,
     // "bool_click": true,
   }); 
@@ -255,19 +255,19 @@ SESDK.track('web_duolianjie_click', {
     currency: 'USD',
     rendered: true,
     customProperties: {
-    imptestszwBL: true,
+    szwBLSS: true,
 }
 });
     //变现广告点击事件
-	SESDK.trackAdClick({
-    adNetworkPlatform: 'oppo',
-    adType: 1,
-    adId: '123',
-    mediationPlatform: 'custom',
-    customProperties: {
-    adclicktestszwDC: 1.234567666,
-}
-});
+// 	SESDK.trackAdClick({
+//     adNetworkPlatform: 'oppo',
+//     adType: 1,
+//     adId: '123',
+//     mediationPlatform: 'custom',
+//     customProperties: {
+//     adclicktestszwDC: 1.234567666,
+// }
+// });
     //应用内购点击事件
 //      SESDK.trackIAP({
 //      orderId: '12345678',
