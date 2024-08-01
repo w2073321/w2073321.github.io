@@ -240,7 +240,7 @@ SESDK.ready(function(){
 
 //自定义事件上报
 SESDK.track('web_duolianjie_click', {
-    "multilink_click": 'shoucang'
+    "multilink_clickBL": false
     // "num_click": 1,
     // "bool_click": true,
   }); 
@@ -255,7 +255,7 @@ SESDK.track('web_duolianjie_click', {
     currency: 'USD',
     rendered: true,
     customProperties: {
-    imptestszw: true,
+    imptestszwBL: true,
 }
 });
     //变现广告点击事件
@@ -265,68 +265,68 @@ SESDK.track('web_duolianjie_click', {
     adId: '123',
     mediationPlatform: 'custom',
     customProperties: {
-    adclicktestszw: 1.234567666,
+    adclicktestszwDC: 1.234567666,
 }
 });
     //应用内购点击事件
-     SESDK.trackIAP({
-     orderId: '12345678',
-     payAmount: 1234.5678,
-     currencyType: 'USD',
-     payType: 'alipay',
-     productID: '12345678',
-     productName: 'this is product name',
-     productCount: 10,
-     payStatus: 1,
-     failReason: 'this is fail reason',
-     customProperties: {
-tracktestszw: 209,
-}
-});
+//      SESDK.trackIAP({
+//      orderId: '12345678',
+//      payAmount: 1234.5678,
+//      currencyType: 'USD',
+//      payType: 'alipay',
+//      productID: '12345678',
+//      productName: 'this is product name',
+//      productCount: 10,
+//      payStatus: 1,
+//      failReason: 'this is fail reason',
+//      customProperties: {
+// tracktestszw: 209,
+// }
+// });
      //自归因安装事件 
-	 SESDK.trackAppAttr({
-     adNetwork: '123456',
-     subChannel: '123456',
-     adAccountID: '123456',
-     adAccountName: '123456',
-     adCampaignID: '123456',
-     adCampaignName: '123456',
-     adOfferID: '123456',
-     adOfferName: '123456',
-     adCreativeID: '123456',
-     adCreativeName: '123456',
-     attributionPlatform: '123456',
-     customProperties: {
-trackattrtestszw: '归因安装自定义属性',
-}
-});
+// 	 SESDK.trackAppAttr({
+//      adNetwork: '123456',
+//      subChannel: '123456',
+//      adAccountID: '123456',
+//      adAccountName: '123456',
+//      adCampaignID: '123456',
+//      adCampaignName: '123456',
+//      adOfferID: '123456',
+//      adOfferName: '123456',
+//      adCreativeID: '123456',
+//      adCreativeName: '123456',
+//      attributionPlatform: '123456',
+//      customProperties: {
+// trackattrtestszw: '归因安装自定义属性',
+// }
+// });
    //订单事件
-   SESDK.trackOrder({
-   orderId: '12345678',
-   payAmount: 1234.5678,
-   currencyType: 'USD',
-   payType: 'alipay',
-   status: 'this is fail status',
-   customProperties: {
-ordertestszw: false,
-}
-});
+//    SESDK.trackOrder({
+//    orderId: '12345678',
+//    payAmount: 1234.5678,
+//    currencyType: 'USD',
+//    payType: 'alipay',
+//    status: 'this is fail status',
+//    customProperties: {
+// ordertestszw: false,
+// }
+// });
    //登录事件
-   SESDK.trackLogin({
-   loginType: 'WeChat',
-   loginStatus: 'success',
-   customProperties: {
-logintest: '1',
-}
-});
+//    SESDK.trackLogin({
+//    loginType: 'WeChat',
+//    loginStatus: 'success',
+//    customProperties: {
+// logintest: '1',
+// }
+// });
 //注册事件
-SESDK.trackRegister({
-    regType: 'WeChat',
-    registerStatus: 'success',
-    customProperties: {
-      one: '1',
-    }
-  });
+// SESDK.trackRegister({
+//     regType: 'WeChat',
+//     registerStatus: 'success',
+//     customProperties: {
+//       one: '1',
+//     }
+//   });
   //追加用户属性
 //   SESDK.userAdd({
 //     num_click:223,
