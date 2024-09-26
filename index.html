@@ -166,6 +166,13 @@ SESDK.init({
     },
   }); 
   window.SESDK.use(window.webabtestPlugin);
+
+
+  //获取distentid
+  SESDK.getDistinct().then(res=>{
+     console.log("获取distentid为:"+res.distinct_id);
+     console.log("获取distentid_type为:"+res.distinct_id_type);
+  });
  
   //设置defult值
   SESDK.setRemoteDefaultConfig([
