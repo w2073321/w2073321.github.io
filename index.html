@@ -34,11 +34,11 @@ $("#shownr img").delay(500).show(500)
 <!-- <script src="js/web-us-sesdk-umd.js"></script>
 <script src="js/sesdk-webabtest-plugin-umd.js"></script> -->
 
-<!-- <script src="js/web-cn-sesdk-umd.js"></script>
-<script src="js/sesdk-webabtest-plugin-umd.js"></script> -->
-
-<script src="js/web-cn-sesdk-umd_T.js"></script>
+<script src="js/web-cn-sesdk-umd.js"></script>
 <script src="js/sesdk-webabtest-plugin-umd.js"></script>
+
+<!-- <script src="js/web-cn-sesdk-umd_T.js"></script>
+<script src="js/sesdk-webabtest-plugin-umd.js"></script> -->
 
 </head>
 <body  data-page="home">
@@ -127,19 +127,15 @@ window.SESDK.prevInit(1);
 // 初始化SDK
 SESDK.init({
 	//正式国内环境
-    //appKey: '928b43d83e821220',
+    appKey: '928b43d83e821220',
   //正式海外环境  
      // appKey: 'cee27e71b641e5f5',
     //  appKey: '898b33180e819174',
-     //  userId: '5c5a2f0fd35d9296',	
+       userId: '5c5a2f0fd35d9296',	
 	//测试环境
-    appKey: 'cd1fdb6ee1b1f082',
-    userId: '1fca0a4b93fa7170',	
-    // appKey: '0d2dededcb7868c4',
+    // appKey: 'cd1fdb6ee1b1f082',
+    // userId: '1fca0a4b93fa7170',	
     
-    // appKey: '1f49ddbd7da65e96',
-    // appKey: '6e32f460093e5524',
-    // appKey: '2efc263b95b93395',
     config: {
       debugModel: false,
       isInApp:false,
