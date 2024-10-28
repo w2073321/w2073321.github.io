@@ -169,8 +169,13 @@ SESDK.init({
     },
   }); 
   
-  window.SESDK.use(window.webabtestPlugin);
-
+  // window.SESDK.use(window.webabtestPlugin);
+//自定义事件上报
+SESDK.track('Collection', {
+    "_zc_se": false
+    // "num_click": 1,
+    // "bool_click": true,
+  }); 
 
   //获取distentid
   SESDK.getDistinct().then(res=>{
@@ -249,12 +254,7 @@ SESDK.ready(function(){
 
 
 
-//自定义事件上报
-SESDK.track('Collection', {
-    "_zc_se": false
-    // "num_click": 1,
-    // "bool_click": true,
-  }); 
+
 //变现广告展示事件
 	SESDK.trackAdImpression({
   //  adNetworkPlatform: 'oppo',
