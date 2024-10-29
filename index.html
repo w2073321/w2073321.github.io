@@ -178,19 +178,19 @@ SESDK.track('Collection', {
   }); 
 
   //获取distentid
-  SESDK.getDistinct().then(res=>{
-     console.log("获取distentid为:"+res.distinct_id);
-     console.log("获取distentid_type为:"+res.distinct_id_type);
-  });
+  //SESDK.getDistinct().then(res=>{
+    // console.log("获取distentid为:"+res.distinct_id);
+     //console.log("获取distentid_type为:"+res.distinct_id_type);
+  //});
  
   //设置defult值
-  SESDK.setRemoteDefaultConfig([
-      {
-            name : "AB_d", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
-            typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
-            value : 0, // 配置项的值
-      }
-  ]);
+  // SESDK.setRemoteDefaultConfig([
+  //     {
+  //           name : "AB_d", // 配置项的名称，对应fastFetchRemoteConfig接口的参数 key
+  //           typ : 2, // 配置项的类型 1 string、2 number、3 boolean、4 json
+  //           value : 0, // 配置项的值
+  //     }
+  // ]);
   SESDK.login('accid'+x);
   var Acc = SESDK.getAccountId();
   console.log(Acc);
@@ -201,52 +201,52 @@ SESDK.track('Collection', {
  console.log(Visit);
  
   //同步下发参数
-  SESDK.ready(function(){
-    const value = SESDK.fastFetchRemoteConfig("Acc");
+//   SESDK.ready(function(){
+//     const value = SESDK.fastFetchRemoteConfig("Acc");
    
 
-    console.log(value, typeof value);
-    if (value === "1") {
+//     console.log(value, typeof value);
+//     if (value === "1") {
     
    
-    //展示试验版本样式
-    } else if (value === "0"){
-    //展示原始版本样式
-    };
-});
-SESDK.ready(function(){
+//     //展示试验版本样式
+//     } else if (value === "0"){
+//     //展示原始版本样式
+//     };
+// });
+// SESDK.ready(function(){
     
-    const value2 = SESDK.fastFetchRemoteConfig("vid");
+//     const value2 = SESDK.fastFetchRemoteConfig("vid");
 
-    console.log(value2, typeof value2);
-    if (value2 === "1") {
+//     console.log(value2, typeof value2);
+//     if (value2 === "1") {
     
    
-    //展示试验版本样式
-    } else if (value2 === "0"){
-    //展示原始版本样式
-    };
-});
-SESDK.ready(function(){
+//     //展示试验版本样式
+//     } else if (value2 === "0"){
+//     //展示原始版本样式
+//     };
+// });
+// SESDK.ready(function(){
     
-    const value3 = SESDK.fastFetchRemoteConfig("AB_u");
-    console.log(value3, typeof value3);
-    if (value3 === "false") {
-    //展示试验版本样式
-    } else if (value3 === "true"){
-    //展示原始版本样式
-    };
-});
-SESDK.ready(function(){
+//     const value3 = SESDK.fastFetchRemoteConfig("AB_u");
+//     console.log(value3, typeof value3);
+//     if (value3 === "false") {
+//     //展示试验版本样式
+//     } else if (value3 === "true"){
+//     //展示原始版本样式
+//     };
+// });
+// SESDK.ready(function(){
     
-    const value4 = SESDK.fastFetchRemoteConfig("Cud");
-    console.log(value4, typeof value4);
-    if (value4 === "B") {
-    //展示试验版本样式
-    } else if (value4 === "A"){
-    //展示原始版本样式
-    };
-});
+//     const value4 = SESDK.fastFetchRemoteConfig("Cud");
+//     console.log(value4, typeof value4);
+//     if (value4 === "B") {
+//     //展示试验版本样式
+//     } else if (value4 === "A"){
+//     //展示原始版本样式
+//     };
+// });
 // window.SESDK.login('account-id-1');
   //   window.SESDK.setVisitorId('VisitorId-id-1');
   //   window.SESDK.setChannel('channel-1');
