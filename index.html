@@ -171,10 +171,14 @@ SESDK.init({
   
   // window.SESDK.use(window.webabtestPlugin);
 //自定义事件上报
-SESDK.track('Collection', {
-    "_zc_se": false
-    // "num_click": 1,
-    // "bool_click": true,
+SESDK.track('szwCustom1', { 
+    "num_click": 1,
+    "bool_click": true,
+  }); 
+  
+  SESDK.track('_szwCustom1', { 
+    "num_click": 1,
+    "bool_click": true,
   }); 
 
   //获取distentid
@@ -339,12 +343,11 @@ logintest: 1,
      }
    });
   //追加用户属性
-//   SESDK.userAdd({
-//     num_click:223,
-//     bool_click: false,
-                                              
-//     job_click: "厨师",
-//     age_click: 33,
-// });
+  SESDK.userAdd({
+    num_click:223,
+    bool_click: false,                                              
+    job_click: "厨师",
+    age_click: 33,
+});
 
 </script> 
