@@ -177,10 +177,10 @@ SESDK.track('szwCustom1', {
     "bool_click": true,
   }); 
 
-  SESDK.track('_szwCustom1', { 
-    "num_click": 1,
-    "bool_click": true,
-  }); 
+  // SESDK.track('_szwCustom1', { 
+  //   "num_click": 1,
+  //   "bool_click": true,
+  // }); 
 
   // 获取distentid
   SESDK.getDistinct().then(res=>{
@@ -262,7 +262,7 @@ SESDK.ready(function(){
 
 //变现广告展示事件
 	SESDK.trackAdImpression({
-    // adNetworkPlatform: 'oppo',
+  adNetworkPlatform: 'oppo',
    adType: 1,
    adNetworkAppID: 1,
    adId: '123',
@@ -281,7 +281,7 @@ SESDK.ready(function(){
     adId: '123',
     mediationPlatform: 'custom',
     customProperties: {
-    _adclicktestszwDC: 1.234567666,
+    // _adclicktestszwDC: 1.234567666,
 }
 });
     //应用内购点击事件
