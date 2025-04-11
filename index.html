@@ -41,6 +41,8 @@ $("#shownr img").delay(500).show(500)
 
 <!-- <script src="js/web-cn-sesdk-umd_T.js"></script>
 <script src="js/sesdk-webabtest-plugin-umd.js"></script> -->
+<script src="js/web-us-sesdk-GA-umd.js"></script>
+<script src="js/sesdk-webabtest-plugin-umd.js"></script>
 
 </head>
 <body  data-page="home">
@@ -129,7 +131,7 @@ window.SESDK.prevInit(1);
 // 初始化SDK
 SESDK.init({
 	//正式国内环境
-      appKey: 'cfbd67b43ea26567',
+      // appKey: 'cfbd67b43ea26567',
     //  appKey: ' e62fe50b80fc6e5c',
   //正式海外环境  
   //  appKey: '265bbb3f16a53d28',
@@ -142,6 +144,8 @@ SESDK.init({
 
     // appKey: '1c4cdfddb1404a7d',
     // userId: '8e8df1002e92e9dd',
+    //GA环境
+    appKey: '68657fb8999ca65f',
     
     config: {
       logEnabled: true,
@@ -303,42 +307,42 @@ SESDK.ready(function(){
  tracktestszwDD: 209,
  }
  });
-     //自归因安装事件 
-// 	 SESDK.trackAppAttr({
-//      adNetwork: '123456',
-//      subChannel: '123456',
-//      adAccountID: '123456',
-//      adAccountName: '123456',
-//      adCampaignID: '123456',
-//      adCampaignName: '123456',
-//      adOfferID: '123456',
-//      adOfferName: '123456',
-//      adCreativeID: '123456',
-//      adCreativeName: '123456',
-//      attributionPlatform: '123456',
-//      customProperties: {
-// trackattrtestszw: '归因安装自定义属性',
-// }
-// });
+//      自归因安装事件 
+	 SESDK.trackAppAttr({
+     adNetwork: '123456',
+     subChannel: '123456',
+     adAccountID: '123456',
+     adAccountName: '123456',
+     adCampaignID: '123456',
+     adCampaignName: '123456',
+     adOfferID: '123456',
+     adOfferName: '123456',
+     adCreativeID: '123456',
+     adCreativeName: '123456',
+     attributionPlatform: '123456',
+     customProperties: {
+trackattrtestszw: '归因安装自定义属性',
+}
+});
    //订单事件
-//    SESDK.trackOrder({
-//    orderId: '12345678',
-//    payAmount: 1234.5678,
-//    currencyType: 'USD',
-//    payType: 'alipay',
-//    status: 'this is fail status',
-//    customProperties: {
-// ordertestszw: false,
-// }
-// });
+   SESDK.trackOrder({
+   orderId: '12345678',
+   payAmount: 1234.5678,
+   currencyType: 'USD',
+   payType: 'alipay',
+   status: 'this is fail status',
+   customProperties: {
+ordertestszw: false,
+}
+});
    //登录事件
-//    SESDK.trackLogin({
-//    loginType: 'WeChat',
-//    loginStatus: 'success',
-//    customProperties: {
-// logintest: 1,
-// }
-// });
+   SESDK.trackLogin({
+   loginType: 'WeChat',
+   loginStatus: 'success',
+   customProperties: {
+logintest: 1,
+}
+});
 //注册事件
  SESDK.trackRegister({
      regType: 'WeChat'
